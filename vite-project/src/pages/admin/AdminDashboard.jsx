@@ -1,5 +1,5 @@
 import React from 'react'
-import Sidebar from './AdminSidebar'
+import Sidebar from '../admin/AdminSideBar'
 
 
 export default function AdminDashboard() {
