@@ -1,0 +1,111 @@
+.highest-placement-section {
+  background: linear-gradient(
+    135deg,
+    #020024,
+    #090979,
+    #00d4ff
+  );
+  padding: 80px 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.highest-title {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.gold-line {
+  width: 150px;
+  height: 5px;
+  background: gold;
+  margin: 15px auto 50px;
+  border-radius: 20px;
+}
+
+.top-card {
+  background: rgba(255,255,255,.12);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: .4s;
+}
+
+.top-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 35px gold;
+}
+
+.rank-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: gold;
+  color: black;
+  padding: 8px 14px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.winner-ribbon {
+  position: absolute;
+  top: 15px;
+  right: -35px;
+  background: crimson;
+  color: white;
+  padding: 8px 40px;
+  transform: rotate(45deg);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 50%;
+  background: gold;
+  color: navy;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.package-box {
+  margin-top: 15px;
+  padding: 12px;
+  background: gold;
+  color: black;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 800;
+  animation: pulse 1.5s infinite;
+}
+
+.placed-text {
+  margin-top: 15px;
+  color: #00ff66;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,218 @@
+/* careerhub.css */
+
+.careerhub-wrapper{
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 5%;
+    background: #f5f7fb;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.careerhub-hero{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.careerhub-hero h1{
+    font-size: 30px;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.careerhub-hero p{
+    font-size: 18px;
+    color: #666;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* SEARCH */
+
+.careerhub-search-box{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 18px 22px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.careerhub-search-box input{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+}
+
+.careerhub-search-icon{
+    color: #666;
+    font-size: 18px;
+}
+
+/* FILTER */
+
+.careerhub-filter-area{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 35px 0;
+}
+
+.careerhub-filter-area button{
+    border: none;
+    padding: 12px 22px;
+    border-radius: 40px;
+    background: white;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.careerhub-filter-area button:hover{
+    background: #0d6efd;
+    color: white;
+}
+
+/* GRID */
+
+.careerhub-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 30px;
+}
+
+/* CARD */
+
+.careerhub-card{
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+.careerhub-card:hover{
+    transform: translateY(-10px);
+}
+
+.careerhub-card-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.careerhub-company-icon{
+    padding: 20;
+    border-radius: 18px;
+    background: #edf3ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #0d6efd;
+}
+
+.careerhub-badge{
+    background: #111;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.careerhub-card h3{
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.careerhub-card h5{
+    color: #0d6efd;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.careerhub-card p{
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* FOOTER */
+
+.careerhub-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.careerhub-footer span{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #444;
+    font-weight: 500;
+}
+
+.careerhub-footer button{
+    border: none;
+    padding: 12px 22px;
+    border-radius: 14px;
+    background: #0d6efd;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.careerhub-footer button:hover{
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .careerhub-hero h1{
+        font-size: 36px;
+    }
+
+    .careerhub-hero p{
+        font-size: 16px;
+    }
+
+    .careerhub-card{
+        padding: 25px;
+    }
+
+    .careerhub-card h3{
+        font-size: 24px;
+    }
+
+}

@@ -1,0 +1,228 @@
+/* addplacement.css */
+
+.addPlacementPage{
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 25px;
+    background: #f4f7fb;
+}
+
+/* HEADER */
+
+.placementTopBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.placementTopBar h2{
+    font-size: 32px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+.placementTopBar p{
+    color: #6b7280;
+    margin: 0;
+    font-size: 15px;
+}
+
+/* BACK BUTTON */
+
+.placementBackBtn{
+    border: none;
+    outline: none;
+    background: #111827;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.placementBackBtn:hover{
+    background: #2563eb;
+}
+
+/* FORM */
+
+.placementMainForm{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* CARD */
+
+.placementCard{
+    background: white;
+    border-radius: 22px;
+    padding: 28px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+/* CARD TITLE */
+
+.placementCardTitle{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.placementCardTitle svg{
+    font-size: 22px;
+    color: #2563eb;
+}
+
+.placementCardTitle h4{
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    color: #111827;
+}
+
+/* GRID */
+
+.placementGrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 22px;
+}
+
+/* INPUT BOX */
+
+.placementInputBox{
+    display: flex;
+    flex-direction: column;
+}
+
+.placementInputBox label{
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    text-align: left;
+}
+
+/* INPUT */
+
+.placementInputBox input,
+.placementInputBox select{
+    width: 100%;
+    height: 52px;
+    border-radius: 14px;
+    border: 1px solid #d1d5db;
+    padding: 0 16px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+    background: #f9fafb;
+}
+
+.placementInputBox input:focus,
+.placementInputBox select:focus{
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.10);
+}
+
+/* FULL WIDTH */
+
+.fullWidth{
+    grid-column: span 2;
+}
+
+/* BUTTONS */
+
+.placementActionBtns{
+    display: flex;
+    justify-content: flex-end;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+/* CANCEL */
+
+.placementCancelBtn{
+    border: none;
+    outline: none;
+    background: #e5e7eb;
+    color: #111827;
+    padding: 14px 24px;
+    border-radius: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.placementCancelBtn:hover{
+    background: #d1d5db;
+}
+
+/* SAVE */
+
+.placementSaveBtn{
+    border: none;
+    outline: none;
+    background: linear-gradient(135deg,#2563eb,#1d4ed8);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(37,99,235,0.25);
+}
+
+.placementSaveBtn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 14px 25px rgba(37,99,235,0.35);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .addPlacementPage{
+        padding: 25px 15px;
+    }
+
+    .placementGrid{
+        grid-template-columns: 1fr;
+    }
+
+    .fullWidth{
+        grid-column: span 1;
+    }
+
+    .placementTopBar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .placementActionBtns{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .placementTopBar h2{
+        font-size: 26px;
+    }
+
+    .placementCard{
+        padding: 22px;
+    }
+}

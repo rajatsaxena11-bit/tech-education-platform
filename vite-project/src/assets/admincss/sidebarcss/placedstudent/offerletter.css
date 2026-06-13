@@ -1,0 +1,270 @@
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.offerLetterLayout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.offerLetterMain {
+  flex: 1;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   COMPANY HEADER
+========================= */
+
+.letterTopBar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.offerCompanyLogo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  padding: 8px;
+  background: #fff;
+}
+
+.letterTopBar h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.letterTopBar p {
+  margin: 5px 0 0;
+  color: #64748b;
+}
+
+/* =========================
+   REF SECTION
+========================= */
+
+.letterRefSection {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+  font-size: 15px;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* =========================
+   SUBJECT
+========================= */
+
+.letterSubject {
+  margin-bottom: 25px;
+}
+
+.letterSubject h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2563eb;
+  border-left: 5px solid #2563eb;
+  padding-left: 15px;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.letterContent p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #374151;
+  margin-bottom: 15px;
+}
+
+.letterContent strong {
+  color: #111827;
+}
+
+/* =========================
+   TERMS
+========================= */
+
+.offerTerms {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 15px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.offerTerms h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #111827;
+}
+
+.offerTerms ul {
+  padding-left: 20px;
+}
+
+.offerTerms li {
+  margin-bottom: 10px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.signatureSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 60px;
+}
+
+.signatureSection h4 {
+  margin-bottom: 5px;
+  color: #111827;
+}
+
+.signatureSection p {
+  color: #64748b;
+}
+
+.signatureBox {
+  width: 220px;
+  text-align: center;
+  border-top: 2px solid #111827;
+  padding-top: 10px;
+  font-weight: 600;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.candidateSidebar {
+  width: 320px;
+  position: sticky;
+  top: 20px;
+}
+
+.candidateCard {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.candidateAvatar {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed
+  );
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.candidateCard h3 {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #111827;
+}
+
+.candidateRole {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.candidateInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.infoRow:last-child {
+  border-bottom: none;
+}
+
+.infoRow span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.infoRow strong {
+  color: #111827;
+  font-size: 14px;
+  text-align: right;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+  .offerLetterLayout {
+    flex-direction: column;
+  }
+
+  .candidateSidebar {
+    width: 100%;
+    position: static;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .offerLetterMain {
+    padding: 25px;
+  }
+
+  .letterTopBar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .letterRefSection {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .signatureSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+}

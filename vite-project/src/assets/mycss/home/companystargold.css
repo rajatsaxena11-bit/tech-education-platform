@@ -1,0 +1,94 @@
+/* companystargold.css */
+
+.partner_title h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #222;
+}
+
+.partner_title h3 span {
+  color: #28a745;
+}
+
+.explore-course-btn {
+  position: relative;
+  overflow: hidden;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* Logo Slider */
+
+.client-logo {
+  width: 100%;
+  max-width: 140px;
+  height: 80px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+  filter: none !important;
+  opacity: 1 !important;
+  cursor: pointer;
+}
+
+.client-logo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.08);
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button Shine Effect */
+
+.btn-shine-effect {
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: skewX(-25deg);
+}
+
+.explore-course-btn:hover .btn-shine-effect {
+  left: 150%;
+  transition: 0.8s;
+}
+
+/* Responsive */
+
+@media (max-width: 991px) {
+  .partner_title {
+    text-align: center;
+  }
+
+  .partner_title h3 {
+    font-size: 1.6rem;
+  }
+
+  .explore-course-btn {
+    display: block;
+    margin: 15px auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .partner_title h3 {
+    font-size: 1.3rem;
+  }
+
+  .client-logo {
+    max-width: 100px;
+    height: 60px;
+  }
+}

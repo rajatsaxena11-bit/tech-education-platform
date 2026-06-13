@@ -1,0 +1,1039 @@
+/* ===== Recently Placed Students Section ===== */
+
+.my-hiring-partners{
+  color:teal;
+}
+
+
+.placed-students-wrapper {
+  padding: 80px 20px;
+  background: #f8fafc;
+}
+
+.placed-students-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.placed-badge {
+  display: inline-block;
+  background: #dcfce7;
+  color: #15803d;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.placed-students-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.placed-students-title::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background: #facc15;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+
+.placed-subtitle {
+  max-width: 650px;
+  margin: 25px auto 0;
+  color: #64748b;
+}
+
+.placement-profile-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.placement-profile-card:hover {
+  transform: translateY(-8px);
+}
+
+.placement-image-wrapper {
+  margin-bottom: 15px;
+}
+
+.placement-profile-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #e0e7ff;
+  filter: none !important;
+  opacity: 1 !important;
+  cursor: pointer;
+}
+
+.placement-student-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.placement-job-role {
+  color: #475569;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.placement-package {
+  background: #fef3c7;
+  color: #b45309;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.placement-location {
+  color: #64748b;
+  margin-bottom: 15px;
+}
+
+.placement-company-name {
+  display: inline-block;
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+
+  .placed-students-title {
+    font-size: 28px;
+  }
+
+  .placement-profile-card {
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hp-page {
+  font-family: "Poppins", sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* HERO */
+.hp-hero {
+  text-align: center;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: white;
+}
+
+.hp-hero h1 {
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: darkgray;
+}
+
+.hp-hero p {
+  opacity: 0.8;
+  font-size: 15px;
+}
+
+.hp-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  
+}
+.hp-stats h2{
+  font-weight: bold;
+  color: #fff;
+}
+.hp-stats div {
+  background: rgba(255,255,255,0.1);
+  padding: 20px 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  
+}
+
+/* MARQUEE */
+.hp-marquee {
+  overflow: hidden;
+  background: white;
+  padding: 30px 0;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 60px;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.marquee-track img {
+  height: 50px;
+  filter: grayscale(100%);
+  transition: 0.3s;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+.marquee-track img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* SECTION */
+.hp-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hp-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* GRID */
+.hp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.hp-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.hp-card:hover {
+  transform: translateY(-8px);
+}
+
+.hp-card img {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* DARK SECTION */
+.dark {
+  background: #0f172a;
+  color: white;
+}
+
+/* STUDENT CARD */
+.student-card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.student-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* CTA */
+.hp-cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: white;
+}
+
+.hp-cta button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background: white;
+  color: #0f172a;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hp-cta button:hover {
+  transform: scale(1.05);
+}
+
+/* SECTION */
+
+.recruitment-swiper-section{
+  padding: 10px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* HEADER */
+
+.recruitment-swiper-header{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.recruitment-swiper-header span{
+  display: inline-block;
+  background: rgba(37,99,235,0.1);
+  color: #2563eb;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.recruitment-swiper-header h2{
+  font-size: 52px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.recruitment-swiper-header p{
+  max-width: 700px;
+  margin: 20px auto 0;
+  color: #6b7280;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* SWIPER */
+
+.recruitment-company-swiper{
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+/* CARD */
+
+.recruitment-company-card{
+  position: relative;
+  overflow: hidden;
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(14px);
+  border-radius: 28px;
+  padding: 35px 25px;
+  text-align: center;
+  transition: 0.5s;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  cursor: pointer;
+}
+
+.recruitment-company-card:hover{
+  transform: translateY(-10px);
+}
+
+/* LOGO */
+
+.recruitment-company-logo{
+  width: 110px;
+  height: 110px;
+  margin: auto;
+  background: white;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.recruitment-company-logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+  
+}
+
+/* CONTENT */
+
+.recruitment-company-card h3{
+  margin-top: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.recruitment-company-card p{
+  margin-top: 14px;
+  color: #6b7280;
+  line-height: 1.7;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* BADGE */
+
+.recruitment-company-badge{
+  display: inline-block;
+  margin-top: 24px;
+  padding: 10px 18px;
+  border-radius: 50px;
+  background: rgba(34,197,94,0.12);
+  color: #16a34a;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .recruitment-swiper-header h2{
+    font-size: 34px;
+  }
+
+}
+/* ------------------------------- */
+
+/* =========================
+   CORPORATE BRIDGE SECTION
+========================= */
+
+.corporatebridge-section{
+    width: 100%;
+    padding: 110px 5% 80px;
+    background: linear-gradient(to bottom,#f8fbff,#edf4ff);
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 40px 40px;
+}
+
+/* GLOW EFFECT */
+
+.corporatebridge-glow{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.35;
+}
+
+.corporatebridge-glow-left{
+    width: 320px;
+    height: 320px;
+    background: #2563eb;
+    top: -100px;
+    left: -100px;
+}
+
+.corporatebridge-glow-right{
+    width: 280px;
+    height: 280px;
+    background: #7c3aed;
+    bottom: -100px;
+    right: -100px;
+}
+
+/* CONTENT */
+
+.corporatebridge-content{
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.corporatebridge-badge{
+    display: inline-block;
+    background: #dbeafe;
+    color: #2563eb;
+    padding: 10px 24px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.corporatebridge-content h1{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: -10px;
+    /* letter-spacing: 1px; */
+    color: #111827;
+    margin-bottom: 18px;
+    line-height: 1.1;
+}
+
+.corporatebridge-content p{
+    max-width: 760px;
+    margin: auto;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #6b7280;
+}
+
+/* STATS */
+
+.corporatebridge-stats-grid{
+    margin-top: 65px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    gap: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+/* CARD */
+
+.corporatebridge-stat-box{
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    transition: 0.4s;
+    
+}
+
+.corporatebridge-stat-box:hover{
+    transform: translateY(-8px);
+}
+
+.corporatebridge-stat-icon{
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    margin-bottom: 22px;
+    border-radius: 22px;
+    background: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.corporatebridge-stat-box h2{
+    font-size: 30px;
+    font-weight: 900;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.corporatebridge-stat-box h2 span{
+    color: #2563eb;
+}
+
+.corporatebridge-stat-box p{
+    color: #6b7280;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* BUTTON CARD */
+
+.corporatebridge-action-box{
+    /* background: linear-gradient(135deg,#2563eb,#7c3aed); */
+    /* border-radius: 30px;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    box-shadow: 0 15px 40px rgba(37,99,235,0.25); */
+}
+
+.corporatebridge-view-btn{
+    border: none;
+    background: white;
+    color: #111827;
+    padding: 18px 32px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 30px;
+}
+
+.corporatebridge-view-btn:hover{
+    transform: scale(1.05);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .corporatebridge-section{
+        padding: 90px 4% 70px;
+    }
+
+    .corporatebridge-content h1{
+        font-size: 42px;
+    }
+
+    .corporatebridge-content p{
+        font-size: 15px;
+    }
+
+    .corporatebridge-stat-box h2{
+        font-size: 38px;
+    }
+
+    .corporatebridge-action-box{
+        min-height: 180px;
+    }
+
+}
+
+
+
+/* ===========================
+   GRID
+=========================== */
+
+.corporatebridge-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 50px;
+}
+
+/* ===========================
+   STAT CARD
+=========================== */
+
+.corporatebridge-stat-box {
+  background: white;
+  border-radius: 22px;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+
+  transition: all .4s ease;
+}
+
+/* Gradient top border */
+
+.corporatebridge-stat-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+
+  width: 100%;
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    #ff9800,
+    #001f54,
+    #ff9800
+  );
+
+  transition: .5s;
+}
+
+.corporatebridge-stat-box:hover::before {
+  left: 0;
+}
+
+.corporatebridge-stat-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,31,84,.15);
+}
+
+/* ===========================
+   ICON
+=========================== */
+
+.corporatebridge-stat-icon {
+  width: 80px;
+  height: 80px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  background: #eef4ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 34px;
+  color: #001f54;
+
+  transition: .4s;
+}
+
+.corporatebridge-stat-box:hover .corporatebridge-stat-icon {
+  background: #001f54;
+  color: white;
+
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* ===========================
+   NUMBER
+=========================== */
+
+.corporatebridge-stat-box h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #001f54;
+}
+
+.corporatebridge-stat-box h2 span {
+  color: #ff9800;
+}
+
+.corporatebridge-stat-box p {
+  margin: 0;
+  color: #666;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ===========================
+   BUTTON CARD
+=========================== */
+
+.corporatebridge-action-box {
+  background: linear-gradient(
+    135deg,
+    #001f54,
+    #003b9b
+  );
+
+  border-radius: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  box-shadow: 0 10px 30px rgba(0,31,84,.2);
+
+  transition: .4s;
+}
+
+.corporatebridge-action-box:hover {
+  transform: translateY(-10px);
+}
+
+.corporatebridge-view-btn {
+  border: none;
+  outline: none;
+
+  padding: 14px 24px;
+
+  border-radius: 50px;
+
+  background: #ff9800;
+  color: white;
+
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  transition: .3s;
+}
+
+.corporatebridge-view-btn:hover {
+  background: #ff8c00;
+  transform: scale(1.05);
+}
+
+/* ===========================
+   ENTRY ANIMATION
+=========================== */
+
+.corporatebridge-stat-box,
+.corporatebridge-action-box {
+  animation: statFadeUp .8s ease;
+}
+
+@keyframes statFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+  .corporatebridge-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .corporatebridge-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .corporatebridge-stat-box h2 {
+    font-size: 34px;
+  }
+}
+
+.partner-section {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 0;
+  background: linear-gradient(
+    135deg,
+    #021024,
+    #052659,
+    #5483b3
+  );
+}
+
+.partner-title {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.partner-line {
+  width: 140px;
+  height: 5px;
+  background: gold;
+  margin: 15px auto;
+  border-radius: 50px;
+}
+
+.partner-subtitle {
+  text-align: center;
+  color: #ddd;
+  margin-bottom: 50px;
+}
+
+.partner-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.partner-track {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  width: max-content;
+  animation: partnerScroll 80s linear infinite;
+}
+
+.partner-slider:hover .partner-track {
+  animation-play-state: paused;
+}
+
+.partner-card {
+  min-width: 220px;
+  height: 140px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-6px);
+}
+
+.partner-logo {
+  width: 120px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.partner-card h5 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: center;
+}
+
+@keyframes partnerScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .partner-card {
+    min-width: 180px;
+    height: 120px;
+    padding: 15px;
+  }
+
+  .partner-logo {
+    width: 90px;
+    height: 50px;
+  }
+
+  .partner-card h5 {
+    font-size: 13px;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Floating Celebration Animation */
+
+.celebration-icons span {
+  position: absolute;
+  font-size: 35px;
+  opacity: .8;
+  animation: floatUp 10s linear infinite;
+}
+
+.celebration-icons span:nth-child(1) {
+  left: 10%;
+}
+
+.celebration-icons span:nth-child(2) {
+  left: 30%;
+  animation-delay: 2s;
+}
+
+.celebration-icons span:nth-child(3) {
+  left: 50%;
+  animation-delay: 4s;
+}
+
+.celebration-icons span:nth-child(4) {
+  left: 70%;
+  animation-delay: 6s;
+}
+
+.celebration-icons span:nth-child(5) {
+  left: 90%;
+  animation-delay: 8s;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-600px);
+    opacity: 0;
+  }
+}
+
+.partner-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.2),
+    transparent
+  );
+  transform: translateX(-100%);
+}
+
+.partner-card:hover::before {
+  animation: shine 1.5s;
+}
+
+@keyframes shine {
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@media(max-width:768px){
+
+  .partner-title{
+    font-size:30px;
+  }
+
+  .partner-card{
+    min-width:160px;
+    font-size:18px;
+  }
+}

@@ -1,0 +1,180 @@
+/* elitehiringcompanies.css */
+
+.elitehub-section{
+    width: 100%;
+    padding: 90px 5%;
+    background: #f8fbff;
+}
+
+.elitehub-top-area{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.elitehub-mini-tag{
+    background: #dbeafe;
+    color: #2563eb;
+    padding: 10px 24px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.elitehub-top-area h2{
+    font-size: 25px;
+    font-weight: 500;
+    color: #111827;
+    margin-bottom: 18px;
+}
+
+.elitehub-top-area p{
+    max-width: 720px;
+    margin: auto;
+    color: #6b7280;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* GRID */
+
+.elitehub-grid-layout{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+    gap: 28px;
+}
+
+/* CARD */
+
+.elitehub-company-card{
+    background: white;
+    border-radius: 28px;
+    padding: 28px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+    transition: 0.4s;
+}
+
+.elitehub-company-card:hover{
+    transform: translateY(-8px);
+}
+
+.elitehub-card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.elitehub-logo-box{
+    width: 42px;
+    height: 42px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: white;
+}
+
+/* THEMES */
+
+.elite-google{background:#ea4335;}
+.elite-amazon{background:#111827;}
+.elite-microsoft{background:#2563eb;}
+.elite-infosys{background:#0ea5e9;}
+.elite-tcs{background:#7c3aed;}
+.elite-wipro{background:#f97316;}
+.elite-accenture{background:#111827;}
+.elite-oracle{background:#dc2626;}
+.elite-ibm{background:#2563eb;}
+.elite-capgemini{background:#7c3aed;}
+.elite-cognizant{background:#06b6d4;}
+.elite-hcl{background:#f59e0b;}
+.elite-adobe{background:#ef4444;}
+.elite-meta{background:#2563eb;}
+.elite-netflix{background:#dc2626;}
+.elite-uber{background:#111827;}
+.elite-airbnb{background:#ff385c;}
+.elite-salesforce{background:#0ea5e9;}
+.elite-zoho{background:#ef4444;}
+.elite-sap{background:#2563eb;}
+
+/* BADGE */
+
+.elitehub-hiring-badge{
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 10px 18px;
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* CONTENT */
+
+.elitehub-content-area h3{
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.elitehub-content-area h4{
+    color: #2563eb;
+    margin-bottom: 18px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.elitehub-meta-info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.elitehub-meta-info span{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* BUTTON */
+
+.elitehub-apply-btn{
+    width: 100%;
+    margin-top: 28px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 16px;
+    border-radius: 18px;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.elitehub-apply-btn:hover{
+    transform: translateY(-3px);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .elitehub-section{
+        padding: 70px 4%;
+    }
+
+    .elitehub-top-area h2{
+        font-size: 34px;
+    }
+
+}

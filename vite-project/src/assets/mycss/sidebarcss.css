@@ -1,0 +1,25 @@
+.sidebarsmall {
+	position: fixed;
+	right: 0px;
+	top:50%;
+	transform: translateY(-50%);
+	background: #2f5bff;
+	padding: 10px 5px;
+	display: flex;
+	flex-direction: column;
+	/* gap: 5px; */
+	z-index: 2;
+	border-radius: 20px 0 0 20px;
+}
+.icon{
+	color: white;
+	font-size: 20px;
+	padding: 10px;
+	text-align: center;
+	transition: 0.3s;
+}
+.icon:hover{
+	background: white;
+	background: #072e5b;
+	border-radius: 8px;
+}

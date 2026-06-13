@@ -1,0 +1,996 @@
+/* =========================
+   MERN STACK PAGE CSS
+========================= */
+
+.mern-main-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: #f5f7fb;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+
+
+
+/* HERO SECTION */
+
+.mern-hero-row{
+    min-height: 90vh;
+    padding: 70px 0;
+}
+
+/* BREADCRUMB */
+
+.mern-breadcrumb{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* TAG */
+
+.mern-tag{
+    display: inline-block;
+    background: rgba(59,130,246,0.1);
+    color: #2563eb;
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(59,130,246,0.2);
+    text-align: left !important;
+}
+
+/* HEADING */
+
+.mern-main-heading{
+    font-size: 65px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #0f172a;
+    margin-bottom: 25px;
+}
+
+.mern-main-heading span{
+    color: #2563eb;
+    position: relative;
+}
+
+/* PARA */
+
+.mern-hero-para{
+    font-size: 18px;
+    color: #475569;
+    line-height: 1.8;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+/* RATING */
+
+.mern-rating-box{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.mern-stars{
+    display: flex;
+    gap: 5px;
+    color: #facc15;
+    font-size: 18px;
+}
+
+.mern-rating-box span{
+    font-weight: 600;
+    color: #334155;
+}
+
+/* FEATURES */
+
+.mern-mini-features{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.mern-feature-chip{
+    background: #ffffff;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: #0f172a;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    border: 1px solid #e2e8f0;
+}
+
+/* BUTTONS */
+
+.mern-btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.mern-primary-btn{
+    background: linear-gradient(135deg,#2563eb,#4f46e5);
+    color: white;
+    border: none;
+    padding: 15px 28px;
+    border-radius: 14px;
+    font-weight: 700;
+    transition: 0.4s;
+}
+
+.mern-primary-btn:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(37,99,235,0.3);
+}
+
+.mern-outline-btn{
+    background: white;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+    padding: 15px 28px;
+    border-radius: 14px;
+    font-weight: 700;
+    transition: 0.4s;
+}
+
+.mern-outline-btn:hover{
+    background: #2563eb;
+    color: white;
+}
+
+/* IMAGE SECTION */
+
+.mern-image-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
+
+/* BACKGROUND CIRCLE */
+
+.mern-image-circle{
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background: linear-gradient(135deg,#2563eb,#4f46e5);
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: pulse 4s infinite;
+}
+
+/* MAIN IMAGE */
+
+.mern-main-image{
+    width: 80%;
+    z-index: 2;
+    position: relative;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+/* FLOATING CARDS */
+
+.mern-floating-card{
+    position: absolute;
+    background: white;
+    padding: 12px 18px;
+    border-radius: 14px;
+    font-weight: 700;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    z-index: 3;
+    animation: floatCard 3s ease-in-out infinite;
+}
+
+.mern-card-one{
+    top: 40px;
+    left: 30px;
+}
+
+.mern-card-two{
+    bottom: 60px;
+    left: 10px;
+}
+
+.mern-card-three{
+    top: 100px;
+    right: 20px;
+}
+
+/* ANIMATION */
+
+@keyframes floatImage{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-15px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+
+@keyframes floatCard{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-10px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.05);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+    .mern-main-heading{
+        font-size: 48px;
+    }
+
+    .mern-image-wrapper{
+        margin-top: 50px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .mern-hero-row{
+        text-align: center;
+        padding: 50px 0;
+    }
+
+    .mern-main-heading{
+        font-size: 38px;
+    }
+
+    .mern-hero-para{
+        font-size: 16px;
+    }
+
+    .mern-rating-box{
+        justify-content: center;
+    }
+
+    .mern-mini-features{
+        justify-content: center;
+    }
+
+    .mern-btn-group{
+        justify-content: center;
+    }
+
+    .mern-image-circle{
+        width: 300px;
+        height: 300px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .mern-main-heading{
+        font-size: 30px;
+    }
+
+    .mern-feature-chip{
+        width: 100%;
+    }
+
+    .mern-primary-btn,
+    .mern-outline-btn{
+        width: 100%;
+    }
+
+    .mern-main-image{
+        width: 90%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mern-hero-section {
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  position: relative;
+}
+
+.mern-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #cbd5e1;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.mern-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  color: #38bdf8;
+  padding: 10px 18px;
+  border-radius: 50px;
+  margin-top: 25px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.mern-main-heading {
+  font-size: 30px;
+  font-weight: 800;
+  color: white;
+  margin-top: 25px;
+  line-height: 1.2;
+}
+
+.mern-hero-para {
+  color: #dbeafe;
+  margin-top: 25px;
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+.mern-rating-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 25px;
+  color: #facc15;
+  flex-wrap: wrap;
+}
+
+.mern-rating-box span {
+  color: white;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.mern-btn-group {
+  margin-top: 35px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.mern-primary-btn {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.mern-primary-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+}
+
+.mern-outline-btn {
+  padding: 14px 30px;
+  border-radius: 12px;
+  border: 2px solid #38bdf8;
+  background: transparent;
+  color: #38bdf8;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.mern-outline-btn:hover {
+  background: #38bdf8;
+  color: white;
+}
+
+.mern-image-card {
+  background: rgba(255,255,255,0.08);
+  padding: 40px;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.mern-image-card img {
+  width: 100%;
+  max-width: 320px;
+  animation: mernFloat 4s ease-in-out infinite;
+}
+
+@keyframes mernFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* =========================
+   STATS
+========================= */
+
+.mern-stats-section {
+  margin-top: -50px;
+  position: relative;
+  z-index: 10;
+}
+
+.mern-stat-card {
+  background: white;
+  padding: 20px 10px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  height: 100%;
+}
+
+.mern-stat-card:hover {
+  transform: translateY(-8px);
+}
+
+.mern-stat-icon {
+  font-size: 35px;
+  color: #2563eb;
+}
+
+.mern-stat-card h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.mern-stat-card p {
+  color: #64748b;
+  margin: 0;
+}
+
+/* =========================
+   COURSE INFO
+========================= */
+
+.mern-course-info {
+  padding: 60px 0 30px;
+}
+
+.mern-info-wrapper {
+  background: white;
+  border-radius: 25px;
+  padding: 35px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.mern-info-box {
+  text-align: center;
+}
+
+.mern-info-box h5 {
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.mern-info-box p {
+  color: #64748b;
+  margin: 0;
+  font-size: 15px;
+}
+
+/* =========================
+   CONTENT SECTION
+========================= */
+
+.mern-content-section {
+  padding: 50px 0 80px;
+}
+
+.mern-content-card {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.mern-content-card h2 {
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.mern-content-card p {
+  line-height: 1.9;
+  color: #475569;
+}
+
+.mern-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.mern-feature-box {
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.mern-feature-box:hover {
+  transform: translateY(-5px);
+  background: #eff6ff;
+}
+
+.mern-feature-icon {
+  font-size: 42px;
+  color: #2563eb;
+  margin-bottom: 18px;
+}
+
+.mern-feature-box h5 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.mern-feature-box p {
+  margin: 0;
+}
+
+/* =========================
+   TABS
+========================= */
+
+.mern-tab-section {
+  margin-top: 50px;
+}
+
+.mern-tab-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.mern-tab-btn {
+  border: none;
+  padding: 14px 25px;
+  border-radius: 12px;
+  background: #e2e8f0;
+  color: #0f172a;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.mern-tab-btn.active {
+  background: #2563eb;
+  color: white;
+}
+
+.mern-tab-content {
+  background: white;
+  padding: 35px;
+  border-radius: 25px;
+  margin-top: 25px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.mern-tab-content h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.mern-tab-content ul {
+  padding-left: 20px;
+}
+
+.mern-tab-content li {
+  margin-bottom: 12px;
+  color: #475569;
+  font-size: 15px;
+}
+
+/* =========================
+   MODULES
+========================= */
+
+.mern-module-wrapper {
+  margin-top: 60px;
+}
+
+.mern-section-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.mern-module-card {
+  background: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.mern-module-header {
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mern-module-header h5 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.mern-module-body {
+  padding: 0 25px 25px;
+  color: #64748b;
+  line-height: 1.8;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.mern-form-card {
+  background: white;
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 100px;
+}
+
+.mern-form-card h3 {
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.mern-input {
+  width: 100%;
+  height: 55px;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  padding: 0 18px;
+  margin-bottom: 18px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.mern-input:focus {
+  border-color: #2563eb;
+}
+
+.mern-submit-btn {
+  width: 100%;
+  height: 55px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.mern-submit-btn:hover {
+  background: #1d4ed8;
+}
+
+/* =========================
+   RELATED COURSE
+========================= */
+
+.mern-related-card {
+  background: white;
+  padding: 35px;
+  border-radius: 25px;
+  margin-top: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.mern-related-card h3 {
+  margin-bottom: 25px;
+  font-weight: 800;
+}
+
+.mern-related-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 15px 18px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.mern-related-item:hover {
+  background: #2563eb;
+  color: white;
+  transform: translateX(5px);
+}
+
+/* =========================
+   BENEFITS
+========================= */
+
+.mern-benefit-section {
+  padding-bottom: 80px;
+}
+
+.mern-benefit-card {
+  background: white;
+  padding: 35px;
+  border-radius: 25px;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.mern-benefit-card:hover {
+  transform: translateY(-8px);
+}
+
+.mern-benefit-icon {
+  font-size: 35px;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+.mern-benefit-card h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.mern-benefit-card p {
+  color: #64748b;
+  margin: 0;
+  font-size: 15px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px) {
+
+  .mern-main-heading {
+    font-size: 45px;
+  }
+
+  .mern-info-wrapper {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .mern-form-card {
+    position: static;
+    margin-top: 40px;
+  }
+}
+
+@media(max-width:768px) {
+
+  .mern-hero-section {
+    padding: 90px 0 70px;
+    text-align: center;
+  }
+
+  .mern-main-heading {
+    font-size: 34px;
+  }
+
+  .mern-rating-box {
+    justify-content: center;
+  }
+
+  .mern-btn-group {
+    justify-content: center;
+  }
+
+  .mern-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mern-info-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .mern-tab-buttons {
+    flex-direction: column;
+  }
+
+  .mern-tab-btn {
+    width: 100%;
+  }
+
+  .mern-content-card {
+    padding: 25px;
+  }
+
+  .mern-form-card {
+    padding: 25px;
+  }
+}
+
+@media(max-width:576px) {
+
+  .mern-main-heading {
+    font-size: 28px;
+  }
+
+  .mern-content-card h2 {
+    font-size: 28px;
+  }
+
+  .mern-section-title {
+    font-size: 28px;
+  }
+
+  .mern-feature-box {
+    padding: 22px;
+  }
+
+  .mern-module-header h5 {
+    font-size: 15px;
+  }
+
+  .mern-stat-card h3 {
+    font-size: 24px;
+  }
+}
+
+
+
+
+.mern-course-section {
+  /* background: linear-gradient(
+    135deg,
+    #071426,
+    #0c2340
+  ); */
+  color: white;
+}
+
+.mern-title {
+  font-size: 25px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.mern-subtitle {
+  color: #cfcfcf;
+  max-width: 700px;
+  margin: auto;
+  font-weight: bold;
+}
+
+.mern-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 18px;
+  height: 100%;
+  transition: 0.4s;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.mern-card:hover {
+  box-shadow: 0 15px 35px rgba(0,0,0,.3);
+}
+
+.mern-icon {
+  font-size: 38px;
+  color: #00ed64;
+  margin-bottom: 15px;
+}
+
+.mern-card h5 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.mern-card p {
+  color: #333;
+  font-size: 14px;
+}
+
+.mern-image {
+  width: 320px;
+  max-width: 100%;
+  animation: floatMern 4s ease-in-out infinite;
+}
+
+.mern-badge {
+  margin-top: 25px;
+  display: inline-block;
+  background: #00ed64;
+  color: #000;
+  font-weight: 700;
+  padding: 12px 25px;
+  border-radius: 30px;
+}
+
+@keyframes floatMern {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

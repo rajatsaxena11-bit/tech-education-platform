@@ -1,0 +1,310 @@
+/* toastcontainer.css */
+
+
+.academy-close-action1{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: #6b6d6e;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.academy-close-action1:hover{
+    background: #ef4444;
+    color: white;
+    transform: rotate(90deg);
+}
+
+
+.premium-toast {
+
+    position: fixed;
+
+    top: 120px;
+
+    right: 20px;
+
+    width: 500px;
+    height: 150px;
+
+    background:
+        rgba(15, 23, 42, 0.92);
+
+    backdrop-filter: blur(20px);
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    border-radius: 22px;
+
+    padding: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    z-index: 2;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.35);
+
+    transform: translateX(120%);
+
+    opacity: 0;
+
+    transition: .5s;
+}
+
+.premium-toast.show {
+
+    transform: translateX(0);
+
+    opacity: 1;
+}
+
+.premium-close-btn {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    width: 28px;
+
+    height: 28px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.premium-close-btn:hover {
+
+    background: crimson;
+}
+
+.premium-image-wrapper {
+
+    position: relative;
+}
+
+.premium-image-wrapper img {
+
+    width: 42px;
+
+    height: 42px;
+    margin-top: -50px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid #22c55e;
+}
+
+.online-dot {
+
+    width: 15px;
+
+    height: 15px;
+
+    background: #22c55e;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    bottom: 4px;
+
+    right: 2px;
+
+    border: 2px solid white;
+}
+
+.premium-toast-content {
+
+    flex: 1;
+}
+
+.top-line {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+.top-line h4 {
+
+    color: #ffff;
+
+    margin: 0;
+
+    font-size: 18px;
+
+    font-weight: 700;
+    margin-top: -10px;
+}
+
+.hired-badge {
+
+    background:
+        linear-gradient(135deg,#22c55e,#16a34a);
+
+    color: white;
+
+    padding: 4px 10px;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+    margin-top: -10px;
+}
+
+.company-line {
+
+    margin: 8px 0;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.company-line span {
+
+    color: #60a5fa;
+
+    font-weight: 700;
+
+    margin-left: 5px;
+}
+
+.role-box {
+
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(96,165,250,0.15);
+
+    color: #93c5fd;
+
+    font-size: 12px;
+
+    margin-bottom: 10px;
+}
+
+.bottom-details {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: #cbd5e1;
+
+    font-size: 12px;
+
+    margin-bottom: 12px;
+}
+
+.bottom-details span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+    font-size: 15px;
+}
+
+.salary {
+
+    color: #22c55e;
+
+    font-weight: 500;
+}
+
+.progress-line {
+
+    width: 100%;
+
+    height: 4px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(90deg,#22c55e,#4ade80);
+
+    transform-origin: left;
+
+    animation:
+        progressMove 5s linear forwards;
+}
+
+@keyframes progressMove {
+
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@media(max-width:576px){
+
+    .premium-toast{
+
+        width: 95%;
+
+        right: 10px;
+
+        left: 10px;
+    }
+}

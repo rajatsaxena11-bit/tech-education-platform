@@ -1,0 +1,242 @@
+/* ==========================
+   WRAPPER
+========================== */
+
+.jobticker-wrapper {
+  width: 100%;
+  background: #001f54;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 80px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================
+   LEFT
+========================== */
+
+.jobticker-left-section {
+  min-width: 220px;
+  height: 100%;
+  background: #ff9800;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  color: white;
+  font-weight: 700;
+}
+
+.jobticker-bell-box {
+  font-size: 22px;
+}
+
+.jobticker-bell-box svg {
+  animation: bellShake 2s infinite;
+}
+
+@keyframes bellShake {
+  0%,100% {
+    transform: rotate(0);
+  }
+
+  20% {
+    transform: rotate(-15deg);
+  }
+
+  40% {
+    transform: rotate(15deg);
+  }
+
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+.live-alert-text {
+  display: flex;
+  align-items: center;
+}
+
+.live-dot {
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  margin-left: 8px;
+
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255,0,0,0.7);
+  }
+
+  100% {
+    box-shadow: 0 0 0 12px rgba(255,0,0,0);
+  }
+}
+
+/* ==========================
+   MARQUEE
+========================== */
+
+.jobticker-marquee-container {
+  flex: 1;
+  overflow: hidden;
+}
+
+.jobticker-marquee-track {
+  display: flex;
+  width: max-content;
+
+  animation: scrollTicker 35s linear infinite;
+}
+
+.jobticker-marquee-container:hover .jobticker-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes scrollTicker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.jobticker-alert-card {
+  min-width: 420px;
+  margin: 0 12px;
+
+  background: white;
+  border-radius: 14px;
+  padding: 12px 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  transition: 0.3s;
+}
+
+.jobticker-alert-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+.jobticker-job-icon {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+  background: #eef4ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #001f54;
+}
+
+.jobticker-alert-content {
+  flex: 1;
+}
+
+.jobticker-alert-content h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #001f54;
+}
+
+.jobticker-alert-content p {
+  margin: 3px 0 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* ==========================
+   BADGE
+========================== */
+
+.jobticker-badge {
+  background: #ff9800;
+  color: white;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  padding: 6px 12px;
+  border-radius: 30px;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.jobticker-view-btn {
+  height: 100%;
+  border: none;
+
+  padding: 0 30px;
+
+  background: #ff9800;
+  color: white;
+
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  transition: 0.3s;
+}
+
+.jobticker-view-btn:hover {
+  background: #ff8c00;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+  .jobticker-wrapper {
+    height: 70px;
+  }
+
+  .jobticker-left-section {
+    min-width: 140px;
+    font-size: 13px;
+  }
+
+  .jobticker-alert-card {
+    min-width: 300px;
+  }
+
+  .jobticker-view-btn {
+    padding: 0 15px;
+    font-size: 13px;
+  }
+
+  .jobticker-alert-content h4 {
+    font-size: 12px;
+  }
+}

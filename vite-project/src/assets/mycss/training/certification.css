@@ -1,0 +1,244 @@
+.certification-section {
+  background: #f8fbff;
+}
+
+/* Heading */
+
+.cert-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.cert-line {
+  width: 100px;
+  height: 4px;
+  background: #0d6efd;
+  margin: 15px auto;
+  border-radius: 20px;
+}
+
+.cert-subtitle {
+  max-width: 700px;
+  margin: auto;
+  color: #666;
+  font-size: 18px;
+}
+
+/* Benefit Cards */
+
+.cert-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.4s;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cert-card:hover {
+  transform: translateY(-10px);
+}
+
+.cert-icon {
+  width: 75px;
+  height: 75px;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto auto 20px;
+}
+
+.cert-card h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.cert-card p {
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Certificate Section */
+
+.cert-showcase {
+  margin-top: 90px;
+}
+
+.certificate-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.certificate-sample {
+  background: #fff;
+  width: 100%;
+  max-width: 580px;
+  padding: 40px;
+  border: 12px solid #d4af37;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-sample::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+}
+
+.certificate-header {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #d4af37;
+  margin-bottom: 20px;
+}
+
+.certificate-logo {
+  font-size: 60px;
+  color: #0d6efd;
+  margin-bottom: 15px;
+}
+
+.presented-text {
+  color: #777;
+}
+
+.certificate-sample h2 {
+  font-size: 42px;
+  color: #0d6efd;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.certificate-sample h4 {
+  color: #222;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.certificate-sample p {
+  color: #666;
+  line-height: 1.8;
+}
+
+.certificate-footer {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.certificate-footer span {
+  border-top: 2px solid #222;
+  padding-top: 8px;
+  min-width: 140px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.certificate-seal {
+  position: absolute;
+  right: 25px;
+  bottom: 100px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #d4af37;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-20deg);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Right Content */
+
+.cert-content h2 {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cert-content p {
+  color: #666;
+  line-height: 1.8;
+}
+
+.cert-list {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+}
+
+.cert-list li {
+  margin-bottom: 15px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* Stats */
+
+.cert-stat {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cert-stat h3 {
+  color: #0d6efd;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.cert-stat p {
+  margin: 0;
+  color: #666;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .cert-title {
+    font-size: 30px;
+  }
+
+  .certificate-sample {
+    padding: 25px;
+  }
+
+  .certificate-sample h2 {
+    font-size: 28px;
+  }
+
+  .certificate-sample h4 {
+    font-size: 20px;
+  }
+
+  .certificate-footer {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .certificate-seal {
+    width: 70px;
+    height: 70px;
+    font-size: 11px;
+  }
+}

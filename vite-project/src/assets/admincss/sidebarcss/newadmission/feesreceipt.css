@@ -1,0 +1,299 @@
+/* feesreceipt.css */
+
+.feesReceiptPage{
+    min-height: 100vh;
+    background: #f3f6fb;
+    padding: 40px 20px;
+}
+
+.feesReceiptCard{
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+
+.feesReceiptHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.feesReceiptLeft{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.receiptLogo{
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    background: linear-gradient(135deg,#4f46e5,#7c3aed);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+}
+
+.feesReceiptLeft h1{
+    margin: 0;
+    font-size: 34px;
+    color: #111827;
+}
+
+.feesReceiptLeft p{
+    margin-top: 8px;
+    color: #6b7280;
+}
+
+.receiptBackBtn{
+    border: none;
+    background: #111827;
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.receiptBackBtn:hover{
+    transform: translateY(-2px);
+}
+
+/* INSTITUTE */
+
+.instituteInfoBox{
+    background: rgb(33, 33, 79) !important;
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 35px;
+}
+
+.instituteInfoBox h3{
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.instituteInfoBox p,
+.instituteInfoBox span{
+    color: #fff;
+}
+
+/* SECTION */
+
+.receiptSection{
+    margin-top: 35px;
+}
+
+.receiptSection h2{
+    margin-bottom: 24px;
+    color: #111827;
+}
+
+/* GRID */
+
+.receiptGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 20px;
+}
+
+.receiptInfoCard{
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.receiptInfoCard svg{
+    color: #4f46e5;
+    font-size: 24px;
+}
+
+.receiptInfoCard span{
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.receiptInfoCard h4{
+    margin-top: 6px;
+    margin-bottom: 0;
+    color: #111827;
+}
+
+/* PAYMENT */
+
+.paymentGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    gap: 20px;
+}
+
+.paymentCard{
+    border-radius: 24px;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.paymentCard svg{
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.paymentCard h4{
+    margin-bottom: 10px;
+}
+
+.paymentCard p{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.paymentCard.total{
+    background: rgb(33, 33, 79) !important;
+}
+
+.paymentCard.paid{
+    background: rgb(33, 33, 79) !important;
+}
+
+.paymentCard.due{
+    background: rgb(33, 33, 79) !important;
+}
+
+/* STATUS */
+
+.receiptStatusBox{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.receiptStatusBox h3{
+    margin-bottom: 16px;
+    color: #111827;
+}
+
+.receiptStatusBadge{
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.receiptStatusBadge.paidStatus{
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.receiptStatusBadge.pending{
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* NOTE */
+
+.receiptNoteBox{
+    margin-top: 40px;
+    background: #f9fafb;
+    padding: 28px;
+    border-radius: 22px;
+}
+
+.receiptNoteBox h4{
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.receiptNoteBox p{
+    color: #4b5563;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+
+.receiptFooter{
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.downloadReceiptBtn,
+.printReceiptBtn{
+    border: none;
+    padding: 15px 28px;
+    border-radius: 14px;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.downloadReceiptBtn{
+    background: #4f46e5;
+}
+
+.printReceiptBtn{
+    background: #111827;
+}
+
+.downloadReceiptBtn:hover,
+.printReceiptBtn:hover{
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .feesReceiptCard{
+        padding: 24px;
+    }
+
+    .feesReceiptHeader{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .feesReceiptLeft{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .receiptLogo{
+        width: 75px;
+        height: 75px;
+        font-size: 28px;
+    }
+
+    .feesReceiptLeft h1{
+        font-size: 28px;
+    }
+
+    .receiptFooter{
+        justify-content: center;
+    }
+
+}

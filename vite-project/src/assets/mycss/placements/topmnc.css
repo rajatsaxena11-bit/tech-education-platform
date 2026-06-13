@@ -1,0 +1,203 @@
+/* topmnchiring.css */
+
+.mncworld-section{
+    width: 100%;
+    padding: 90px 5%;
+    background: #f8fbff;
+}
+
+/* TOP */
+
+.mncworld-top-area{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.mncworld-mini-title{
+    background: #e0edff;
+    color: #2563eb;
+    padding: 10px 22px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.mncworld-top-area h2{
+    font-size: 25px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 18px;
+}
+
+.mncworld-top-area p{
+    max-width: 700px;
+    margin: auto;
+    color: #6b7280;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* GRID */
+
+.mncworld-grid-layout{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 30px;
+}
+
+/* CARD */
+
+.mncworld-company-card{
+    background: white;
+    border-radius: 28px;
+    padding: 30px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.mncworld-company-card:hover{
+    transform: translateY(-10px);
+}
+
+/* TOP */
+
+.mncworld-card-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.mncworld-logo-box{
+    width: 45px;
+    height: 45px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    color: white;
+}
+
+/* COLORS */
+
+.mnc-google{
+    background: #ea4335;
+}
+
+.mnc-amazon{
+    background: #111827;
+}
+
+.mnc-microsoft{
+    background: #2563eb;
+}
+
+.mnc-apple{
+    background: #000;
+}
+
+.mnc-infosys{
+    background: #0ea5e9;
+}
+
+.mnc-tcs{
+    background: #7c3aed;
+}
+
+.mnc-wipro{
+    background: #f97316;
+}
+
+.mnc-accenture{
+    background: #111827;
+}
+
+/* BADGE */
+
+.mncworld-job-badge{
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 10px 18px;
+    border-radius: 40px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* CONTENT */
+
+.mncworld-content-area h3{
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.mncworld-content-area h4{
+    color: #2563eb;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.mncworld-job-meta{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.mncworld-job-meta span{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.mncworld-content-area p{
+    font-size: 15px;
+    color: #4b5563;
+    font-weight: 600;
+}
+
+/* BUTTON */
+
+.mncworld-apply-btn{
+    width: 100%;
+    margin-top: 28px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 16px;
+    border-radius: 18px;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mncworld-apply-btn:hover{
+    transform: translateY(-3px);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .mncworld-section{
+        padding: 70px 4%;
+    }
+
+    .mncworld-top-area h2{
+        font-size: 34px;
+    }
+
+}

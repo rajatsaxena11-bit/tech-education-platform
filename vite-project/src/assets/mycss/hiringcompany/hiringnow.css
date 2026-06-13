@@ -1,0 +1,432 @@
+/* =========================
+   ELITE HUB SECTION
+========================= */
+
+.elitehub-section{
+    padding: 80px 6%;
+    background: #f8fafc;
+}
+
+.elitehub-top-area{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.elitehub-mini-tag{
+    display: inline-block;
+    background: #e0e7ff;
+    color: #4338ca;
+    padding: 10px 18px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.elitehub-top-area h2{
+    font-size: 25px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.elitehub-top-area p{
+    color: #6b7280;
+    max-width: 700px;
+    margin: 15px auto 0;
+    line-height: 1.8;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.elitehub-grid-layout{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 30px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.elitehub-company-card{
+    background: #fff;
+    border-radius: 28px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: .4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    border: 1px solid #eef2f7;
+}
+
+.elitehub-company-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   TOP
+========================= */
+
+.elitehub-card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.elitehub-logo-box{
+    width: 40px;
+    height: 40px;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: white;
+}
+
+/* COMPANY COLORS */
+
+.elite-google{
+    background: linear-gradient(135deg,#4285F4,#34A853);
+}
+
+.elite-amazon{
+    background: linear-gradient(135deg,#ff9900,#232f3e);
+}
+
+.elite-microsoft{
+    background: linear-gradient(135deg,#00a4ef,#7fba00);
+}
+
+.elite-infosys{
+    background: linear-gradient(135deg,#007cc3,#00b4d8);
+}
+
+.elite-tcs{
+    background: linear-gradient(135deg,#5f259f,#ff4f81);
+}
+
+.elite-wipro{
+    background: linear-gradient(135deg,#8e2de2,#4a00e0);
+}
+
+.elite-accenture{
+    background: linear-gradient(135deg,#7f00ff,#e100ff);
+}
+
+.elite-oracle{
+    background: linear-gradient(135deg,#f80000,#ff5f6d);
+}
+
+.elitehub-hiring-badge{
+    background: #ecfdf5;
+    color: #059669;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.elitehub-content-area{
+    margin-top: 25px;
+}
+
+.elitehub-content-area h3{
+    font-size: 20px;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.elitehub-content-area h4{
+    font-size: 18px;
+    color: #4b5563;
+    margin-bottom: 20px;
+}
+
+.elitehub-meta-info{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.elitehub-meta-info span{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.elitehub-apply-btn{
+    width: 100%;
+    margin-top: 25px;
+    border: none;
+    background: linear-gradient(135deg,#2563eb,#7c3aed);
+    color: white;
+    padding: 15px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: .3s;
+}
+
+.elitehub-apply-btn:hover{
+    transform: scale(1.02);
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.corporatex-modal-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    padding: 20px;
+}
+
+.corporatex-modal-card{
+    width: 100%;
+    max-width: 750px;
+    background: white;
+    border-radius: 28px;
+    padding: 35px;
+    position: relative;
+    animation: popupScale .35s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+@keyframes popupScale{
+    from{
+        opacity: 0;
+        transform: scale(.85);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.corporatex-close-btn{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: #f3f4f6;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+/* =========================
+   COMPANY TOP
+========================= */
+
+.corporatex-company-top{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.corporatex-company-logo{
+    width: 90px;
+    height: 90px;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+}
+
+.corporatex-company-top h2{
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.corporatex-company-top h4{
+    color: #6b7280;
+    font-size: 18px;
+}
+
+/* =========================
+   INFO GRID
+========================= */
+
+.corporatex-info-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.corporatex-info-box{
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: #374151;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.corporatex-description-area{
+    margin-top: 35px;
+}
+
+.corporatex-description-area h3{
+    margin-bottom: 12px;
+}
+
+.corporatex-description-area p{
+    color: #6b7280;
+    line-height: 1.8;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.corporatex-skills-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.corporatex-skills-wrapper span{
+    background: #eef2ff;
+    color: #4338ca;
+    padding: 10px 16px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.corporatex-apply-form{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.corporatex-apply-form input,
+.corporatex-apply-form textarea{
+    width: 100%;
+    border: 1px solid #dbe4ee;
+    border-radius: 16px;
+    padding: 16px;
+    outline: none;
+    font-size: 15px;
+}
+
+.corporatex-apply-form textarea{
+    min-height: 120px;
+    resize: none;
+}
+
+/* =========================
+   UPLOAD
+========================= */
+
+.corporatex-upload-box{
+    border: 2px dashed #cbd5e1;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.corporatex-upload-box svg{
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.corporatex-upload-box input{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.corporatex-submit-btn{
+    background: linear-gradient(135deg,#2563eb,#7c3aed);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.corporatex-submit-btn:hover{
+    transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .elitehub-top-area h2{
+        font-size: 30px;
+    }
+
+    .corporatex-info-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .corporatex-company-top{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .corporatex-modal-card{
+        padding: 25px;
+    }
+}

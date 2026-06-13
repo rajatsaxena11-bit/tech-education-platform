@@ -1,0 +1,332 @@
+/* viewfaculty.css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.viewFacultyPage{
+    width: 100%;
+    min-height: 100vh;
+    background: #f4f7fb;
+    padding: 40px 20px;
+}
+
+.viewFacultyCard{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+/* ================= HEADER ================= */
+
+.viewFacultyHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.viewFacultyLeft{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.facultyProfileImage{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#4f46e5,#7c3aed);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    flex-shrink: 0;
+}
+
+.viewFacultyLeft h2{
+    font-size: 32px;
+    color: #111827;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.viewFacultyLeft p{
+    color: #6b7280;
+    font-size: 15px;
+    margin: 0;
+}
+
+.facultyBackBtn{
+    border: none;
+    outline: none;
+    background: #111827;
+    color: #fff;
+    padding: 13px 24px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.facultyBackBtn:hover{
+    background: #1f2937;
+    transform: translateY(-2px);
+}
+
+/* ================= GRID ================= */
+
+.facultyDetailsGrid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 22px;
+}
+
+.facultyInfoCard{
+    width: 100%;
+    background: rgb(33, 33, 79) !important;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: 0.3s;
+}
+
+.facultyInfoCard:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.facultyIconBox{
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    border-radius: 14px;
+    background: linear-gradient(135deg,#2563eb,#7c3aed);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+.facultyInfoCard span{
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.facultyInfoCard h4{
+    font-size: 17px;
+    color: #fff;
+    font-weight: 700;
+    word-break: break-word;
+}
+
+/* ================= STATUS ================= */
+
+.facultyStatusSection{
+    margin-top: 40px;
+}
+
+.facultyStatusSection h3{
+    font-size: 24px;
+    margin-bottom: 18px;
+    color: #111827;
+}
+
+.facultyStatusBadge{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.facultyStatusBadge.active{
+    background: #dcfce7;
+    color: #166534;
+}
+
+.facultyStatusBadge.on-leave{
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* ================= ABOUT ================= */
+
+.facultyAboutSection{
+    margin-top: 40px;
+    background: #eef2ff;
+    border-radius: 22px;
+    padding: 30px;
+}
+
+.facultyAboutSection h3{
+    font-size: 24px;
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+.facultyAboutSection p{
+    font-size: 16px;
+    line-height: 1.8;
+    color: #4b5563;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+    .viewFacultyCard{
+        padding: 28px;
+    }
+
+    .viewFacultyLeft h2{
+        font-size: 28px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .viewFacultyPage{
+        padding: 20px 12px;
+    }
+
+    .viewFacultyCard{
+        padding: 22px 18px;
+    }
+
+    .viewFacultyHeader{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .viewFacultyLeft{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .facultyProfileImage{
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+    }
+
+    .viewFacultyLeft h2{
+        font-size: 24px;
+    }
+
+    .facultyBackBtn{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .facultyInfoCard{
+        padding: 18px;
+    }
+
+    .facultyAboutSection{
+        padding: 22px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .facultyDetailsGrid{
+        grid-template-columns: 1fr;
+    }
+
+    .facultyInfoCard{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .facultyIconBox{
+        width: 52px;
+        height: 52px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* Open Animation */
+
+.viewFacultyCard {
+    animation: facultyViewOpen .4s ease;
+    transform-origin: center;
+}
+
+@keyframes facultyViewOpen {
+    from {
+        opacity: 0;
+        transform: scale(.85) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Close Animation */
+
+.view-faculty-closing .viewFacultyCard {
+    animation: facultyViewClose .4s ease forwards;
+}
+
+@keyframes facultyViewClose {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(.65) translateY(-30px);
+    }
+}
+
+.view-faculty-closing {
+    animation: pageFadeOut .4s ease forwards;
+}
+
+@keyframes pageFadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

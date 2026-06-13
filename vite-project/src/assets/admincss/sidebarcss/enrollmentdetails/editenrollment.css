@@ -1,0 +1,251 @@
+/* =========================
+   EDIT ENROLLMENT PAGE
+========================= */
+
+.edit-enrollment-page {
+  padding: 35px;
+  min-height: 100vh;
+  background: #f3f6fb;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.edit-header h2 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 5px;
+}
+
+.edit-header p {
+  color: #6b7280;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-btn {
+  border: none;
+  background: white;
+  padding: 13px 22px;
+  border-radius: 14px;
+  font-weight: 600;
+  color: #111827;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+  background: #111827;
+  color: white;
+}
+
+/* =========================
+   MAIN FORM CARD
+========================= */
+
+.edit-form {
+  background: white;
+  padding: 35px;
+  border-radius: 28px;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e5e7eb;
+  position: relative;
+  overflow: hidden;
+}
+
+/* top gradient effect */
+
+.edit-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(
+    to right,
+    #2563eb,
+    #7c3aed,
+    #06b6d4
+  );
+}
+
+/* =========================
+   GRID
+========================= */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.form-group input,
+.form-group select {
+  height: 54px;
+  border: 1px solid #dbe2ea;
+  border-radius: 16px;
+  padding: 0 18px;
+  font-size: 15px;
+  background: #f9fafb;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2563eb;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* =========================
+   IMAGE PREVIEW
+========================= */
+
+.preview-box {
+  margin-top: 10px;
+}
+
+.preview-box img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 3px solid #e5e7eb;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   SAVE BUTTON
+========================= */
+
+.save-btn {
+  margin-top: 35px;
+  border: none;
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  );
+  color: white;
+  height: 56px;
+  padding: 0 28px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+.save-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.35);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .edit-enrollment-page {
+    padding: 18px;
+  }
+
+  .edit-form {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .edit-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .edit-header h2 {
+    font-size: 28px;
+  }
+
+  .save-btn {
+    width: 100%;
+  }
+}
+
+.edit-enrollment-page {
+  animation: editEnrollmentOpen 0.4s ease;
+}
+
+.edit-enrollment-closing {
+  animation: editEnrollmentClose 0.4s ease forwards;
+}
+
+@keyframes editEnrollmentOpen {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes editEnrollmentClose {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}

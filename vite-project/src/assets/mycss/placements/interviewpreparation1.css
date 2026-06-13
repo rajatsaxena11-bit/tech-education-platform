@@ -1,0 +1,212 @@
+/* =========================
+   Interview Preparation
+========================= */
+
+.interview-section {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 5%;
+  background: linear-gradient(
+    135deg,
+    #021024,
+    #052659,
+    #5483b3
+  );
+}
+
+/* Title */
+
+.interview-title {
+  text-align: center;
+  color: #fff;
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.gold-line {
+  width: 120px;
+  height: 5px;
+  background: gold;
+  margin: 0 auto 50px;
+  border-radius: 20px;
+}
+
+/* Grid */
+
+.interview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Card */
+
+.interview-card {
+  position: relative;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  min-height: 280px;
+}
+
+.interview-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255,215,0,0.3);
+}
+
+/* Number Badge */
+
+.step-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 38px;
+  height: 38px;
+  background: gold;
+  color: #000;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon */
+
+.interview-icon {
+  font-size: 50px;
+  color: gold;
+  margin-bottom: 20px;
+  transition: 0.4s;
+}
+
+.interview-card:hover .interview-icon {
+  transform: scale(1.15) rotate(8deg);
+}
+
+/* Heading */
+
+.interview-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Description */
+
+.interview-card p {
+  color: #e5e5e5;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Shine Effect */
+
+.interview-card::before {
+  content: "";
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  width: 80px;
+  height: 300%;
+  background: rgba(255,255,255,0.2);
+  transform: rotate(25deg);
+}
+
+.interview-card:hover::before {
+  animation: shine 1.2s linear;
+}
+
+@keyframes shine {
+  100% {
+    left: 220%;
+  }
+}
+
+/* Floating Celebration Animation */
+
+.celebration span {
+  position: absolute;
+  font-size: 35px;
+  animation: floatUp 10s linear infinite;
+  opacity: 0.8;
+}
+
+.celebration span:nth-child(1) {
+  left: 8%;
+}
+
+.celebration span:nth-child(2) {
+  left: 25%;
+  animation-delay: 2s;
+}
+
+.celebration span:nth-child(3) {
+  left: 50%;
+  animation-delay: 4s;
+}
+
+.celebration span:nth-child(4) {
+  left: 75%;
+  animation-delay: 6s;
+}
+
+.celebration span:nth-child(5) {
+  left: 92%;
+  animation-delay: 8s;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(600px);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-700px);
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .interview-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .interview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .interview-title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .interview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interview-title {
+    font-size: 28px;
+  }
+
+  .interview-card {
+    min-height: auto;
+  }
+}

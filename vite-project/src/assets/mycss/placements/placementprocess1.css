@@ -1,0 +1,170 @@
+.placement-process {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 5%;
+  background: linear-gradient(
+    135deg,
+    #041c42,
+    #072b61,
+    #0b3d91
+  );
+}
+
+.process-title {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.gold-line {
+  width: 150px;
+  height: 5px;
+  background: gold;
+  margin: 15px auto 60px;
+  border-radius: 50px;
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.step-card {
+  position: relative;
+  background: rgba(255,255,255,.12);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 30px 20px;
+  text-align: center;
+  color: white;
+  transition: .4s;
+  border: 1px solid rgba(255,255,255,.2);
+  overflow: hidden;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255,215,0,.4);
+}
+
+.step-number {
+  width: 45px;
+  height: 45px;
+  background: gold;
+  color: #000;
+  border-radius: 50%;
+  margin: auto;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-icon {
+  font-size: 30px;
+  color: gold;
+  margin: 20px 0;
+}
+
+.step-card h3 {
+  margin-bottom: 10px;
+  font-size: 26px;
+  color: #888;
+  font-weight: bold;
+}
+
+.step-card p {
+  color: #ddd;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Shine Effect */
+
+.step-card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -150%;
+  width: 80px;
+  height: 300%;
+  background: rgba(255,255,255,.2);
+  transform: rotate(25deg);
+}
+
+.step-card:hover::before {
+  animation: shine 1.2s;
+}
+
+@keyframes shine {
+  100% {
+    left: 200%;
+  }
+}
+
+/* Celebration Icons */
+
+.floating-icons span {
+  position: absolute;
+  font-size: 35px;
+  animation: floatUp 10s linear infinite;
+}
+
+.floating-icons span:nth-child(1) {
+  left: 10%;
+}
+
+.floating-icons span:nth-child(2) {
+  left: 30%;
+  animation-delay: 2s;
+}
+
+.floating-icons span:nth-child(3) {
+  left: 50%;
+  animation-delay: 4s;
+}
+
+.floating-icons span:nth-child(4) {
+  left: 70%;
+  animation-delay: 6s;
+}
+
+.floating-icons span:nth-child(5) {
+  left: 90%;
+  animation-delay: 8s;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-600px);
+    opacity: 0;
+  }
+}
+
+@media(max-width:992px) {
+  .timeline {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px) {
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .process-title {
+    font-size: 30px;
+  }
+}

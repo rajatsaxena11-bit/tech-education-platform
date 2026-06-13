@@ -1,0 +1,134 @@
+.placement-success-section {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.placement-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.placement-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  background: #ecfdf5;
+  color: #16a34a;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.placement-title {
+  font-size: 38px;
+  font-weight: 800;
+  margin-top: 15px;
+  color: #0f172a;
+  position: relative;
+  display: inline-block;
+}
+
+.placement-title::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background: #facc15;
+  left: 50%;
+  bottom: -12px;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+
+.placement-subtitle {
+  max-width: 650px;
+  margin: 25px auto 0;
+  color: #64748b;
+}
+
+/* Card */
+
+.placement-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  transition: all .35s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.placement-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 35px rgba(0,0,0,.15);
+}
+
+/* Avatar */
+
+.placement-avatar {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed
+  );
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.placement-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.placement-role {
+  color: #64748b;
+  margin-bottom: 15px;
+}
+
+.placement-package {
+  background: #fef3c7;
+  color: #b45309;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.placement-location {
+  color: #64748b;
+  margin-bottom: 15px;
+}
+
+.placement-company {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.placement-swiper {
+  padding-bottom: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .placement-title {
+    font-size: 28px;
+  }
+
+  .placement-card {
+    padding: 20px;
+  }
+}

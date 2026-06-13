@@ -1,0 +1,250 @@
+/* OVERLAY */
+
+.academy-batch-overlay{
+    /* position: fixed; */
+    inset: 0;
+    background: rgba(15,23,42,0.75);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    padding: 20px;
+}
+
+/* MODAL */
+
+.academy-batch-modal{
+    width: 100%;
+    max-width: 1050px;
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 35px;
+    box-shadow: 0 20px 60px rgba(15,23,42,0.18);
+    animation: modalFade .4s ease;
+    position: relative;
+}
+
+@keyframes modalFade{
+    from{
+        opacity: 0;
+        transform: translateY(30px) scale(.96);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* HEADER */
+
+.academy-batch-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.academy-batch-tag{
+    background: rgba(37,99,235,0.12);
+    color: #2563eb;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.academy-batch-header h2{
+    font-size: 33px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.academy-batch-header p{
+    color: #64748b;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* CLOSE */
+
+.academy-close-action{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: #6b6d6e;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.academy-close-action:hover{
+    background: #ef4444;
+    color: white;
+    transform: rotate(90deg);
+}
+
+/* FORM */
+
+.academy-batch-form-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+}
+
+.academy-input-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.academy-input-group label{
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.academy-input-group input,
+.academy-input-group select{
+    height: 58px;
+    border: 1px solid #dbe4f0;
+    border-radius: 16px;
+    padding: 0 18px;
+    font-size: 15px;
+    background: #f8fafc;
+    transition: .3s;
+}
+
+.academy-input-group input:focus,
+.academy-input-group select:focus{
+    outline: none;
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.1);
+}
+
+/* FOOTER */
+
+.academy-batch-footer{
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 35px;
+}
+
+.academy-cancel-btn{
+    height: 52px;
+    padding: 0 28px;
+    border-radius: 14px;
+    border: 1px solid #dbe4f0;
+    background: white;
+    font-weight: 700;
+    color: #334155;
+    transition: .3s;
+}
+
+.academy-cancel-btn:hover{
+    background: #f1f5f9;
+}
+
+.academy-create-btn{
+    height: 52px;
+    padding: 0 32px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg,#2563eb,#1d4ed8);
+    color: white;
+    font-weight: 700;
+    transition: .3s;
+    box-shadow: 0 10px 25px rgba(37,99,235,0.25);
+}
+
+.academy-create-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(37,99,235,0.35);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .academy-batch-modal{
+        padding: 24px;
+    }
+
+    .academy-batch-form-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .academy-batch-header{
+        flex-direction: column;
+    }
+
+    .academy-batch-header h2{
+        font-size: 25px;
+    }
+
+    .academy-batch-footer{
+        flex-direction: column;
+    }
+
+    .academy-cancel-btn,
+    .academy-create-btn{
+        width: 100%;
+    }
+}
+
+
+/* Modal Open Animation */
+.academy-batch-modal {
+    animation: popupOpen .4s ease;
+    transform-origin: center;
+}
+
+/* Modal Close Animation */
+.modal-closing {
+    animation: popupClose .4s ease forwards;
+}
+
+@keyframes popupOpen {
+    from {
+        opacity: 0;
+        transform: scale(.8) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes popupClose {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(.6) translateY(-30px);
+    }
+}
+
+/* Overlay Fade */
+.overlay-closing {
+    animation: overlayFade .4s ease forwards;
+}
+
+@keyframes overlayFade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

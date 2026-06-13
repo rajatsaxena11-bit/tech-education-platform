@@ -1,0 +1,106 @@
+.success-section {
+  padding: 90px 5%;
+  background: linear-gradient(135deg,#021024,#052659,#5483b3);
+  position: relative;
+  overflow: hidden;
+}
+
+.success-title {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.gold-line {
+  width: 140px;
+  height: 5px;
+  background: gold;
+  margin: 15px auto 50px;
+  border-radius: 50px;
+}
+
+.success-card {
+  background: rgba(255,255,255,.12);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  border: 1px solid rgba(255,255,255,.2);
+  transition: .4s;
+}
+
+.success-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255,215,0,.35);
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  background: gold;
+  color: #000;
+  border-radius: 50%;
+  font-size: 35px;
+  font-weight: bold;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company {
+  color: gold;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.role {
+  color: #ddd;
+}
+
+.package {
+  margin: 15px 0;
+  background: gold;
+  color: black;
+  padding: 10px;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+.story {
+  color: #f1f1f1;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.badge {
+  margin-top: 15px;
+  color: #00ff66;
+  font-weight: bold;
+}
+
+/* Floating Celebration */
+
+.celebration span {
+  position: absolute;
+  font-size: 35px;
+  animation: floatUp 10s linear infinite;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(600px);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-700px);
+    opacity: 0;
+  }
+}
