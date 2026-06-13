@@ -1,5 +1,6 @@
 import React from 'react'
-import AdminSidebar from './AdminSidebar'
+import Sidebar from './AdminSidebar'
+
 
 export default function AdminDashboard() {
   return (
@@ -7,7 +8,7 @@ export default function AdminDashboard() {
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-3">
-            <AdminSidebar />
+            <Sidebar />
           </div>
           <div className="col-lg-9 mt-5">
             <div className="d-flex justify-content-between align-items-center mb-4 mt-5">
