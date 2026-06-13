@@ -18,7 +18,7 @@ const placedStudents = [
         course: "MERN Stack Development",
         company: "TCS",
         package: "6.5 LPA",
-        image: "src/assets/images/hiringcompany/1 (1).png",
+        image: "https://ibb.co/gMDMWw00",
     },
 
     {
@@ -27,7 +27,7 @@ const placedStudents = [
         course: "UI/UX Designing",
         company: "Infosys",
         package: "5.2 LPA",
-        image: "src/assets/images/hiringcompany/1 (2).png",
+        image: "https://ibb.co/F4FLdx63",
     },
 
     {
@@ -36,7 +36,7 @@ const placedStudents = [
         course: "Python Full Stack",
         company: "Wipro",
         package: "7 LPA",
-        image: "src/assets/images/hiringcompany/1 (3).png",
+        image: "https://ibb.co/QFr7vZvb",
     },
 
     {
@@ -45,7 +45,7 @@ const placedStudents = [
         course: "FrontEnd Developer",
         company: "Capgemini",
         package: "8 LPA",
-        image: "src/assets/images/hiringcompany/1 (4).png",
+        image: "https://ibb.co/b03mbZP",
     },
     {
         id: 5,
@@ -53,7 +53,7 @@ const placedStudents = [
         course: "FrontEnd Developer",
         company: "Capgemini",
         package: "8 LPA",
-        image: "src/assets/images/hiringcompany/1 (5).png",
+        image: "https://ibb.co/HpXDSFn0",
     },
 
 ];
