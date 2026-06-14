@@ -154,6 +154,7 @@ export default function MernStackDeveloper() {
         <h3>Loading...</h3>
       </div>
     );
+  }
   return (
     <>
       <section className="mern-course-section py-5 mt-5" style={{ cursor: "pointer" }}>
@@ -587,5 +588,4 @@ export default function MernStackDeveloper() {
 
     </>
   );
-}
 }

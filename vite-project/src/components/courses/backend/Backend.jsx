@@ -157,6 +157,7 @@ export default function BackendDeveloper() {
          <h3>Loading...</h3>
        </div>
      );
+    }
 
   return (
     <>
@@ -584,5 +585,4 @@ export default function BackendDeveloper() {
 
     </>
   );
-}
 }
