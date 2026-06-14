@@ -138,24 +138,22 @@ export default function MernStackDeveloper() {
   const [openIndex, setOpenIndex] = useState(null);
 
    const [loading, setLoading] = useState(true);
-  
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        setLoading(false);
-      }, 400); // 2 second loading
-  
-      return () => clearTimeout(timer);
-    }, []);
-  
-    if (loading) {
-      return (
-        <div className="frontend-loader">
-          <div className="spinner"></div>
-          <h3>Loading Frontend Course...</h3>
-        </div>
-      );
-    }
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 400); // 2 second loading
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="frontend-loader">
+        <div className="spinner"></div>
+        <h3>Loading...</h3>
+      </div>
+    );
   return (
     <>
       <section className="mern-course-section py-5 mt-5" style={{ cursor: "pointer" }}>
@@ -164,32 +162,67 @@ export default function MernStackDeveloper() {
           <div className="row">
             <div className="col-lg-6">
               <div className=" mb-5">
-                <h2 className="mern-title text-center">
+                <motion.h2 style={{ fontSize: "35px" }}
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  className="fw-bold display-5 mb-3"
+                >
+                  <h2 className="hero-title" style={{ marginTop: "80px" }}>
+                    Master Mern Development &
+                    <span> Launch Your Tech Career</span>
+                  </h2>
+                </motion.h2>
+
+                <motion.img
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1 }}
+                  src="https://www.rlogical.com/wp-content/uploads/2020/12/MERN.webp"
+                  alt="Frontend Developer"
+                  className="img-fluid mt-4 frontend-image"
+                />
+                <h5 className="backend-main-heading">
+                  MERN DEVELOPER
+                </h5>
+                {/* <h2 className="mern-title text-center">
                   Become a MERN Stack Developer 🚀
                 </h2>
+                 <motion.img
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+                src="https://www.rlogical.com/wp-content/uploads/2020/12/MERN.webp"
+                alt="MERN Stack"
+                className="mern-image mt-5 w-100"
+              /> */}
 
-                <div className="mern-breadcrumb">
+                <div className="frontend-breadcrumb">
 
-                  <span style={{ fontSize: "15px", fontWeight: "bold", color: "#333" }}>Home</span>
+                  <span style={{ fontSize: "15px", fontWeight: "bold", color: "#1dc5ba" }}>Home</span>
 
-                  <span style={{ fontSize: "15px", fontWeight: "bold", color: "#333" }}>/</span>
+                  <span style={{ fontSize: "15px", fontWeight: "bold", color: "#1dc5ba" }}>/</span>
 
-                  <span style={{ fontSize: "15px", fontWeight: "bold", color: "#333" }}>Full Stack Development</span>
+                  <span style={{ fontSize: "15px", fontWeight: "bold", color: "#1dc5ba" }}>Frontend Development</span>
 
-                  <span style={{ fontSize: "15px", fontWeight: "bold", color: "#333" }}>/</span>
+                  <span style={{ fontSize: "15px", fontWeight: "bold", color: "#1dc5ba" }}>/</span>
 
-                  <span style={{ fontSize: "15px", fontWeight: "bold", color: "#333" }}>MERN Stack Developer</span>
+                  <span style={{ fontSize: "15px", fontWeight: "bold", color: "#1dc5ba" }}>Frontend Developer</span>
 
                 </div>
 
-                <div className="mern-tag">
-                  #1 Full Stack Development Program
+                <div className="frontend-tag" style={{ fontSize: "15px", fontWeight: "bold", color: "darkgray" }}>
+                  #1 MERN Stack Development Program
                 </div>
 
-                <p style={{ color: "#333" }}>
+                <p className="frontend-hero-para mt-3" style={{ fontSize: "15px", fontWeight: "bold", color: "black" }}>
+
                   Master MongoDB, Express.js, React.js & Node.js <br />
                   and build real-world full stack applications.
+
                 </p>
+
+
               </div>
             </div>
           </div>
@@ -225,33 +258,189 @@ export default function MernStackDeveloper() {
             {/* Left Side */}
             <div className="col-lg-6 mb-4">
 
-              <div className="row">
-
+              <div className="row mt-4">
                 {concepts.map((item, index) => (
-                  <div className="col-md-6 mb-4 mt-5" key={index}>
-
+                  <div className="col-md-6 mb-3" key={index}>
                     <motion.div
                       whileHover={{
-                        y: -10,
-                        scale: 1.05
+                        y: -8,
+                        scale: 1.04,
                       }}
-                      className="mern-card"
+                      className="backend-card p-3"
                     >
-                      <div className="mern-icon">
+                      <div className="backend-icon">
                         {item.icon}
                       </div>
 
                       <h5>{item.title}</h5>
-
-                      <p>{item.desc}</p>
-
+                      <p className="text-dark fw-bold">{item.desc}</p>
                     </motion.div>
+                  </div>
+                ))}
+              </div>
+
+
+              {/* MODULES */}
+
+              <div className="mern-module-wrapper">
+
+                <h2 className="mern-section-title">
+                  Explore Course Modules
+                </h2>
+
+                {modules.map((item, index) => (
+
+                  <div className="mern-module-card" key={index}>
+
+                    <div
+                      className="mern-module-header"
+                      onClick={() =>
+                        setOpenIndex(openIndex === index ? null : index)
+                      }
+                    >
+
+                      <h5>{item.title}</h5>
+
+                      {openIndex === index ? (
+                        <FaChevronUp />
+                      ) : (
+                        <FaChevronDown />
+                      )}
+
+                    </div>
+
+                    {openIndex === index && (
+
+                      <div className="mern-module-body">
+
+                        <p style={{ fontSize: "16px" }}>{item.content}</p>
+
+                      </div>
+
+                    )}
 
                   </div>
+
                 ))}
 
               </div>
-              <div className="mern-tab-section">
+
+            </div>
+
+            {/* Right Side Image */}
+            <div className="col-lg-6 text-center" style={{ marginTop: "-45rem" }}>
+
+
+
+              <div className="mern-badge">
+                MERN Stack Development
+              </div>
+
+              <div className="mern-content-card">
+
+                <h2 style={{ fontSize: "20px" }}>
+                  What Is MERN Stack Developer?
+                </h2>
+
+                <p style={{ fontSize: "15px" }}>
+
+                  A MERN Stack Developer is a full stack developer who builds
+                  complete web applications using MongoDB, Express JS, React JS
+                  and Node JS.
+
+                </p>
+
+                <p style={{ fontSize: "15px" }}>
+
+                  MERN Stack helps developers create modern frontend interfaces,
+                  scalable backend APIs and powerful database-driven applications
+                  using JavaScript.
+
+                </p>
+
+              </div>
+              <div className="backend-form-card mt-5">
+
+                <div className="form-header">
+                  <h3 style={{ fontSize: "22px" }}>🚀 Enquire Now</h3>
+                  <p>Start your Backend Developer journey today</p>
+                </div>
+
+                <form>
+
+                  <div className="input-group-custom">
+                    <FaUser className="input-icon" />
+                    <input
+                      type="text"
+                      placeholder="Full Name"
+                      className="backend-input"
+                    />
+                  </div>
+
+                  <div className="input-group-custom">
+                    <FaEnvelope className="input-icon" />
+                    <input
+                      type="email"
+                      placeholder="Email Address"
+                      className="backend-input"
+                    />
+                  </div>
+
+                  <div className="input-group-custom">
+                    <FaPhoneAlt className="input-icon" />
+                    <input
+                      type="text"
+                      placeholder="Phone Number"
+                      className="backend-input"
+                    />
+                  </div>
+
+                  <div className="input-group-custom">
+                    <FaCode className="input-icon" />
+                    <input
+                      type="text"
+                      value="MERN STACK DEVELOPER"
+                      readOnly
+                      className="backend-input text-dark"
+                    />
+                  </div>
+
+                  <div className="input-group-custom">
+                    <FaMapMarkerAlt className="input-icon" />
+
+                    <select className="backend-select">
+                      <option value="">Select Branch</option>
+                      <option value="Online">Online</option>
+                      <option value="Delhi">Delhi</option>
+                      <option value="Noida">Noida</option>
+                    </select>
+                  </div>
+
+                  <button type="submit" className="backend-submit-btn">
+                    Apply Now →
+                  </button>
+
+                </form>
+
+              </div>
+              <div className="backend-related-card">
+
+                <h3>Related Courses</h3>
+
+                {relatedCourses.map((course, index) => (
+
+                  <div className="backend-related-item" key={index}>
+
+                    <span style={{ color: "navy", fontWeight: "bold", fontSize: "14px" }}>{course}</span>
+
+                    <FaArrowRight />
+
+                  </div>
+
+                ))}
+
+              </div>
+              <div className="mern-tab-section" style={{marginTop:"20rem"}}>
 
                 <div className="mern-tab-buttons">
 
@@ -385,180 +574,12 @@ export default function MernStackDeveloper() {
                 </div>
 
               </div>
-
-              {/* MODULES */}
-
-              <div className="mern-module-wrapper">
-
-                <h2 className="mern-section-title">
-                  Explore Course Modules
-                </h2>
-
-                {modules.map((item, index) => (
-
-                  <div className="mern-module-card" key={index}>
-
-                    <div
-                      className="mern-module-header"
-                      onClick={() =>
-                        setOpenIndex(openIndex === index ? null : index)
-                      }
-                    >
-
-                      <h5>{item.title}</h5>
-
-                      {openIndex === index ? (
-                        <FaChevronUp />
-                      ) : (
-                        <FaChevronDown />
-                      )}
-
-                    </div>
-
-                    {openIndex === index && (
-
-                      <div className="mern-module-body">
-
-                        <p style={{ fontSize: "16px" }}>{item.content}</p>
-
-                      </div>
-
-                    )}
-
-                  </div>
-
-                ))}
-
-              </div>
-
-            </div>
-
-            {/* Right Side Image */}
-            <div className="col-lg-6 text-center" style={{ marginTop: "-40rem" }}>
-
-              <motion.img
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
-                src="https://www.rlogical.com/wp-content/uploads/2020/12/MERN.webp"
-                alt="MERN Stack"
-                className="mern-image w-100"
-              />
-
-              <div className="mern-badge">
-                MERN Stack Development
-              </div>
-
-              <div className="mern-content-card">
-
-                <h2 style={{ fontSize: "20px" }}>
-                  What Is MERN Stack Developer?
-                </h2>
-
-                <p style={{ fontSize: "15px" }}>
-
-                  A MERN Stack Developer is a full stack developer who builds
-                  complete web applications using MongoDB, Express JS, React JS
-                  and Node JS.
-
-                </p>
-
-                <p style={{ fontSize: "15px" }}>
-
-                  MERN Stack helps developers create modern frontend interfaces,
-                  scalable backend APIs and powerful database-driven applications
-                  using JavaScript.
-
-                </p>
-
-              </div>
-              <div className="backend-form-card mt-5">
-
-                <div className="form-header">
-                  <h3 style={{fontSize:"22px"}}>🚀 Enquire Now</h3>
-                  <p>Start your Backend Developer journey today</p>
-                </div>
-
-                <form>
-
-                  <div className="input-group-custom">
-                    <FaUser className="input-icon" />
-                    <input
-                      type="text"
-                      placeholder="Full Name"
-                      className="backend-input"
-                    />
-                  </div>
-
-                  <div className="input-group-custom">
-                    <FaEnvelope className="input-icon" />
-                    <input
-                      type="email"
-                      placeholder="Email Address"
-                      className="backend-input"
-                    />
-                  </div>
-
-                  <div className="input-group-custom">
-                    <FaPhoneAlt className="input-icon" />
-                    <input
-                      type="text"
-                      placeholder="Phone Number"
-                      className="backend-input"
-                    />
-                  </div>
-
-                  <div className="input-group-custom">
-                    <FaCode className="input-icon" />
-                    <input
-                      type="text"
-                      value="MERN STACK DEVELOPER"
-                      readOnly
-                      className="backend-input text-dark"
-                    />
-                  </div>
-
-                  <div className="input-group-custom">
-                    <FaMapMarkerAlt className="input-icon" />
-
-                    <select className="backend-select">
-                      <option value="">Select Branch</option>
-                      <option value="Online">Online</option>
-                      <option value="Delhi">Delhi</option>
-                      <option value="Noida">Noida</option>
-                    </select>
-                  </div>
-
-                  <button type="submit" className="backend-submit-btn">
-                    Apply Now →
-                  </button>
-
-                </form>
-
-              </div>
-              <div className="mern-related-card">
-
-                <h3 style={{ fontSize: "22px" }}>Related Courses</h3>
-
-                {relatedCourses.map((course, index) => (
-
-                  <div className="mern-related-item" key={index}>
-
-                    <span style={{ color: "#333" }}>{course}</span>
-
-                    <FaArrowRight />
-
-                  </div>
-
-                ))}
-
-              </div>
             </div>
           </div>
 
-      <Courses/>
+          <Courses />
         </div>
-      <Testimonials />
+        <Testimonials />
       </section>
 
 

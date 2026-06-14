@@ -662,3 +662,366 @@
   box-shadow: 0 10px 25px rgba(13, 110, 253, 0.35);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================
+   BACKEND COURSE RESPONSIVE
+========================== */
+
+.backend-course {
+  overflow: hidden;
+}
+
+.backend-image {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.backend-main-heading {
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.backend-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.backend-rating-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 20px 0;
+}
+
+.backend-rating-box svg {
+  color: #ffc107;
+}
+
+.backend-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.backend-primary-btn,
+.backend-outline-btn {
+  min-width: 220px;
+  padding: 14px 25px;
+  border-radius: 50px;
+}
+
+.backend-card {
+  height: 100%;
+}
+
+.backend-form-card {
+  width: 100%;
+}
+
+.backend-content-card,
+.backend-tab-content,
+.backend-form-card,
+.backend-related-card {
+  width: 100%;
+}
+
+/* ==========================
+      LARGE DESKTOP
+========================== */
+
+@media (min-width: 1400px) {
+
+  .backend-course .container {
+    max-width: 1320px;
+  }
+
+}
+
+/* ==========================
+      LAPTOP
+========================== */
+
+@media (max-width: 1199px) {
+
+  .backend-main-heading {
+    font-size: 30px;
+  }
+
+  .backend-course .col-lg-6:first-child {
+    margin-top: 0 !important;
+  }
+
+}
+
+/* ==========================
+      TABLET
+========================== */
+
+@media (max-width: 991px) {
+
+  .backend-course {
+    padding-top: 50px;
+  }
+
+  .backend-course .row {
+    flex-direction: column;
+  }
+
+  .backend-course .col-lg-6 {
+    width: 100%;
+  }
+
+  .backend-course .col-lg-6.text-center {
+    margin-top: 0 !important;
+    order: 1;
+  }
+
+  .backend-course .col-lg-6:last-child {
+    order: 2;
+    margin-top: 40px !important;
+  }
+
+  .backend-main-heading {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .backend-hero-para {
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .backend-content-card {
+    margin-top: 25px;
+  }
+
+  .backend-tab-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .backend-tab-btn {
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .backend-form-card {
+    margin-top: 30px;
+  }
+
+}
+
+/* ==========================
+      MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+  .backend-course {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .backend-course h2 {
+    font-size: 35px !important;
+    line-height: 1.4;
+    margin-top: 80px;
+  }
+
+  .backend-main-heading {
+    font-size: 24px;
+  }
+
+  .backend-breadcrumb {
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .backend-tag {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .backend-hero-para {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .backend-btn-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .backend-primary-btn,
+  .backend-outline-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .backend-tab-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .backend-tab-btn {
+    width: 100%;
+    font-size: 14px !important;
+  }
+
+  .backend-tab-content {
+    padding: 20px;
+  }
+
+  .backend-section-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .backend-module-header h5 {
+    font-size: 15px;
+  }
+
+  .backend-form-card {
+    padding: 20px;
+  }
+
+  .backend-related-card {
+    margin-top: 25px;
+  }
+
+  .backend-related-item {
+    padding: 12px;
+  }
+
+}
+@media (max-width: 768px) {
+  
+
+  .backend-content-card h2{
+   font-size: 1rem !important;
+   margin-top: -20px;
+  
+  }
+
+
+}
+
+/* ==========================
+      SMALL MOBILE
+========================== */
+
+@media (max-width: 576px) {
+
+  .backend-course .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .backend-course h2 {
+    font-size: 24px !important;
+  }
+
+  .backend-main-heading {
+    font-size: 22px;
+  }
+
+  .backend-image {
+    border-radius: 15px;
+  }
+
+  .backend-card {
+    text-align: center;
+  }
+
+  .backend-icon {
+    margin: 0 auto 15px;
+  }
+
+  .backend-card h5 {
+    font-size: 18px;
+  }
+
+  .backend-card p {
+    font-size: 14px;
+  }
+
+  .backend-tab-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .backend-tab-btn {
+    width: 100%;
+  }
+
+  .backend-input,
+  .backend-select {
+    font-size: 14px;
+  }
+
+  .backend-submit-btn {
+    width: 100%;
+  }
+
+}
+
+/* ==========================
+      FIXES
+========================== */
+
+@media (max-width: 991px) {
+
+  .backend-course .col-lg-6.text-center {
+    margin-top: 0 !important;
+  }
+
+  .backend-course .col-lg-6 {
+    margin-top: 0 !important;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .backend-breadcrumb.mx-5 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .backend-course h2 {
+    font-size: 2rem !important;
+    line-height: 1.3;
+  }
+}

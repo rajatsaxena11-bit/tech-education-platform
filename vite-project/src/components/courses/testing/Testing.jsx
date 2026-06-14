@@ -136,7 +136,7 @@ export default function TestingDeveloper() {
 
   const [openIndex, setOpenIndex] = useState(null);
 
-   const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
   
     useEffect(() => {
       const timer = setTimeout(() => {
@@ -150,11 +150,9 @@ export default function TestingDeveloper() {
       return (
         <div className="frontend-loader">
           <div className="spinner"></div>
-          <h3>Loading Frontend Course...</h3>
+          <h3>Loading...</h3>
         </div>
       );
-    }
-
   return (
     <>
 
@@ -165,26 +163,35 @@ export default function TestingDeveloper() {
 
             {/* Left Content */}
             <div className="col-lg-6">
-              <motion.h2
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="testing-title"
-              >
-                Become a Software Testing Expert 🧪
-              </motion.h2>
+              <h2 className="hero-title" style={{ marginTop: "80px" }}>
+                Master Software Testing &
+                <span> Launch Your Tech Career</span>
+              </h2>
 
-              <div className="testing-breadcrumb mx-5">
+              <motion.img
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+                src="https://www.thinktank.de/wp-content/uploads/2022/12/Tests-in-Softwareentwicklung.webp"
+                alt="Software Testing"
+                className="testing-image mt-4 w-100"
+              />
 
-                <span style={{ fontSize: "15px", fontWeight: "bold", color: "#333" }}>Home</span>
+              <h5 className="backend-main-heading">
+                SOFTWARE TESTING
+              </h5>
 
-                <span style={{ fontSize: "15px", fontWeight: "bold", color: "#333" }}>/</span>
+              <div className="backend-breadcrumb mx-5">
 
-                <span style={{ fontSize: "15px", fontWeight: "bold", color: "#333" }}>Software Testing</span>
+                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>Home</span>
 
-                <span style={{ fontSize: "15px", fontWeight: "bold", color: "#333" }}>/</span>
+                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>/</span>
 
-                <span style={{ fontSize: "15px", fontWeight: "bold", color: "#333" }}>QA Testing</span>
+                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>Backend Development</span>
+
+                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>/</span>
+
+                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>Backend Developer</span>
 
               </div>
 
@@ -229,162 +236,27 @@ export default function TestingDeveloper() {
 
               </div>
 
-              <div className="row mt-4" style={{ cursor: "pointer" }}>
-                {concepts.map((item, index) => (
-                  <div className="col-md-6 mb-4" key={index}>
-                    <motion.div
-                      whileHover={{
-                        y: -10,
-                        scale: 1.05
-                      }}
-                      className="testing-card"
-                    >
-                      <div className="testing-icon">
-                        {item.icon}
-                      </div>
+              <div className="row mt-4">
+                             {concepts.map((item, index) => (
+                               <div className="col-md-6 mb-3" key={index}>
+                                 <motion.div
+                                   whileHover={{
+                                     y: -8,
+                                     scale: 1.04,
+                                   }}
+                                   className="backend-card p-3"
+                                 >
+                                   <div className="backend-icon">
+                                     {item.icon}
+                                   </div>
+             
+                                   <h5>{item.title}</h5>
+                                   <p className="text-dark fw-bold">{item.desc}</p>
+                                 </motion.div>
+                               </div>
+                             ))}
+                           </div>
 
-                      <h5 style={{ fontSize: "18px" }}>{item.title}</h5>
-
-                      <p>{item.desc}</p>
-                    </motion.div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="testing-tab-section">
-
-                <div className="testing-tab-buttons">
-
-                  <button style={{ fontSize: "15px" }}
-                    className={
-                      activeTab === "about"
-                        ? "testing-tab-btn active"
-                        : "testing-tab-btn"
-                    }
-                    onClick={() => setActiveTab("about")}
-                  >
-                    About
-                  </button>
-
-                  <button style={{ fontSize: "15px" }}
-                    className={
-                      activeTab === "career"
-                        ? "testing-tab-btn active"
-                        : "testing-tab-btn"
-                    }
-                    onClick={() => setActiveTab("career")}
-                  >
-                    Career
-                  </button>
-
-                  <button style={{ fontSize: "15px" }}
-                    className={
-                      activeTab === "certificate"
-                        ? "testing-tab-btn active"
-                        : "testing-tab-btn"
-                    }
-                    onClick={() => setActiveTab("certificate")}
-                  >
-                    Certificate
-                  </button>
-
-                  <button style={{ fontSize: "15px" }}
-                    className={
-                      activeTab === "faqs"
-                        ? "testing-tab-btn active"
-                        : "testing-tab-btn"
-                    }
-                    onClick={() => setActiveTab("faqs")}
-                  >
-                    FAQs
-                  </button>
-
-                </div>
-
-                <div className="testing-tab-content">
-
-                  {activeTab === "about" && (
-
-                    <div>
-
-                      <h3 style={{ fontSize: "17px", fontWeight: "bold" }}>What You Will Learn?</h3>
-
-                      <ul>
-
-                        <li>Manual Testing Concepts</li>
-
-                        <li>Automation Testing with Selenium</li>
-
-                        <li>API Testing with Postman</li>
-
-                        <li>Bug Tracking Tools</li>
-
-                        <li>Performance Testing</li>
-
-                        <li>Real-Time Testing Projects</li>
-
-                      </ul>
-
-                    </div>
-
-                  )}
-
-                  {activeTab === "career" && (
-
-                    <div>
-
-                      <h3 style={{ fontSize: "17px", fontWeight: "bold" }}>Career Opportunities</h3>
-
-                      <ul>
-
-                        <li>QA Engineer</li>
-
-                        <li>Automation Tester</li>
-
-                        <li>Manual Tester</li>
-
-                        <li>Software Test Engineer</li>
-
-                      </ul>
-
-                    </div>
-
-                  )}
-
-                  {activeTab === "certificate" && (
-
-                    <div>
-
-                      <h3 style={{ fontSize: "17px", fontWeight: "bold" }}>Industry Certificate</h3>
-
-                      <p style={{fontSize:"15px"}}>
-
-                        Get an industry-recognized Software Testing
-                        certificate after course completion.
-
-                      </p>
-
-                    </div>
-
-                  )}
-
-                  {activeTab === "faqs" && (
-
-                    <div>
-
-                      <h3 style={{ fontSize: "17px", fontWeight: "bold" }}>Frequently Asked Questions</h3>
-
-                      <p style={{fontSize:"15px"}}>
-                        Placement assistance and interview preparation included.
-                      </p>
-
-                    </div>
-
-                  )}
-
-                </div>
-
-              </div>
 
               {/* MODULES */}
 
@@ -405,7 +277,7 @@ export default function TestingDeveloper() {
                       }
                     >
 
-                      <h5 style={{fontSize:"15px"}}>{item.title}</h5>
+                      <h5 style={{ fontSize: "15px" }}>{item.title}</h5>
 
                       {openIndex === index ? (
                         <FaChevronUp />
@@ -434,16 +306,9 @@ export default function TestingDeveloper() {
             </div>
 
             {/* Right Image */}
-            <div className="col-lg-6 text-center" style={{ marginTop: "-2rem" }}>
+            <div className="col-lg-6 text-center" >
 
-              <motion.img
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
-                src="https://www.thinktank.de/wp-content/uploads/2022/12/Tests-in-Softwareentwicklung.webp"
-                alt="Software Testing"
-                className="testing-image w-100"
-              />
+
 
               <div className="testing-badge">
                 QA & Automation Testing
@@ -474,7 +339,7 @@ export default function TestingDeveloper() {
               <div className="backend-form-card mt-5">
 
                 <div className="form-header">
-                  <h3 style={{fontSize:"22px"}}>🚀 Enquire Now</h3>
+                  <h3 style={{ fontSize: "22px" }}>🚀 Enquire Now</h3>
                   <p>Start your Backend Developer journey today</p>
                 </div>
 
@@ -536,15 +401,15 @@ export default function TestingDeveloper() {
 
               </div>
 
-              <div className="testing-related-card mt-5">
+              <div className="backend-related-card">
 
-                <h3 style={{ fontSize: "20px" }}>Related Courses</h3>
+                <h3>Related Courses</h3>
 
                 {relatedCourses.map((course, index) => (
 
-                  <div className="testing-related-item" key={index}>
+                  <div className="backend-related-item" key={index}>
 
-                    <span>{course}</span>
+                    <span style={{ color: "navy", fontWeight: "bold", fontSize: "14px" }}>{course}</span>
 
                     <FaArrowRight />
 
@@ -554,15 +419,152 @@ export default function TestingDeveloper() {
 
               </div>
 
+              <div className="backend-tab-section">
+
+                <div className="backend-tab-buttons">
+
+                  <button style={{ fontSize: "17px" }}
+                    className={
+                      activeTab === "about"
+                        ? "backend-tab-btn active"
+                        : "backend-tab-btn"
+                    }
+                    onClick={() => setActiveTab("about")}
+                  >
+                    About
+                  </button>
+
+                  <button style={{ fontSize: "17px" }}
+                    className={
+                      activeTab === "career"
+                        ? "backend-tab-btn active"
+                        : "backend-tab-btn"
+                    }
+                    onClick={() => setActiveTab("career")}
+                  >
+                    Career
+                  </button>
+
+                  <button style={{ fontSize: "17px" }}
+                    className={
+                      activeTab === "certificate"
+                        ? "backend-tab-btn active"
+                        : "backend-tab-btn"
+                    }
+                    onClick={() => setActiveTab("certificate")}
+                  >
+                    Certificate
+                  </button>
+
+                  <button style={{ fontSize: "17px" }}
+                    className={
+                      activeTab === "faqs"
+                        ? "backend-tab-btn active"
+                        : "backend-tab-btn"
+                    }
+                    onClick={() => setActiveTab("faqs")}
+                  >
+                    FAQs
+                  </button>
+
+                </div>
+
+                <div className="backend-tab-content">
+
+                  {activeTab === "about" && (
+
+                    <div>
+
+                      <h3 style={{ fontSize: "20px", fontWeight: "bold" }}>What You Will Learn?</h3>
+                      <br />
+
+                      <ul>
+
+                        <li>Backend Development using Node JS</li>
+
+                        <li>REST API Development with Express JS</li>
+
+                        <li>MongoDB Database Integration</li>
+
+                        <li>Authentication using JWT</li>
+
+                        <li>Server Deployment & Hosting</li>
+
+                      </ul>
+
+                    </div>
+
+                  )}
+
+                  {activeTab === "career" && (
+
+                    <div>
+
+                      <h3 style={{ fontSize: "25px" }}>Career Opportunities</h3>
+                      <br />
+
+                      <ul>
+
+                        <li>Backend Developer</li>
+
+                        <li>Node JS Developer</li>
+
+                        <li>API Developer</li>
+
+                        <li>Full Stack Developer</li>
+
+                      </ul>
+
+                    </div>
+
+                  )}
+
+                  {activeTab === "certificate" && (
+
+                    <div>
+
+                      <h3 style={{ fontSize: "25px" }}>Industry Certificate</h3>
+                      <br />
+
+                      <p>
+
+                        Get an industry-recognized Backend Developer
+                        certificate after course completion.
+
+                      </p>
+
+                    </div>
+
+                  )}
+
+                  {activeTab === "faqs" && (
+
+                    <div>
+
+                      <h3 style={{ fontSize: "25px" }}>Frequently Asked Questions</h3>
+                      <br />
+
+                      <p>
+                        100% placement support and interview preparation included.
+                      </p>
+
+                    </div>
+
+                  )}
+
+                </div>
+
+              </div>
+
             </div>
 
           </div>
 
         </div>
-        <Courses/>
-        <Testimonials/>
+        <Courses />
+        <Testimonials />
       </section>
-         
+
     </>
   );
 }

@@ -143,7 +143,7 @@ export default function OurPlacedStudents() {
       return (
         <div className="frontend-loader">
           <div className="spinner"></div>
-          <h3>Loading Frontend Course...</h3>
+          <h3>Loading...</h3>
         </div>
       );
     }

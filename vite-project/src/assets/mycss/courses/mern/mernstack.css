@@ -882,6 +882,7 @@
   }
 }
 
+
 @media(max-width:576px) {
 
   .mern-main-heading {
@@ -992,5 +993,18 @@
 
   100% {
     transform: translateY(0);
+  }
+}
+
+
+.hero-title {
+  font-size: 35px;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 30px !important;
+    line-height: 1.2;
+    margin-top: 40px !important;
   }
 }

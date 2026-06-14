@@ -141,45 +141,68 @@ export default function BackendDeveloper() {
   const [openIndex, setOpenIndex] = useState(null);
 
    const [loading, setLoading] = useState(true);
-  
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        setLoading(false);
-      }, 400); // 2 second loading
-  
-      return () => clearTimeout(timer);
-    }, []);
-  
-    if (loading) {
-      return (
-        <div className="frontend-loader">
-          <div className="spinner"></div>
-          <h3>Loading Frontend Course...</h3>
-        </div>
-      );
-    }
+ 
+   useEffect(() => {
+     const timer = setTimeout(() => {
+       setLoading(false);
+     }, 400); // 2 second loading
+ 
+     return () => clearTimeout(timer);
+   }, []);
+ 
+   if (loading) {
+     return (
+       <div className="frontend-loader">
+         <div className="spinner"></div>
+         <h3>Loading...</h3>
+       </div>
+     );
 
   return (
     <>
 
-      <section className="backend-course py-5 mt-5" style={{ cursor: "pointer" }}>
+      <section className="backend-course py-5" style={{ cursor: "pointer" }}>
         <div className="container">
           <div className="row align-items-center">
 
+            
+
             {/* Image Section */}
             <div className="col-lg-6 text-center mb-4">
-              <motion.img style={{ marginTop: "-300px" }}
+                  <h2 className="hero-title">
+                  Master Backend Development &
+                  <span> Launch Your Tech Career</span>
+                </h2>
+              <motion.img 
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
                 src="https://palcomtech.ac.id/wp-content/uploads/2023/11/nodejs_cover_photo_smaller_size.png"
                 alt="Backend Developer"
-                className="img-fluid backend-image"
+                className="img-fluid mt-4 backend-image"
               />
 
               <h5 className="backend-main-heading">
                 BACKEND DEVELOPER
               </h5>
+
+               <div className="backend-breadcrumb mx-5">
+
+                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>Home</span>
+
+                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>/</span>
+
+                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>Backend Development</span>
+
+                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>/</span>
+
+                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>Backend Developer</span>
+
+              </div>
+
+              <div className="backend-tag" style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>
+                #1 Backend Development Program
+              </div>
 
               <div className="backend-content-card">
 
@@ -206,7 +229,7 @@ export default function BackendDeveloper() {
               </div>
 
 
-              <p className="backend-hero-para">
+              <p className="backend-hero-para mt-3">
 
                 Become a professional Backend Developer by mastering
                 Node JS, Express JS, MongoDB and REST APIs with live projects
@@ -375,7 +398,7 @@ export default function BackendDeveloper() {
                 </div>
 
               </div>
-              <div className="frontend-content-card mt-5">
+              {/* <div className="frontend-content-card mt-5">
 
                 <h2>
                   What Is Backend Development?
@@ -387,13 +410,13 @@ export default function BackendDeveloper() {
                   and web applications behind the scenes.
                 </p>
 
-                <p>
+                <p className="text-dark">
                   Backend Developers work with technologies like Node.js, Express.js,
                   MongoDB, MySQL, and REST APIs to create secure, scalable, and
                   high-performance applications.
                 </p>
 
-              </div>
+              </div> */}
               <div className="backend-module-wrapper">
 
                 <h2 className="backend-section-title">
@@ -441,34 +464,8 @@ export default function BackendDeveloper() {
 
             {/* Content Section */}
             <div className="col-lg-6" style={{ marginTop: "50px" }}>
-              <motion.h2 style={{ fontSize: "35px" }}
-                initial={{ opacity: 0, x: 60 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="fw-bold display-5 mb-3"
-              >
-                Become a Professional Backend Developer ⚙️
-              </motion.h2>
-
-              <div className="backend-breadcrumb mx-5">
-
-                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>Home</span>
-
-                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>/</span>
-
-                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>Backend Development</span>
-
-                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>/</span>
-
-                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>Backend Developer</span>
-
-              </div>
-
-              <div className="backend-tag" style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>
-                #1 Backend Development Program
-              </div>
-
-              <p className="text-muted" style={{ fontSize: "15px" }}>
+            
+              <p className="text-muted mt-5" style={{ fontSize: "15px" }}>
                 Learn Node.js, Express.js, MongoDB, Authentication,
                 APIs and Deployment to build powerful backend systems.
               </p>

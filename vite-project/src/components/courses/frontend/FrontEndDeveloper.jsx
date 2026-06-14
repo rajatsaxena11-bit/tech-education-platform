@@ -138,7 +138,7 @@ export default function FrontendDeveloper() {
 
   const [openIndex, setOpenIndex] = useState(null);
 
-  const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -152,10 +152,9 @@ export default function FrontendDeveloper() {
     return (
       <div className="frontend-loader">
         <div className="spinner"></div>
-        <h3>Loading Frontend Course...</h3>
+        <h3>Loading...</h3>
       </div>
     );
-  }
 
 
   return (
@@ -165,35 +164,51 @@ export default function FrontendDeveloper() {
           <div className="row align-items-center">
 
             {/* Left Content */}
-            <div className="col-lg-6 mb-4" style={{ marginTop: "-40rem" }}>
+            <div className="col-lg-6 mb-4" style={{marginTop:"120px"}} >
+              
               <motion.h2 style={{ fontSize: "35px" }}
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 className="fw-bold display-5 mb-3"
               >
-                Become a Professional Frontend Developer 🚀
+                <h2 className="hero-title">
+                  Master Frontend Development &
+                  <span> Launch Your Tech Career</span>
+                </h2>
               </motion.h2>
+
+               <motion.img
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+                src="https://refine.ams3.cdn.digitaloceanspaces.com/blog-yearly/2023/2023-12-11-frameworks-2024/social-2.webp"
+                alt="Frontend Developer"
+                className="img-fluid mt-4 frontend-image"
+              />
+               <h5 className="backend-main-heading">
+                FRONTEND DEVELOPER
+              </h5>
 
               <div className="frontend-breadcrumb">
 
-                <span style={{ fontSize: "15px", fontWeight: "bold", color: "navy" }}>Home</span>
+                <span style={{ fontSize: "15px", fontWeight: "bold", color: "#1dc5ba" }}>Home</span>
 
-                <span style={{ fontSize: "15px", fontWeight: "bold", color: "navy" }}>/</span>
+                <span style={{ fontSize: "15px", fontWeight: "bold", color: "#1dc5ba" }}>/</span>
 
-                <span style={{ fontSize: "15px", fontWeight: "bold", color: "navy" }}>Frontend Development</span>
+                <span style={{ fontSize: "15px", fontWeight: "bold", color: "#1dc5ba" }}>Frontend Development</span>
 
-                <span style={{ fontSize: "15px", fontWeight: "bold", color: "navy" }}>/</span>
+                <span style={{ fontSize: "15px", fontWeight: "bold", color: "#1dc5ba" }}>/</span>
 
-                <span style={{ fontSize: "15px", fontWeight: "bold", color: "navy" }}>Frontend Developer</span>
+                <span style={{ fontSize: "15px", fontWeight: "bold", color: "#1dc5ba" }}>Frontend Developer</span>
 
               </div>
 
-              <div className="frontend-tag" style={{ fontSize: "15px", fontWeight: "bold", color: "navy" }}>
+              <div className="frontend-tag" style={{ fontSize: "15px", fontWeight: "bold", color: "darkgray" }}>
                 #1 Frontend Development Program
               </div>
 
-              <p className="frontend-hero-para" style={{ fontSize: "15px", fontWeight: "bold", color: "navy" }}>
+              <p className="frontend-hero-para" style={{ fontSize: "15px", fontWeight: "bold", color: "black" }}>
 
                 Become a professional Frontend Developer by mastering
                 HTML5, CSS3, JavaScript and React JS with live projects
@@ -201,18 +216,16 @@ export default function FrontendDeveloper() {
 
               </p>
 
-              <div className="frontend-rating-box" style={{ fontSize: "15px", fontWeight: "bold" }}>
+              <div className="frontend-rating-box">
+                <div className="stars">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} />
+                  ))}
+                </div>
 
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-
-                <span style={{ fontSize: "15px", fontWeight: "bold", color: "black" }}>
+                <span>
                   4.9 Rating (16,000+ Reviews)
                 </span>
-
               </div>
 
               <div className="frontend-btn-group">
@@ -227,16 +240,14 @@ export default function FrontendDeveloper() {
 
               </div>
 
-              <h1 className="frontend-main-heading" style={{ fontSize: "25px", fontWeight: "bold", color: "black" }}>
-                FRONTEND DEVELOPER
-              </h1>
+             
 
               <p className="text-muted" style={{ fontSize: "15px" }}>
                 Learn everything from HTML, CSS, JavaScript to React JS and
                 build modern, responsive and interactive websites.
               </p>
 
-              <div className="row mt-4">
+              <div className="row mt-4" style={{cursor:"pointer"}}>
                 {concepts.map((item, index) => (
                   <div className="col-md-6 mb-3" key={index}>
                     <motion.div
@@ -247,7 +258,7 @@ export default function FrontendDeveloper() {
                       className="concept-card p-3"
                     >
                       <div className="icon text-dark">{item.icon}</div>
-                      <h5>{item.title}</h5>
+                      <h5 className="fw-bold" style={{fontSize:"17px", cursor:"pointer"}}>{item.title}</h5>
                       <p>{item.desc}</p>
                     </motion.div>
                   </div>
@@ -257,155 +268,7 @@ export default function FrontendDeveloper() {
 
               {/* TABS */}
 
-              <div className="frontend-tab-section">
-
-                <div className="frontend-tab-buttons">
-
-                  <button style={{ fontSize: "17px" }}
-                    className={
-                      activeTab === "about"
-                        ? "frontend-tab-btn active"
-                        : "frontend-tab-btn"
-                    }
-                    onClick={() => setActiveTab("about")}
-                  >
-                    About
-                  </button>
-
-                  <button style={{ fontSize: "15px" }}
-                    className={
-                      activeTab === "career"
-                        ? "frontend-tab-btn active"
-                        : "frontend-tab-btn"
-                    }
-                    onClick={() => setActiveTab("career")}
-                  >
-                    Career
-                  </button>
-
-                  <button style={{ fontSize: "15px" }}
-                    className={
-                      activeTab === "certificate"
-                        ? "frontend-tab-btn active"
-                        : "frontend-tab-btn"
-                    }
-                    onClick={() => setActiveTab("certificate")}
-                  >
-                    Certificate
-                  </button>
-
-                  <button style={{ fontSize: "15px" }}
-                    className={
-                      activeTab === "faqs"
-                        ? "frontend-tab-btn active"
-                        : "frontend-tab-btn"
-                    }
-                    onClick={() => setActiveTab("faqs")}
-                  >
-                    FAQs
-                  </button>
-
-                </div>
-
-                <div className="frontend-tab-content">
-
-                  {activeTab === "about" && (
-
-                    <div>
-
-                      <h3 style={{ fontSize: "17px", fontWeight: "bold" }}>
-                        What You Will Learn?
-                      </h3>
-
-                      <br />
-
-                      <ul>
-
-                        <li>Responsive Website Development</li>
-
-                        <li>HTML5 & CSS3 Design</li>
-
-                        <li>JavaScript & ES6 Concepts</li>
-
-                        <li>Frontend Development using React JS</li>
-
-                        <li>API Integration & Routing</li>
-
-                        <li>Deployment & Hosting</li>
-
-                      </ul>
-
-                    </div>
-
-                  )}
-
-                  {activeTab === "career" && (
-
-                    <div>
-
-                      <h3 style={{ fontSize: "17px", fontWeight: "bold" }}>
-                        Career Opportunities
-                      </h3>
-
-                      <br />
-
-                      <ul>
-
-                        <li>Frontend Developer</li>
-
-                        <li>React JS Developer</li>
-
-                        <li>UI Developer</li>
-
-                        <li>Web Designer</li>
-
-                      </ul>
-
-                    </div>
-
-                  )}
-
-                  {activeTab === "certificate" && (
-
-                    <div>
-
-                      <h3 style={{ fontSize: "17px", fontWeight: "bold" }}>
-                        Industry Certificate
-                      </h3>
-
-                      <br />
-
-                      <p style={{ fontSize: "15px" }}>
-
-                        Get an industry-recognized Frontend Developer
-                        certificate after course completion.
-
-                      </p>
-
-                    </div>
-
-                  )}
-
-                  {activeTab === "faqs" && (
-
-                    <div>
-
-                      <h3 style={{ fontSize: "17px", fontWeight: "bold" }}>
-                        Frequently Asked Questions
-                      </h3>
-
-                      <br />
-
-                      <p style={{ fontSize: "15px" }}>
-                        100% placement support and interview preparation included.
-                      </p>
-
-                    </div>
-
-                  )}
-
-                </div>
-              </div>
+            
 
               {/* MODULES */}
 
@@ -413,15 +276,33 @@ export default function FrontendDeveloper() {
             </div>
 
             {/* Right Image */}
-            <div className="col-lg-6 text-center" style={{ marginTop: "10rem" }}>
-              <motion.img
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
-                src="https://refine.ams3.cdn.digitaloceanspaces.com/blog-yearly/2023/2023-12-11-frameworks-2024/social-2.webp"
-                alt="Frontend Developer"
-                className="img-fluid frontend-image"
-              />
+            <div className="col-lg-6 text-center mt-5" >
+
+               <div className="frontend-content-card">
+
+                <h2 className="fw-bold frontend-content-card1">
+                  What Is Frontend Development?
+                </h2>
+
+                <p>
+
+                  Frontend Development focuses on building responsive,
+                  interactive and user-friendly interfaces for websites
+                  and web applications.
+
+                </p>
+
+                <p>
+
+                  Frontend Developers create visually attractive websites
+                  using HTML, CSS, JavaScript and modern frameworks like React JS.
+
+                </p>
+
+
+
+              </div>
+             
 
 
               <div className="backend-form-card mt-5">
@@ -507,34 +388,164 @@ export default function FrontendDeveloper() {
 
               </div>
 
-              <div className="frontend-content-card mt-5">
+                <div className="frontend-tab-section mt-5">
 
-                <h2>
-                  What Is Frontend Development?
-                </h2>
+                <div className="frontend-tab-buttons">
 
-                <p>
+                  <button style={{ fontSize: "17px" }}
+                    className={
+                      activeTab === "about"
+                        ? "frontend-tab-btn active"
+                        : "frontend-tab-btn"
+                    }
+                    onClick={() => setActiveTab("about")}
+                  >
+                    About
+                  </button>
 
-                  Frontend Development focuses on building responsive,
-                  interactive and user-friendly interfaces for websites
-                  and web applications.
+                  <button style={{ fontSize: "15px" }}
+                    className={
+                      activeTab === "career"
+                        ? "frontend-tab-btn active"
+                        : "frontend-tab-btn"
+                    }
+                    onClick={() => setActiveTab("career")}
+                  >
+                    Career
+                  </button>
 
-                </p>
+                  <button style={{ fontSize: "15px" }}
+                    className={
+                      activeTab === "certificate"
+                        ? "frontend-tab-btn active"
+                        : "frontend-tab-btn"
+                    }
+                    onClick={() => setActiveTab("certificate")}
+                  >
+                    Certificate
+                  </button>
 
-                <p>
+                  <button style={{ fontSize: "15px" }}
+                    className={
+                      activeTab === "faqs"
+                        ? "frontend-tab-btn active"
+                        : "frontend-tab-btn"
+                    }
+                    onClick={() => setActiveTab("faqs")}
+                  >
+                    FAQs
+                  </button>
 
-                  Frontend Developers create visually attractive websites
-                  using HTML, CSS, JavaScript and modern frameworks like React JS.
+                </div>
 
-                </p>
+                <div className="frontend-tab-content">
 
+                  {activeTab === "about" && (
 
+                    <div>
 
+                      <h3 style={{ fontSize: "20px", fontWeight: "bold" }}>
+                        What You Will Learn?
+                      </h3>
+
+                      <br />
+
+                      <ul>
+
+                        <li>Responsive Website Development</li>
+
+                        <li>HTML5 & CSS3 Design</li>
+
+                        <li>JavaScript & ES6 Concepts</li>
+
+                        <li>Frontend Development using React JS</li>
+
+                        <li>API Integration & Routing</li>
+
+                        <li>Deployment & Hosting</li>
+
+                      </ul>
+
+                    </div>
+
+                  )}
+
+                  {activeTab === "career" && (
+
+                    <div>
+
+                      <h3 style={{ fontSize: "20px", fontWeight: "bold" }}>
+                        Career Opportunities
+                      </h3>
+
+                      <br />
+
+                      <ul>
+
+                        <li>Frontend Developer</li>
+
+                        <li>React JS Developer</li>
+
+                        <li>UI Developer</li>
+
+                        <li>Web Designer</li>
+
+                      </ul>
+
+                    </div>
+
+                  )}
+
+                  {activeTab === "certificate" && (
+
+                    <div>
+
+                      <h3 style={{ fontSize: "20px", fontWeight: "bold" }}>
+                        Industry Certificate
+                      </h3>
+
+                      <br />
+
+                      <p style={{ fontSize: "15px" }}>
+
+                        Get an industry-recognized Frontend Developer
+                        certificate after course completion.
+
+                      </p>
+
+                    </div>
+
+                  )}
+
+                  {activeTab === "faqs" && (
+
+                    <div>
+
+                      <h3 style={{ fontSize: "20px", fontWeight: "bold" }}>
+                        Frequently Asked Questions
+                      </h3>
+
+                      <br />
+
+                      <p style={{ fontSize: "15px" }}>
+                        100% placement support and interview preparation included.
+                      </p>
+
+                    </div>
+
+                  )}
+
+                </div>
               </div>
 
+             
+
+            
+
+            </div>
               <div className="frontend-module-wrapper">
 
-                <h2 className="frontend-section-title">
+                <h2 className="frontend-section-title mt-5 mb-3 fw-bold">
                   Explore Course Modules
                 </h2>
 
@@ -549,7 +560,7 @@ export default function FrontendDeveloper() {
                       }
                     >
 
-                      <h5>{item.title}</h5>
+                      <h5 style={{fontSize:"17px"}}>{item.title}</h5>
 
                       {openIndex === index ? (
                         <FaChevronUp />
@@ -574,8 +585,6 @@ export default function FrontendDeveloper() {
                 ))}
 
               </div>
-
-            </div>
             <ModernCourseSlider />
           </div>
         </div>
