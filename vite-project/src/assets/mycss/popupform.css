@@ -13,7 +13,7 @@
 
   z-index: 99999;
 
-  padding: 20px;
+  padding: 15px;
 
   backdrop-filter: blur(6px);
 }
@@ -39,6 +39,12 @@
   position: relative;
 
   animation: careerPopupAnimation 0.4s ease;
+}
+
+.career-popup-left-panel,
+.career-popup-right-panel {
+  flex: 1;
+  overflow-y: auto;
 }
 
 @keyframes careerPopupAnimation {
@@ -398,13 +404,23 @@
 }
 
 /* MAIN CONTAINER */
-.career-popup-container {
-  display: flex;
-  width: 100%;
-  max-width: 950px;
-  background: #fff;
-  border-radius: 15px;
-  overflow: hidden;
+.career-popup-container{
+  display:flex;
+  max-height:100vh !important;
+  overflow-y:auto !important;
+}
+
+@media(max-width:768px){
+  .career-popup-container{
+    flex-direction:column !important;
+    height:auto !important;
+  }
+
+  .career-popup-left-panel,
+  .career-popup-right-panel{
+    width:100% !important;
+    height:auto !important;
+  }
 }
 
 /* LEFT PANEL */
