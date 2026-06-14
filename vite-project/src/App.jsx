@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Navbar';
 import HomePage from './pages/HomePage';
-import CoursePage from './pages/CoursePage';
+import FrontendDeveloper from './components/courses/frontend/FrontEndDeveloper';
 import BackendDeveloper from './components/courses/backend/Backend';
 import MernStackDeveloper from './components/courses/mern/MernStack';
 import TestingDeveloper from './components/courses/testing/Testing';
@@ -86,6 +86,7 @@ import ContactUsPage from './pages/ContactUsPage';
 
 
 
+
 function App() {
   return (
     <>
@@ -95,7 +96,7 @@ function App() {
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<HomePage />} />
-          <Route path="/frontenddeveloper" element={<CoursePage />} />
+          <Route path="/frontenddeveloper" element={<FrontendDeveloper />} />
           <Route path="/backenddeveloper" element={<BackendDeveloper />} />
           <Route path="/merndeveloper" element={<MernStackDeveloper />} />
           <Route path="/testingdeveloper" element={<TestingDeveloper />} />
