@@ -1,11 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Navbar';
 import HomePage from './pages/HomePage';
+
+// Courses
 import FrontendDeveloper from './components/courses/frontend/FrontEndDeveloper';
 import BackendDeveloper from './components/courses/backend/Backend';
 import MernStackDeveloper from './components/courses/mern/MernStack';
 import TestingDeveloper from './components/courses/testing/Testing';
-import PlacementPage from './pages/PlacementPage';
+
+// Placements
+import OurPlacedStudents from './components/placements/PlacedStudents';
 import HighestPackages from './components/placements/highestpackage';
 import HiringPartners from './components/home/HiringPartners';
 import PlacementProcess from './components/placements/PlacementProcess';
@@ -14,6 +18,7 @@ import StudentSuccessStories from './components/placements/SuccessStory';
 import MockInterview from './components/placements/MockInterviews';
 import StartupOpportunities from './components/placements/StartUpCompany';
 import TopMNCHiring from './components/placements/TopMMnc';
+
 import AboutPage from './pages/AboutPage';
 import GalleryPage from './pages/GalleryPage';
 import PracticalTraining from './components/Training/PracticleTranning';
@@ -87,6 +92,7 @@ import ContactUsPage from './pages/ContactUsPage';
 
 
 
+
 function App() {
   return (
     <>
@@ -102,7 +108,7 @@ function App() {
           <Route path="/testingdeveloper" element={<TestingDeveloper />} />
 
 
-          <Route path="/studentplacementpage" element={<PlacementPage />} />
+          <Route path="/studentplacementpage" element={<OurPlacedStudents />} />
           <Route path="/studenthighestpackage" element={<HighestPackages />} />
           <Route path="/hiringpartners" element={<HiringPartners />} />
           <Route path="/placementprocess" element={<PlacementProcess />} />

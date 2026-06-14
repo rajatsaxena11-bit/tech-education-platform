@@ -128,7 +128,7 @@ const students = [
   },
 ];
 
-export default function PlacedStudents() {
+export default function OurPlacedStudents() {
    const [loading, setLoading] = useState(true);
   
     useEffect(() => {
