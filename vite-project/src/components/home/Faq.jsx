@@ -84,7 +84,7 @@ export default function Faq() {
 
                         <div class="col-lg-6 col-sm-6 col-xs-12">
                             <div class="pt_faq">
-                                <img src="src/assets/images/all-img/faq.png" class="img-fluid" alt="image" />
+                                <img src="https://media.istockphoto.com/id/1497849975/photo/hispanic-teacher-working-on-her-laptop-in-the-classroom.jpg?s=612x612&w=0&k=20&c=YQbh7VreNqDZfrikIpM7v7AZZNvo-6ABv8YT8l0FWx8=" class="img-fluid" alt="image" />
                             </div>
                         </div>
                     </div>

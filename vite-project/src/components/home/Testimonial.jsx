@@ -8,25 +8,25 @@ const testimonials = [
     {
         name: "Nitin Gupta",
         company: "TCS",
-        img: "src/assets/images/all-img/t1.png",
+        img: "https://t4.ftcdn.net/jpg/05/19/89/97/360_F_519899761_kH6DsNBvULXhoSN2MVil1IUsRpSTNxvC.jpg",
         text: "The training exceeded my expectations. Hands-on projects helped me gain real confidence."
     },
     {
         name: "Priyanka Tiwari",
         company: "KT Group",
-        img: "src/assets/images/all-img/t2.png",
+        img: "https://t4.ftcdn.net/jpg/06/77/30/71/360_F_677307123_bVNJqZD8AGDjPolT5riGQd1uYHh2XVXY.jpg",
         text: "I started with zero coding knowledge. Everything was explained in a simple way."
     },
     {
         name: "Akriti Khare",
         company: "Zensar",
-        img: "src/assets/images/all-img/t3.png",
+        img: "https://t4.ftcdn.net/jpg/01/63/75/29/360_F_163752905_ssm9pYAyaSzit4qjxXVDiQePQRChCH8u.jpg",
         text: "Best MERN training with live projects and strong mentor support."
     },
     {
         name: "Rahul Pandey",
         company: "MNC",
-        img: "src/assets/images/all-img/rc-2.png",
+        img: "https://cdn.pixabay.com/photo/2025/11/28/11/39/top-business-institute-in-india-9982835_1280.jpg",
         text: "Frontend course gave me confidence to build real production projects."
     }
 ]

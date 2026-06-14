@@ -66,7 +66,7 @@ export default function ClientSlider() {
                             <SwiperSlide>
                                 <Link to="#">
                                     <img
-                                        src="/src/assets/images/company/1.png"
+                                        src="https://i.ibb.co/5XyYrCCN/1.png"
                                         alt=""
                                         className="client-logo"
                                     />
@@ -76,7 +76,7 @@ export default function ClientSlider() {
                             <SwiperSlide>
                                 <Link to="#">
                                     <img
-                                        src="/src/assets/images/company/2.png"
+                                        src="https://i.ibb.co/rKZ1CgHZ/2.png"
                                         alt=""
                                         className="client-logo"
                                     />
@@ -86,7 +86,7 @@ export default function ClientSlider() {
                             <SwiperSlide>
                                 <Link to="#">
                                     <img
-                                        src="/src/assets/images/company/3.png"
+                                        src="https://i.ibb.co/j9wkX3vT/3.jpg"
                                         alt=""
                                         className="client-logo"
                                     />
@@ -96,7 +96,7 @@ export default function ClientSlider() {
                             <SwiperSlide>
                                 <Link to="#">
                                     <img
-                                        src="/src/assets/images/company/5.png"
+                                        src="https://i.ibb.co/0pDnKGpC/5.png"
                                         alt=""
                                         className="client-logo"
                                     />
@@ -106,7 +106,7 @@ export default function ClientSlider() {
                             <SwiperSlide>
                                 <Link to="#">
                                     <img
-                                        src="/src/assets/images/company/6.png"
+                                        src="https://i.ibb.co/d40DBCbT/6.png"
                                         alt=""
                                         className="client-logo"
                                     />
@@ -116,7 +116,7 @@ export default function ClientSlider() {
                             <SwiperSlide>
                                 <Link to="#">
                                     <img
-                                        src="/src/assets/images/company/7.svg"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTtYmvN4OaL36AwlJTQ4JlJqLL4Uoda8UQkg&s"
                                         alt=""
                                         className="client-logo"
                                     />
@@ -125,7 +125,7 @@ export default function ClientSlider() {
                             <SwiperSlide>
                                 <Link to="#">
                                     <img
-                                        src="/src/assets/images/company/8.avif"
+                                        src="https://i.ibb.co/Y73VGGrM/8.avif"
                                         alt=""
                                         className="client-logo"
                                     />
@@ -134,7 +134,7 @@ export default function ClientSlider() {
                             <SwiperSlide>
                                 <Link to="#">
                                     <img
-                                        src="/src/assets/images/company/9.png"
+                                        src="https://i.ibb.co/Ngv03cS4/9.png"
                                         alt=""
                                         className="client-logo"
                                     />
@@ -143,7 +143,7 @@ export default function ClientSlider() {
                             <SwiperSlide>
                                 <Link to="#">
                                     <img
-                                        src="/src/assets/images/company/3.jpg"
+                                        src="https://i.ibb.co/rKcSKLDN/10.png"
                                         alt=""
                                         className="client-logo"
                                     />
@@ -152,7 +152,7 @@ export default function ClientSlider() {
                             <SwiperSlide>
                                 <Link to="#">
                                     <img
-                                        src="/src/assets/images/company/11.png"
+                                        src="https://i.ibb.co/4RqfqRfD/11.png"
                                         alt=""
                                         className="client-logo"
                                     />
@@ -161,7 +161,7 @@ export default function ClientSlider() {
                             <SwiperSlide>
                                 <Link to="#">
                                     <img
-                                        src="/src/assets/images/company/13.png"
+                                        src="https://i.ibb.co/LXfPDp5k/13.png"
                                         alt=""
                                         className="client-logo"
                                     />
@@ -172,7 +172,7 @@ export default function ClientSlider() {
                             <SwiperSlide>
                                 <Link to="#">
                                     <img
-                                        src="/src/assets/images/company/22.png"
+                                        src="https://i.ibb.co/yBKkN8rt/17.webp"
                                         alt=""
                                         className="client-logo"
                                     />
@@ -181,7 +181,7 @@ export default function ClientSlider() {
                             <SwiperSlide>
                                 <Link to="#">
                                     <img
-                                        src="/src/assets/images/company/33.png"
+                                        src="https://i.ibb.co/nNY27vmT/33.png"
                                         alt=""
                                         className="client-logo"
                                     />

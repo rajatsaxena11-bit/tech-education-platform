@@ -48,7 +48,7 @@ export default function CodingAssetment() {
                         <div className="image-box">
 
                             <img
-                                src="src/assets/img/true-false.png"
+                                src="https://i.ibb.co/Rk81N3rC/true-false.png"
                                 className="img-fluid"
                                 alt=""
                             />
@@ -109,7 +109,7 @@ export default function CodingAssetment() {
                         <div className="image-box">
 
                             <img
-                                src="src/assets/img/discussion.png"
+                                src="https://i.ibb.co/6cN1D9wJ/discussion.png"
                                 className="img-fluid"
                                 alt=""
                             />

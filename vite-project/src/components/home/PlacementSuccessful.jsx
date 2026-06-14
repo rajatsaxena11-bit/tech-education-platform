@@ -122,7 +122,7 @@ export default function PlacementSlider() {
 
         <div className="placement-header">
 
-          <span className="placement-badge fs-5">
+          <span className="placement-badge">
             🎯 Placement Success
           </span>
 
