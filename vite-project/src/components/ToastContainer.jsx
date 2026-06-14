@@ -11,7 +11,7 @@ import {
 import "../assets/mycss/toastcontainer.css";
 
 export default function PlacementToast() {
-  
+
 
   const students = [
 
@@ -61,7 +61,7 @@ export default function PlacementToast() {
   const [show, setShow] = useState(true);
   const [closed, setClosed] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
-  
+
 
   useEffect(() => {
 
@@ -91,25 +91,24 @@ export default function PlacementToast() {
 
   return (
 
-  <div
-  className={`premium-toast ${show ? "show" : ""} ${
-    isClosing ? "toast-closing" : ""
-  }`}
->
+    <div
+      className={`premium-toast ${show ? "show" : ""} ${isClosing ? "toast-closing" : ""
+        }`}
+    >
 
       {/* Close */}
-     <button
-  className="premium-close-btn academy-close-action1"
-  onClick={() => {
-    setIsClosing(true);
+      <button
+        className="premium-close-btn academy-close-action1"
+        onClick={() => {
+          setIsClosing(true);
 
-    setTimeout(() => {
-      setClosed(true);
-    }, 300);
-  }}
->
-  ✕
-</button>
+          setTimeout(() => {
+            setClosed(true);
+          }, 400);
+        }}
+      >
+        ✕
+      </button>
 
       {/* Left Image */}
       <div className="premium-image-wrapper">
@@ -137,34 +136,34 @@ export default function PlacementToast() {
             🎉 Hired
           </span>
 
-           
+
 
         </div>
 
         {/* Company */}
-      
+
 
         {/* Role */}
-       <div className="d-flex justify-content-between">
-         <div className="role-box">
+        <div className="d-flex justify-content-between">
+          <div className="role-box">
 
-          <span style={{fontSize:"12px", fontWeight:"bold"}}>{students[index].role}</span>
+            <span style={{ fontSize: "12px", fontWeight: "bold" }}>{students[index].role}</span>
 
-        </div>
+          </div>
 
           <p className="company-line mt-2">
 
-          <FaLaptopCode />
-           <span style={{fontSize:"15px"}}>
-            
-          Selected in
-          <span className="text-warning fw-bold">
-            {students[index].company}
-          </span>
-           </span>
+            <FaLaptopCode />
+            <span style={{ fontSize: "15px" }}>
 
-        </p>
-       </div>
+              Selected in
+              <span className="text-warning fw-bold">
+                {students[index].company}
+              </span>
+            </span>
+
+          </p>
+        </div>
 
         {/* Bottom */}
         <div className="bottom-details">
@@ -174,11 +173,11 @@ export default function PlacementToast() {
             {students[index].location}
           </span>
 
-           <span className="salary" style={{fontSize:"13px"}}>
+          <span className="salary" style={{ fontSize: "13px" }}>
             {students[index].package}
           </span>
 
-        
+
 
         </div>
 

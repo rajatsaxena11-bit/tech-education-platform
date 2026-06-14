@@ -330,3 +330,19 @@
   transform: translateX(120%);
   pointer-events: none;
 }
+
+.toast-closing {
+  animation: toastClose 0.4s forwards;
+}
+
+@keyframes toastClose {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(400px);
+  }
+}
