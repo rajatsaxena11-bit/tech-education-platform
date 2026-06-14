@@ -74,7 +74,7 @@ export default function CodingAssetment() {
                                 & Skill Tests
                             </h3>
 
-                            <p style={{fontSize:"15px"}}>
+                            <p style={{ fontSize: "15px" }}>
                                 Improve your coding skills through
                                 real-world challenges, assignments,
                                 quizzes & practical projects.
@@ -129,7 +129,7 @@ export default function CodingAssetment() {
                                 Expert Mentorship
                             </span>
 
-                            <h3 style={{fontSize:"25px"}} className='mt-3'>
+                            <h3 style={{ fontSize: "25px" }} className='mt-3'>
                                 One-on-One
                                 <span> Mentorship </span>
                             </h3>
@@ -219,85 +219,78 @@ export default function CodingAssetment() {
                 </div>
 
                 {/* Features */}
-                <div className="mt-5">
+                <div className="mt-5 why-choose-section">
 
                     <div className="text-center mb-5">
-
-                        <h2 className="feature-heading" style={{ fontSize: "25px" }}>
-                            Why Choose
-                            <span> Our Institute?</span>
+                        <h2 className="feature-heading">
+                            Why Choose <span>Our Institute?</span>
                         </h2>
 
+                        <p className="feature-subtitle">
+                            Learn from industry experts, build real-world projects,
+                            and get career-ready with practical training.
+                        </p>
                     </div>
 
-                    <div className="row g-4">
+                    <div className="row g-4" style={{cursor:"pointer"}}>
 
-                        <div
-                            data-aos="fade-up"
-                            className="col-lg-4"
-                        >
+                        <div data-aos="zoom-in-up" className="col-lg-4 col-md-6">
+                            <div className="feature-card-custom">
 
-                            <div className="feature-card career-primary-btn">
-
-                                <div className="feature-icon">
+                                <div className="feature-icon-custom">
                                     <i className="bi bi-code-slash"></i>
                                 </div>
 
-                                <h5 style={{fontSize:"19px"}}>Real Coding Practice</h5>
+                                <h5>Real Coding Practice</h5>
 
                                 <p>
-                                    Build projects & gain practical
-                                    industry experience
+                                    Work on live projects, coding challenges and
+                                    real-world applications used in the industry.
                                 </p>
 
                             </div>
-
                         </div>
 
                         <div
-                            data-aos="fade-up"
+                            data-aos="zoom-in-up"
                             data-aos-delay="150"
-                            className="col-lg-4"
+                            className="col-lg-4 col-md-6"
                         >
+                            <div className="feature-card-custom">
 
-                            <div className="feature-card career-primary-btn">
-
-                                <div className="feature-icon">
+                                <div className="feature-icon-custom">
                                     <i className="bi bi-people"></i>
                                 </div>
 
-                                <h5 style={{fontSize:"19px"}}>Expert Mentors</h5>
+                                <h5>Expert Mentors</h5>
 
                                 <p>
-                                    Learn from professionals working
-                                    in top tech companies
+                                    Learn directly from experienced developers and
+                                    professionals working in top companies.
                                 </p>
 
                             </div>
-
                         </div>
 
                         <div
-                            data-aos="fade-up"
+                            data-aos="zoom-in-up"
                             data-aos-delay="300"
-                            className="col-lg-4"
+                            className="col-lg-4 col-md-6"
                         >
+                            <div className="feature-card-custom">
 
-                            <div className="feature-card career-primary-btn">
-
-                                <div className="feature-icon">
+                                <div className="feature-icon-custom">
                                     <i className="bi bi-briefcase"></i>
                                 </div>
 
-                                <h5 style={{fontSize:"19px"}}>Placement Support</h5>
+                                <h5>Placement Support</h5>
 
                                 <p>
-                                    Resume building, mock interviews &
-                                    job assistance
+                                    Get resume reviews, mock interviews and complete
+                                    job placement assistance.
                                 </p>
 
                             </div>
-
                         </div>
 
                     </div>

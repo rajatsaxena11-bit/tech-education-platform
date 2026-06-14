@@ -220,7 +220,7 @@ export default function Home() {
                             </p>
 
                             {/* Search Box */}
-                            <div className="bg-white shadow-lg rounded-4 p-1 d-flex align-items-center mb-4">
+                            {/* <div className="bg-white shadow-lg rounded-4 p-1 d-flex align-items-center mb-4">
 
                                 <input
                                     type="text"
@@ -248,7 +248,38 @@ export default function Home() {
                                 </button>
 
 
-                            </div>
+                            </div> */}
+
+
+                            <div className="bg-white shadow-lg rounded-4 p-2 mb-4">
+
+    <div className="d-flex flex-column flex-md-row gap-2 align-items-stretch">
+
+        <input
+            type="text"
+            className="form-control border-0 shadow-none"
+            placeholder="Search Courses..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                    handleSearch();
+                }
+            }}
+        />
+
+        <button
+            style={{ fontSize: "15px" }}
+            className="career-primary-btn btn btn-primary rounded-3 px-4 explore-course-btn"
+            onClick={handleSearch}
+        >
+            Search
+            <div className="btn-shine-effect"></div>
+        </button>
+
+    </div>
+
+</div>
 
                             {/* Popular Tags */}
                             <div className="d-flex flex-wrap gap-3 mb-5 " style={{ cursor: "pointer" }}>

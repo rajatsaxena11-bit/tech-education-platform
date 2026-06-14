@@ -1061,3 +1061,14 @@
         transform: scale(0.85) translateY(30px);
     }
 }
+
+.explore-course-btn {
+    min-width: 120px;
+    white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+    .explore-course-btn {
+        width: 100%;
+    }
+}
