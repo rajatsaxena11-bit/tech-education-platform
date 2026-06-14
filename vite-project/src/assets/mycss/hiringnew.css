@@ -5,7 +5,16 @@
 }
 
 
+@media (max-width: 1199px) {
+  .navmenu .dropdown ul {
+    display: none;
+    padding-left: 15px;
+  }
 
+  .navmenu .dropdown.dropdown-active ul {
+    display: block;
+  }
+}
 
 
 

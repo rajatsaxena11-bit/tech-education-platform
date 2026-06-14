@@ -15,7 +15,7 @@ export default function SidebarComponent() {
                     <FaWhatsapp />
                 </Link>
 
-                  <Link to="mailto:rajatsaxena@gmail.com" className='icon'>
+                  <Link to="mailto:rajatsaxena796@gmail.com" className='icon'>
                     <FaEnvelope />
                 </Link>
             </div>

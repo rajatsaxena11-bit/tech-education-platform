@@ -20,11 +20,19 @@ import {
 
 
 export default function Header() {
+    
     const [mobileNav, setMobileNav] = useState(false)
     // const [openModal, setOpenModal] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [closing, setClosing] = useState(false);
     const user = JSON.parse(localStorage.getItem("user"))
+    const [openDropdown, setOpenDropdown] = useState(null);
+
+    const toggleDropdown = (menu) => {
+        setOpenDropdown(openDropdown === menu ? null : menu);
+    };
+
+
     const [formData, setFormData] = useState({
         name: "",
         number: "",
@@ -50,48 +58,48 @@ export default function Header() {
         });
     };
 
-   
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
 
-    try {
-        const res = await fetch(
-            "https://server-5-n0c3.onrender.com/EnquiriesLeads",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
-            }
-        );
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
-        if (!res.ok) throw new Error("Failed");
+        try {
+            const res = await fetch(
+                "https://server-5-n0c3.onrender.com/EnquiriesLeads",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                }
+            );
 
-        // Modal Close Animation
-        closeModal();
+            if (!res.ok) throw new Error("Failed");
 
-        // Form Reset
-        setFormData({
-            name: "",
-            number: "",
-            email: "",
-            course: "",
-            message: "",
-        });
+            // Modal Close Animation
+            closeModal();
 
-        toast.success("Enquiry Submitted Successfully");
+            // Form Reset
+            setFormData({
+                name: "",
+                number: "",
+                email: "",
+                course: "",
+                message: "",
+            });
 
-        // Optional Redirect
-        setTimeout(() => {
-            navigate("/");
-        }, 500);
+            toast.success("Enquiry Submitted Successfully");
 
-    } catch (err) {
-        console.error(err);
-    }
-};
+            // Optional Redirect
+            setTimeout(() => {
+                navigate("/");
+            }, 500);
+
+        } catch (err) {
+            console.error(err);
+        }
+    };
 
     const openModal = () => {
         setShowModal(true);
@@ -197,7 +205,7 @@ export default function Header() {
                                         type="text"
                                         placeholder="Full Name"
                                         name="name"
-                                        
+
                                         onChange={handleChange}
                                     />
                                 </div>
@@ -208,7 +216,7 @@ export default function Header() {
                                         type="email"
                                         placeholder="Email Address"
                                         name="email"
-                                        
+
                                         onChange={handleChange}
                                     />
                                 </div>
@@ -219,13 +227,13 @@ export default function Header() {
                                         type="text"
                                         placeholder="Phone Number"
                                         name="number"
-                                      
+
                                         onChange={handleChange}
                                     />
                                 </div>
 
                                 <select className="rzxenr-select" name="course"
-                                 
+
                                     onChange={handleChange}>
                                     <option>Select Course</option>
                                     <option>Frontend Development</option>
@@ -235,8 +243,8 @@ export default function Header() {
                                     <option>Data Science</option>
                                 </select>
 
-                                <textarea  name="message"
-                                   
+                                <textarea name="message"
+
                                     onChange={handleChange}
                                     rows="4"
                                     placeholder="Message"
@@ -257,13 +265,13 @@ export default function Header() {
             <header id="header" className="header d-flex align-items-center fixed-top">
                 <div className="container-fluid container-xl position-relative d-flex align-items-center">
 
-                    <a href="index.html" className="logo d-flex align-items-center me-auto">
+                    <NavLink to="/" className="logo d-flex align-items-center me-auto" onClick={() => setMobileNav(false)} >
 
                         <img src="/src/assets/img/logo.png" alt="" />
                         <h1 className="sitename">
                             {import.meta.env.VITE_APP_NAME}
                         </h1>
-                    </a>
+                    </NavLink>
 
 
                     <nav
@@ -285,29 +293,71 @@ export default function Header() {
                                 </NavLink>
                             </li>
 
-                            <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            {/* <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                                 <ul>
                                     <li><NavLink to="/frontenddeveloper">FrontEnd Developer</NavLink></li>
                                     <li><NavLink to="/backenddeveloper">BackEnd Developer</NavLink></li>
                                     <li><NavLink to="/merndeveloper">Mern Stack Developer</NavLink></li>
                                     <li><NavLink to="/testingdeveloper">Testing Developer</NavLink></li>
                                 </ul>
+                            </li> */}
+
+
+
+
+                            <li className={`dropdown ${openDropdown === "courses" ? "dropdown-active" : ""}`}>
+                                <a
+                                    href="#"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        toggleDropdown("courses");
+                                    }}
+                                >
+                                    <span>Courses</span>
+                                    <i className="bi bi-chevron-down"></i>
+                                </a>
+
+                                <ul
+                                    style={{
+                                        display: openDropdown === "courses" ? "block" : "none"
+                                    }}
+                                >
+                                    <li><NavLink to="/frontenddeveloper" onClick={() => setMobileNav(false)}>FrontEnd Developer</NavLink></li>
+                                    <li><NavLink to="/backenddeveloper" onClick={() => setMobileNav(false)}>BackEnd Developer</NavLink></li>
+                                    <li><NavLink to="/merndeveloper" onClick={() => setMobileNav(false)}>Mern Stack Developer</NavLink></li>
+                                    <li><NavLink to="/testingdeveloper" onClick={() => setMobileNav(false)}>Testing Developer</NavLink></li>
+                                </ul>
                             </li>
 
 
-                            <li class="dropdown"><a href="#"><span>Placements</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                                <ul>
-                                    {/* <li><a href="/selectedstudent">Selected Student</a></li> */}
 
-                                    <li><NavLink to="/studentplacementpage">Placed Students</NavLink></li>
-                                    <li><NavLink to="/studenthighestpackage">Highest Packages</NavLink></li>
-                                    <li><NavLink to="/hiringpartners">Hiring Partners</NavLink></li>
-                                    <li><NavLink to="/placementprocess">Placement Process</NavLink></li>
-                                    <li><NavLink to="/interviewpreparation">Interview Preparation</NavLink></li>
-                                    <li><NavLink to="/studentsuccessstories">Success Stories</NavLink></li>
-                                    <li><NavLink to="/mockinterview">Mock Interview</NavLink></li>
-                                    <li><NavLink to="/startupopportunity">StartUp Companies</NavLink></li>
-                                    <li><NavLink to="/mncopportunity">MNC Companies</NavLink></li>
+                            <li className={`dropdown ${openDropdown === "placements" ? "dropdown-active" : ""}`}>
+                                <a
+                                    href="#"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        toggleDropdown("placements");
+                                    }}
+                                >
+                                    <span>Placements</span>
+                                    <i className="bi bi-chevron-down"></i>
+                                </a>
+
+                                <ul
+                                    style={{
+                                        display: openDropdown === "placements" ? "block" : "none"
+                                    }}
+                                >
+
+                                    <li><NavLink to="/studentplacementpage" onClick={() => setMobileNav(false)}>Placed Students</NavLink></li>
+                                    <li><NavLink to="/studenthighestpackage" onClick={() => setMobileNav(false)}>Highest Packages</NavLink></li>
+                                    <li><NavLink to="/hiringpartners" onClick={() => setMobileNav(false)}>Hiring Partners</NavLink></li>
+                                    <li><NavLink to="/placementprocess" onClick={() => setMobileNav(false)}>Placement Process</NavLink></li>
+                                    <li><NavLink to="/interviewpreparation" onClick={() => setMobileNav(false)}>Interview Preparation</NavLink></li>
+                                    <li><NavLink to="/studentsuccessstories" onClick={() => setMobileNav(false)}>Success Stories</NavLink></li>
+                                    <li><NavLink to="/mockinterview" onClick={() => setMobileNav(false)}>Mock Interview</NavLink></li>
+                                    <li><NavLink to="/startupopportunity" onClick={() => setMobileNav(false)}>StartUp Companies</NavLink></li>
+                                    <li><NavLink to="/mncopportunity" onClick={() => setMobileNav(false)}>MNC Companies</NavLink></li>
 
                                 </ul>
                             </li>
@@ -336,15 +386,57 @@ export default function Header() {
                                 </NavLink>
                             </li>
 
-                            <li class="dropdown"><a href="#"><span>Training</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                                <ul>
-                                    {/* <li><a href="/selectedstudent">Selected Student</a></li> */}
+                            <li className={`dropdown ${openDropdown === "training" ? "dropdown-active" : ""}`}>
+                                <a
+                                    href="#"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        toggleDropdown("training");
+                                    }}
+                                >
+                                    <span>Training</span>
+                                    <i
+                                        className={`bi ${openDropdown === "training"
+                                                ? "bi-chevron-up"
+                                                : "bi-chevron-down"
+                                            }`}
+                                    ></i>
+                                </a>
 
-                                    <li><a href="/practicletraining">Practicle Training</a></li>
-                                    <li><a href="/liveprojects">Live Project</a></li>
-                                    <li><a href="/internshipfeatures">InternShip Program</a></li>
-                                    <li><a href="/courses">Courses</a></li>
-                                    <li><a href="/certification">Certification</a></li>
+                                <ul
+                                    style={{
+                                        display: openDropdown === "training" ? "block" : "none",
+                                    }}
+                                >
+                                    <li>
+                                        <NavLink to="/practicletraining" onClick={() => setMobileNav(false)}>
+                                            Practicle Training
+                                        </NavLink>
+                                    </li>
+
+                                    <li>
+                                        <NavLink to="/liveprojects" onClick={() => setMobileNav(false)}>
+                                            Live Project
+                                        </NavLink>
+                                    </li>
+
+                                    <li>
+                                        <NavLink to="/internshipfeatures" onClick={() => setMobileNav(false)}>
+                                            Internship Program
+                                        </NavLink>
+                                    </li>
+
+                                    <li>
+                                        <NavLink to="/courses" onClick={() => setMobileNav(false)}>
+                                            Courses
+                                        </NavLink>
+                                    </li>
+
+                                    <li>
+                                        <NavLink to="/certification" onClick={() => setMobileNav(false)}>
+                                            Certification
+                                        </NavLink>
+                                    </li>
                                 </ul>
                             </li>
 
