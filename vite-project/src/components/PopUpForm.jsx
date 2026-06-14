@@ -18,6 +18,9 @@ export default function EnquiryModal() {
   const [popupVisible, setPopupVisible] = useState(true);
 
   const [submitLoading, setSubmitLoading] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+
+  
 
   const [leadFormData, setLeadFormData] = useState({
     name: "",
@@ -90,7 +93,13 @@ export default function EnquiryModal() {
   };
   const handleClosePopup = () => {
     localStorage.setItem("enquiryPopupShown", "true");
-    setPopupVisible(false);
+
+    setIsClosing(true);
+
+    setTimeout(() => {
+      setPopupVisible(false);
+      setIsClosing(false);
+    }, 300); // animation duration
   };
   useEffect(() => {
     const popupShown = localStorage.getItem("enquiryPopupShown");
@@ -104,7 +113,10 @@ export default function EnquiryModal() {
     <>
       {popupVisible && (
 
-        <div className="career-popup-overlay">
+        <div
+          className={`career-popup-overlay ${isClosing ? "popup-closing" : ""
+            }`}
+        >
 
           <div className="career-popup-container">
 
@@ -162,7 +174,7 @@ export default function EnquiryModal() {
               <div className="career-popup-placement-card">
 
                 <img
-                  src="../src/assets/images/placedstudent/3.jpg"
+                  src="https://i.ibb.co/jPswB57G/3.jpg"
                   alt=""
                 />
 

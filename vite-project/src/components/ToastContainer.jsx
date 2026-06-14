@@ -60,6 +60,8 @@ export default function PlacementToast() {
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(true);
   const [closed, setClosed] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+  
 
   useEffect(() => {
 
@@ -89,18 +91,25 @@ export default function PlacementToast() {
 
   return (
 
-    <div
-      className={`premium-toast ${show ? "show" : ""}`}
-    >
+  <div
+  className={`premium-toast ${show ? "show" : ""} ${
+    isClosing ? "toast-closing" : ""
+  }`}
+>
 
       {/* Close */}
-      
-      <button
-        className="premium-close-btn academy-close-action1"
-        onClick={() => setClosed(true)}
-      >
-        ✕
-      </button>
+     <button
+  className="premium-close-btn academy-close-action1"
+  onClick={() => {
+    setIsClosing(true);
+
+    setTimeout(() => {
+      setClosed(true);
+    }, 300);
+  }}
+>
+  ✕
+</button>
 
       {/* Left Image */}
       <div className="premium-image-wrapper">
