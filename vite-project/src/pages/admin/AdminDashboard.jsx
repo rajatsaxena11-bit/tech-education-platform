@@ -12,7 +12,7 @@ export default function AdminDashboard() {
           </div>
           <div className="col-lg-9 mt-5">
             <div className="d-flex justify-content-between align-items-center mb-4 mt-5">
-              <h3 className="fw-bold">Welcom to Admin Dashboard</h3>
+              <h3 className="fw-bold welcomeclass">Welcom to Admin Dashboard</h3>
             </div>
             <div className="row g-4">
 
