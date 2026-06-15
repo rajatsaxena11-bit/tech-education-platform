@@ -1,361 +1,354 @@
-/* ==========================
-   MAIN PAGE
-========================== */
+/* =========================
+   MAIN CONTAINER
+========================= */
 
 .corporateapply-page {
-    max-width: 1300px;
-    margin: auto;
-    padding: 40px 20px;
-    background: #f8fafc;
+  width: 100%;
+  padding: 20px;
+  overflow-x: hidden;
 }
 
-/* ==========================
+/* =========================
    HERO SECTION
-========================== */
+========================= */
 
 .corporateapply-hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 35px 45px;
-    border-radius: 24px;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: #fff;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 20px;
+  background: #111827;
+  color: #fff;
+  flex-wrap: wrap;
 }
 
 .corporateapply-company-area {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .corporateapply-logo-box {
-    width: 90px;
-    height: 90px;
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  background: #1f2937;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
 }
 
-.corporateapply-logo-box svg {
-    font-size: 42px;
-    color: #60a5fa;
+.salary-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 15px;
 }
 
-.corporateapply-company-area h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 5px;
-}
-
-.corporateapply-company-area h4 {
-    color: #cbd5e1;
-    font-size: 1.1rem;
+.salary-stats div {
+  display: flex;
+  flex-direction: column;
 }
 
 .corporateapply-badge {
-    background: #0ba97f;
-    color: white;
-    padding: 10px 22px;
-    border-radius: 50px;
-    font-weight: 700;
-    white-space: nowrap;
+  padding: 10px 18px;
+  border-radius: 30px;
+  background: #16a34a;
+  color: white;
+  text-align: center;
+  font-weight: 600;
 }
 
-/* ==========================
-   INFO CARDS
-========================== */
+/* =========================
+   INFO GRID
+========================= */
 
 .corporateapply-info-grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
-    margin-top: 30px;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .corporateapply-info-card {
-    background: white;
-    padding: 25px;
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    transition: .3s;
-}
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
 
-.corporateapply-info-card:hover {
-    transform: translateY(-6px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
 
 .corporateapply-info-card svg {
-    font-size: 24px;
-    color: #2563eb;
+  font-size: 25px;
+  color: #2563eb;
 }
 
-.corporateapply-info-card span {
-    font-weight: 600;
-    color: #1e293b;
-}
+/* =========================
+   DESCRIPTION
+========================= */
 
-/* ==========================
-   COMMON BOX
-========================== */
-
-.corporateapply-description-box,
-.corporateapply-skills-section,
-.corporateapply-form-box {
-    background: white;
-    margin-top: 30px;
-    padding: 35px;
-    border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-}
-
-.corporateapply-description-box h2,
-.corporateapply-skills-section h2,
-.corporateapply-form-box h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 18px;
-    color: #0f172a;
+.corporateapply-description-box {
+  margin-top: 30px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
 }
 
 .corporateapply-description-box p {
-    color: #475569;
-    line-height: 1.9;
-    font-size: 15px;
+  line-height: 1.8;
 }
 
-/* ==========================
+/* =========================
    SKILLS
-========================== */
+========================= */
+
+.corporateapply-skills-section {
+  margin-top: 30px;
+}
 
 .corporateapply-skills-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 .corporateapply-skill-chip {
-    padding: 12px 22px;
-    background: #eff6ff;
-    color: #2563eb;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: .3s;
-    cursor: pointer;
+  padding: 10px 18px;
+  background: #eef2ff;
+  border-radius: 50px;
+  font-weight: 600;
 }
 
-.corporateapply-skill-chip:hover {
-    background: #2563eb;
-    color: white;
-    transform: translateY(-3px);
+/* =========================
+   BENEFITS
+========================= */
+
+.ventureapply-benefits {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  margin-top: 20px;
 }
 
-/* ==========================
+.benefit-card {
+  background: white;
+  padding: 25px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.benefit-card svg {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   PROCESS
+========================= */
+
+.ventureapply-process {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.process-step {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.process-step span {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* =========================
    FORM
-========================== */
+========================= */
+
+.corporateapply-form-box {
+  margin-top: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
 
 .corporateapply-input-grid {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
 }
 
 .corporateapply-input-grid input,
 .corporateapply-form-box textarea {
-    width: 100%;
-    padding: 15px;
-    border-radius: 14px;
-    border: 1px solid #dbe2ea;
-    font-size: 15px;
-    transition: .3s;
-    background: #fff;
-}
-
-.corporateapply-input-grid input:focus,
-.corporateapply-form-box textarea:focus {
-    outline: none;
-    border-color: #2563eb;
-    box-shadow: 0 0 0 4px rgba(37,99,235,0.15);
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 14px;
+  border-radius: 10px;
 }
 
 .corporateapply-form-box textarea {
-    min-height: 170px;
-    margin-top: 25px;
-    resize: vertical;
+  min-height: 140px;
+  margin-top: 20px;
 }
-
-/* ==========================
-   FILE UPLOAD
-========================== */
 
 .corporateapply-upload-zone {
-    margin-top: 25px;
-    border: 2px dashed #cbd5e1;
-    padding: 40px;
-    border-radius: 18px;
-    text-align: center;
-    background: #f8fafc;
-    transition: .3s;
+  margin-top: 20px;
+  border: 2px dashed #cbd5e1;
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
 }
-
-.corporateapply-upload-zone:hover {
-    border-color: #2563eb;
-    background: #eff6ff;
-}
-
-.corporateapply-upload-zone svg {
-    font-size: 2.5rem;
-    color: #2563eb;
-    margin-bottom: 12px;
-}
-
-.corporateapply-upload-zone p {
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.corporateapply-upload-zone input {
-    margin-top: 10px;
-}
-
-/* ==========================
-   BUTTON
-========================== */
 
 .corporateapply-submit-btn {
-    width: 100%;
-    margin-top: 25px;
-    padding: 16px;
-    border: none;
-    border-radius: 14px;
-    background: linear-gradient(135deg,#2563eb,#1d4ed8);
-    color: white;
-    font-size: 17px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .3s;
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
 }
 
-.corporateapply-submit-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(37,99,235,.25);
-}
-
-/* ==========================
+/* =========================
    SUCCESS MODAL
-========================== */
+========================= */
 
 .corporateapply-success-modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(15,23,42,.65);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
 }
 
 .corporateapply-success-card {
-    width: 450px;
-    max-width: 90%;
-    background: white;
-    border-radius: 24px;
-    text-align: center;
-    padding: 40px;
-    animation: corporatePopup .35s ease;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
 }
 
-.corporateapply-success-card svg {
-    font-size: 70px;
-    color: #22c55e;
-    margin-bottom: 15px;
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+
+  .corporateapply-info-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .ventureapply-benefits {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .ventureapply-process {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .corporateapply-input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .corporateapply-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
-.corporateapply-success-card h2 {
-    margin-bottom: 10px;
-}
+/* =========================
+   MOBILE
+========================= */
 
-.corporateapply-success-card p {
-    color: #64748b;
-    line-height: 1.7;
-}
+@media (max-width: 576px) {
 
-.corporateapply-success-card button {
-    margin-top: 20px;
-    border: none;
-    background: #2563eb;
-    color: white;
-    padding: 12px 28px;
-    border-radius: 10px;
-    cursor: pointer;
-}
+  .corporateapply-page {
+    padding: 12px;
+  }
 
-@keyframes corporatePopup {
-    from {
-        opacity: 0;
-        transform: scale(.7);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
+  .corporateapply-hero {
+    padding: 20px;
+  }
 
-/* ==========================
-   RESPONSIVE
-========================== */
+  .corporateapply-company-area {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-@media(max-width:992px){
+  .corporateapply-logo-box {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+  }
 
-    .corporateapply-hero{
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
+  .corporateapply-info-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .corporateapply-info-grid{
-        grid-template-columns: repeat(2,1fr);
-    }
+  .ventureapply-benefits {
+    grid-template-columns: 1fr;
+  }
 
-    .corporateapply-input-grid{
-        grid-template-columns: 1fr;
-    }
+  .ventureapply-process {
+    grid-template-columns: 1fr;
+  }
 
-    .corporateapply-company-area{
-        flex-direction: column;
-    }
-}
+  .salary-stats {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-@media(max-width:576px){
+  .corporateapply-form-box {
+    padding: 20px;
+  }
 
-    .corporateapply-page{
-        padding:20px 12px;
-    }
+  .corporateapply-description-box,
+  .ventureapply-card {
+    padding: 20px;
+  }
 
-    .corporateapply-info-grid{
-        grid-template-columns: 1fr;
-    }
+  h1 {
+    font-size: 22px !important;
+  }
 
-    .corporateapply-company-area h1{
-        font-size: 1.8rem;
-    }
+  h2 {
+    font-size: 20px !important;
+  }
 
-    .corporateapply-hero,
-    .corporateapply-description-box,
-    .corporateapply-skills-section,
-    .corporateapply-form-box{
-        padding:25px;
-    }
-
-    .corporateapply-logo-box{
-        width:70px;
-        height:70px;
-    }
+  h4 {
+    font-size: 18px !important;
+  }
 }

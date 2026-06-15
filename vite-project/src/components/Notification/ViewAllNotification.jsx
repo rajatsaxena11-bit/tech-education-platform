@@ -19,7 +19,7 @@ export default function CareerOpportunities() {
       useEffect(() => {
         const timer = setTimeout(() => {
           setLoading(false);
-        }, 400); // 2 second loading
+        }, 400); 
     
         return () => clearTimeout(timer);
       }, []);
@@ -27,7 +27,7 @@ export default function CareerOpportunities() {
     
 
     useEffect(() => {
-        fetch("http://localhost:4000/carreropportunity")
+        fetch("https://server-5-n0c3.onrender.com/carreropportunity")
             .then((res) => res.json())
             .then((data) => {
                 setData(data)
