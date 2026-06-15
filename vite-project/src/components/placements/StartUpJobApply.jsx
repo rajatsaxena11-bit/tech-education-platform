@@ -96,7 +96,7 @@ export default function StartupCompanyApply() {
 
         <div className="ventureapply-salary-card">
 
-          <h2>₹ {startup.package}</h2>
+          <h2 style={{fontSize:"25px"}}>₹ {startup.package}</h2>
 
           <p>Annual Compensation</p>
 
