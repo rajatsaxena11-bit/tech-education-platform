@@ -1,6 +1,11 @@
 /* ==========================
    WRAPPER
 ========================== */
+@media (max-width: 768px) {
+  .partner-section-mobilerow {
+    transform: translateY(-170px) !important;
+  }
+}
 
 .jobticker-wrapper {
   width: 100%;

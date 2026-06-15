@@ -272,17 +272,40 @@
 /* TITLE */
 
 .home-hero-title {
-  font-size: 45px;
-  font-weight: 800;
-  line-height: 1.15;
-  color: #0f172a;
-  margin-bottom: 25px;
+  font-size: 2.5rem; /* Desktop */
 }
 
-.home-hero-title span {
-  display: block;
-  color: linear-gradient(to right, #2b323c, #00c6ff) !important;
+@media (max-width: 768px) {
+  .home-hero-title {
+    font-size: 2rem !important;
+    line-height: 1.2;
+    text-align: center;
+  }
 }
+
+@media (max-width: 480px) {
+  .home-hero-title {
+    font-size: 2rem !important;
+    line-height: 1.15;
+  }
+}
+
+.slider-wrapper {
+  margin-top: -50px;
+}
+
+@media (max-width: 991px) {
+  .slider-wrapper {
+    margin-top: -20px; /* Mobile/Tablet ke liye normal */
+  }
+}
+@media (max-width: 768px) {
+  .slider-wrapper {
+    position: relative;
+    top: -100px;
+  }
+}
+
 
 /* DESCRIPTION */
 

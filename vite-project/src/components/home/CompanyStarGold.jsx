@@ -15,7 +15,7 @@ export default function ClientSlider() {
 
     return (
         <>
-            <div className="container" >
+            <div className="container partner-section-mobile" >
                 <div className="row">
                     <div className="col-lg-4 col-sm-4 col-xs-12">
                         <div className="partner_title ">

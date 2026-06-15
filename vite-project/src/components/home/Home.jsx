@@ -358,8 +358,8 @@ export default function Home() {
 
                         </div>
 
-                        <div className="col-lg-6">
-                            <div className="slider-wrapper mt-5">
+                        <div className="col-lg-6 mt-4">
+                            <div className="slider-wrapper">
 
                                 <Swiper
                                     modules={[Autoplay, Pagination]}

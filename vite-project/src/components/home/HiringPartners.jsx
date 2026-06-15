@@ -233,7 +233,7 @@ export default function HiringPartners({removeMargin }) {
   return (
     <>
 
-      <section className={`partner-section ${removeMargin ? "" : "mt-5"}`}>
+      <section className={`partner-section  ${removeMargin ? "" : "mt-5"}`}>
 
         <div className="celebration-icons">
           <span>🎉</span>

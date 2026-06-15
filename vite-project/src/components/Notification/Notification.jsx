@@ -62,7 +62,7 @@ export default function TechPulseNotification() {
 
     return (
 
-     <div className="jobticker-wrapper mt-5" style={{cursor:"pointer"}}>
+     <div className="jobticker-wrapper partner-section-mobilerow" style={{cursor:"pointer"}}>
 
       {/* LEFT SECTION */}
 
