@@ -84,8 +84,8 @@ import Login from './components/login/Login';
 import AdminRoute from './components/AdminProtectedRoute';
 import ExploreCourses from './components/ExploreCourse/ExploreCourse';
 import SidebarComponent from './components/SidebarComponent';
-import EnrollNowModal from './components/EnrollNow';
 import ContactUsPage from './pages/ContactUsPage';
+import ViewAllCourses from './components/home/ViewAllCourses';
 
 
 
@@ -102,10 +102,12 @@ function App() {
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<HomePage />} />
+          <Route path="/viewallcourses" element={<ViewAllCourses />} />
+
           <Route path="/frontenddeveloper" element={<FrontendDeveloper />} />
           <Route path="/backenddeveloper" element={<BackendDeveloper />} />
           <Route path="/merndeveloper" element={<MernStackDeveloper />} />
-          <Route path="/testingdeveloper" element={<TestingDeveloper />} />
+          <Route path="/softwaretestingdeveloper" element={<TestingDeveloper />} />
 
 
           <Route path="/studentplacementpage" element={<OurPlacedStudents />} />
@@ -136,9 +138,6 @@ function App() {
 
 
           <Route path="/explorecourse" element={<ExploreCourses />} />
-
-
-          <Route path="/enrollnow" element={<EnrollNowModal />} />
 
 
           <Route path="/contactus" element={<ContactUsPage />} />

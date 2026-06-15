@@ -33,6 +33,8 @@ import "../../../assets/mycss/courses/backend/backend.css";
 
 import Testimonials from "../../home/Testimonial";
 import Courses from "../../home/Courses";
+import { useLocation } from "react-router-dom";
+import ModernCourseSlider from "../frontend/CourseSlider";
 
 const modules = [
   {
@@ -141,6 +143,10 @@ export default function BackendDeveloper() {
   const [openIndex, setOpenIndex] = useState(null);
 
    const [loading, setLoading] = useState(true);
+
+   const location = useLocation();
+
+
  
    useEffect(() => {
      const timer = setTimeout(() => {
@@ -580,7 +586,16 @@ export default function BackendDeveloper() {
 
         </div>
       </section>
-      <Courses />
+      <ModernCourseSlider/>
+      <div
+             style={{
+               marginTop: location.pathname.includes("backenddeveloper")
+                 ? "-5rem"
+                 : "0px",
+             }}
+           >
+             <Courses />
+           </div>
       <Testimonials />
 
     </>

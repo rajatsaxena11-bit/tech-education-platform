@@ -26,6 +26,40 @@
   right: -100px;
 }
 
+.hero-title {
+  font-size: clamp(1rem, 4vw, 1.8rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #111;
+}
+
+
+.hero-title span {
+  background: linear-gradient(
+    90deg,
+    #0d6efd,
+    #6610f2
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 768px) {
+
+  .frontend-course {
+    padding-top: 70px; /* 90px se kam */
+  }
+
+  .frontend-course .col-lg-6:first-child {
+    padding-top: 0 !important;
+  }
+
+  .hero-title {
+    margin-top: -80px;
+  }
+
+}
+
+
 .backend-breadcrumb {
   display: flex;
   gap: 10px;

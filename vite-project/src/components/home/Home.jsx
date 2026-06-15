@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, FreeMode } from "swiper/modules";
 import '../../assets/mycss/home/home.css'
@@ -252,42 +252,41 @@ export default function Home() {
 
 
                             <div className="course-search-container mb-5">
-  <div className="course-search-box">
+                                <div className="course-search-box">
 
-    <div className="search-icon">
-      <i className="bi bi-search"></i>
-    </div>
+                                    <div className="search-icon">
+                                        <i className="bi bi-search"></i>
+                                    </div>
 
-    <input
-      type="text"
-      className="course-search-input"
-      placeholder="Search courses, skills, technologies..."
-      value={searchText}
-      onChange={(e) => setSearchText(e.target.value)}
-      onKeyDown={(e) => {
-        if (e.key === "Enter") {
-          handleSearch();
-        }
-      }}
-    />
+                                    <input
+                                        type="text"
+                                        className="course-search-input"
+                                        placeholder="Search courses, skills, technologies..."
+                                        value={searchText}
+                                        onChange={(e) => setSearchText(e.target.value)}
+                                        onKeyDown={(e) => {
+                                            if (e.key === "Enter") {
+                                                handleSearch();
+                                            }
+                                        }}
+                                    />
 
-    <button
-      className="course-search-btn"
-      onClick={handleSearch}
-    >
-      Search
-    </button>
+                                    <button
+                                        className="course-search-btn"
+                                        onClick={handleSearch}
+                                    >
+                                        Search
+                                    </button>
 
-  </div>
-</div>
+                                </div>
+                            </div>
                             {/* Popular Tags */}
                             <div className="d-flex flex-wrap gap-3 mb-5 " style={{ cursor: "pointer" }}>
 
-                                <span className="hero-tag">Frontend</span>
-                                <span className="hero-tag">Backend</span>
-                                <span className="hero-tag">MERN Stack</span>
-                                <span className="hero-tag">React JS</span>
-                                <span className="hero-tag">Software Testing</span>
+                                <NavLink to = "/frontenddeveloper" className="floating"><span className="hero-tag">Frontend</span></NavLink>
+                                <NavLink to = "/backenddeveloper" className="floating"><span className="hero-tag">Backend</span></NavLink>
+                                <NavLink to = "/merndeveloper" className="floating"><span className="hero-tag">Mern Stack</span></NavLink>
+                                <NavLink to = "/softwaretestingdeveloper" className="floating"><span className="hero-tag">Software Testing</span></NavLink>
 
                             </div>
 

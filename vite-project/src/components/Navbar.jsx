@@ -20,7 +20,7 @@ import {
 
 
 export default function Header() {
-    
+
     const [mobileNav, setMobileNav] = useState(false)
     // const [openModal, setOpenModal] = useState(false);
     const [showModal, setShowModal] = useState(false);
@@ -47,6 +47,11 @@ export default function Header() {
         setTimeout(() => {
             navigate(-1);
         }, 400);
+    };
+
+    const handleMenuClick = () => {
+        setMobileNav(false);
+        setOpenDropdown(null);
     };
 
     const handleChange = (e) => {
@@ -322,10 +327,10 @@ export default function Header() {
                                         display: openDropdown === "courses" ? "block" : "none"
                                     }}
                                 >
-                                    <li><NavLink to="/frontenddeveloper" onClick={() => setMobileNav(false)}>FrontEnd Developer</NavLink></li>
-                                    <li><NavLink to="/backenddeveloper" onClick={() => setMobileNav(false)}>BackEnd Developer</NavLink></li>
-                                    <li><NavLink to="/merndeveloper" onClick={() => setMobileNav(false)}>Mern Stack Developer</NavLink></li>
-                                    <li><NavLink to="/testingdeveloper" onClick={() => setMobileNav(false)}>Testing Developer</NavLink></li>
+                                    <li><NavLink to="/frontenddeveloper" onClick={handleMenuClick}>FrontEnd Developer</NavLink></li>
+                                    <li><NavLink to="/backenddeveloper" onClick={handleMenuClick}>BackEnd Developer</NavLink></li>
+                                    <li><NavLink to="/merndeveloper" onClick={handleMenuClick}>Mern Stack Developer</NavLink></li>
+                                    <li><NavLink to="/softwaretestingdeveloper" onClick={handleMenuClick}>Testing Developer</NavLink></li>
                                 </ul>
                             </li>
 
@@ -397,8 +402,8 @@ export default function Header() {
                                     <span>Training</span>
                                     <i
                                         className={`bi ${openDropdown === "training"
-                                                ? "bi-chevron-up"
-                                                : "bi-chevron-down"
+                                            ? "bi-chevron-up"
+                                            : "bi-chevron-down"
                                             }`}
                                     ></i>
                                 </a>

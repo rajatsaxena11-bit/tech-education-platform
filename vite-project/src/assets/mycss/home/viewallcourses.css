@@ -1,0 +1,412 @@
+/* =========================
+   VIEW ALL COURSES SECTION
+========================= */
+
+.vac-section {
+  padding: 80px 0;
+  background: linear-gradient(
+    180deg,
+    #f8fbff 0%,
+    #eef5ff 100%
+  );
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.vac-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.vac-heading span {
+  color: #0d6efd;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.vac-heading h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 12px 0;
+  position: relative;
+  display: inline-block;
+}
+
+.vac-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+
+  width: 60px;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #0d6efd,
+    #4f8cff
+  );
+
+  border-radius: 10px;
+}
+
+
+.vac-heading p {
+  max-width: 700px;
+  margin: auto;
+  color: #6b7280;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.vac-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* =========================
+   COURSE CARD
+========================= */
+
+.vac-course-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  width: 100%;
+  background: #fff;
+  border-radius: 24px;
+  padding: 30px;
+
+  overflow: hidden;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+
+  transition: all 0.35s ease;
+}
+
+.vac-course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(13, 110, 253, 0.15);
+}
+
+/* Shine Effect */
+
+.vac-course-card::before {
+  content: "";
+  position: absolute;
+
+  top: -100%;
+  left: -100%;
+
+  width: 200px;
+  height: 250%;
+
+  background: rgba(255, 255, 255, 0.3);
+
+  transform: rotate(25deg);
+
+  transition: 0.8s;
+}
+
+.vac-course-card:hover::before {
+  left: 130%;
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.vac-card-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #ff9800,
+    #ff5722
+  );
+
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+
+  padding: 6px 14px;
+
+  border-radius: 50px;
+}
+
+/* =========================
+   ICON
+========================= */
+
+.vac-course-icon {
+  width: 95px;
+  height: 95px;
+  min-width: 95px;
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+    135deg,
+    #0d6efd,
+    #4f8cff
+  );
+
+  color: white;
+  font-size: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.vac-course-content {
+  flex: 1;
+}
+
+.vac-course-content h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.vac-course-content p {
+  color: #6b7280;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.vac-course-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.vac-course-meta span {
+  background: #f3f4f6;
+  color: #374151;
+
+  padding: 8px 14px;
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.vac-course-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.vac-course-price {
+  color: #0d6efd;
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.vac-course-btn {
+  border: none;
+  outline: none;
+
+  background: linear-gradient(
+    135deg,
+    #0d6efd,
+    #4f8cff
+  );
+
+  color: white;
+
+  padding: 12px 24px;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.vac-course-btn:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .vac-course-card {
+    gap: 20px;
+    padding: 25px;
+  }
+
+  .vac-heading h2 {
+    font-size: 2.4rem;
+  }
+
+  .vac-course-price {
+    font-size: 1.5rem;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .vac-course-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 20px;
+  }
+
+  .vac-course-content {
+    width: 100%;
+  }
+
+  .vac-course-meta {
+    justify-content: center;
+  }
+
+  .vac-course-footer {
+    width: 100%;
+    align-items: center;
+  }
+
+  .vac-card-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  .vac-heading h2 {
+    font-size: 2rem;
+  }
+
+  .vac-course-icon {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    font-size: 32px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .vac-section {
+    padding: 60px 15px;
+  }
+
+  .vac-heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .vac-course-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .vac-course-content p {
+    font-size: 14px;
+  }
+
+  .vac-course-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.vac-course-price {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 18px;
+
+  background: linear-gradient(
+    135deg,
+    #10b981,
+    #059669
+  );
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+
+  border-radius: 999px;
+
+  margin: 0;
+
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+.vac-course-price:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(16, 185, 129, 0.35);
+}
+.vac-course-price1 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 18px;
+
+  background: linear-gradient(
+    135deg,
+    #2f3331,
+    #059669
+  );
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+
+  border-radius: 999px;
+
+  margin: 0;
+
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+.vac-course-price1:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(16, 185, 129, 0.35);
+}

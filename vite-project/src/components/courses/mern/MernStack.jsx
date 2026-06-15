@@ -1,34 +1,42 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+
 import {
   FaStar,
   FaUsers,
   FaChevronDown,
   FaChevronUp,
-  FaReact,
   FaNodeJs,
   FaDatabase,
   FaServer,
   FaArrowRight,
   FaLock,
+  FaCode,
   FaGithub,
+  FaCloud,
   FaProjectDiagram,
-  FaCloudUploadAlt,
 
   FaUser,
   FaEnvelope,
   FaPhoneAlt,
-  FaCode,
 
   FaMapMarkerAlt,
+  FaReact,
+  FaCloudUploadAlt
 } from "react-icons/fa";
 
-import { SiMongodb, SiExpress } from "react-icons/si";
 
-import '../../../assets/mycss/courses/mern/mernstack.css'
+
+
+import { motion } from "framer-motion";
+
+import { SiExpress, SiMongodb } from "react-icons/si";
+
+import "../../../assets/mycss/courses/backend/backend.css";
 
 import Testimonials from "../../home/Testimonial";
 import Courses from "../../home/Courses";
+import { useLocation } from "react-router-dom";
+import ModernCourseSlider from "../frontend/CourseSlider";
 
 const concepts = [
   {
@@ -130,14 +138,14 @@ const stats = [
     name: "Hiring Partners",
   },
 ];
-
 export default function MernStackDeveloper() {
-
   const [activeTab, setActiveTab] = useState("about");
 
   const [openIndex, setOpenIndex] = useState(null);
 
-   const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
+
+  const location = useLocation();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -155,68 +163,55 @@ export default function MernStackDeveloper() {
       </div>
     );
   }
+
   return (
     <>
-      <section className="mern-course-section py-5 mt-5" style={{ cursor: "pointer" }}>
+
+      <section className="backend-course py-5" style={{ cursor: "pointer" }}>
         <div className="container">
+          <div className="row align-items-center">
 
-          <div className="row">
-            <div className="col-lg-6">
-              <div className=" mb-5">
-                <motion.h2 style={{ fontSize: "35px" }}
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
-                  className="fw-bold display-5 mb-3"
-                >
-                  <h2 className="hero-title" style={{ marginTop: "80px" }}>
-                    Master Mern Development &
-                    <span> Launch Your Tech Career</span>
-                  </h2>
-                </motion.h2>
 
-                <motion.img
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 1 }}
-                  src="https://www.rlogical.com/wp-content/uploads/2020/12/MERN.webp"
-                  alt="Frontend Developer"
-                  className="img-fluid mt-4 frontend-image"
-                />
-                <h5 className="backend-main-heading">
-                  MERN DEVELOPER
-                </h5>
-                {/* <h2 className="mern-title text-center">
-                  Become a MERN Stack Developer 🚀
-                </h2>
-                 <motion.img
+
+            {/* Image Section */}
+            <div className="col-lg-6 text-center mb-4">
+              <h2 className="hero-title">
+                Master Mern Stack Development &
+                <span> Launch Your Tech Career</span>
+              </h2>
+              <motion.img
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
                 src="https://www.rlogical.com/wp-content/uploads/2020/12/MERN.webp"
-                alt="MERN Stack"
-                className="mern-image mt-5 w-100"
-              /> */}
+                alt="Backend Developer"
+                className="img-fluid mt-4 backend-image"
+              />
 
-                <div className="frontend-breadcrumb">
+              <h5 className="backend-main-heading">
+                MERN STACK DEVELOPER
+              </h5>
 
-                  <span style={{ fontSize: "15px", fontWeight: "bold", color: "#1dc5ba" }}>Home</span>
+              <div className="backend-breadcrumb mx-5">
 
-                  <span style={{ fontSize: "15px", fontWeight: "bold", color: "#1dc5ba" }}>/</span>
+                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>Home</span>
 
-                  <span style={{ fontSize: "15px", fontWeight: "bold", color: "#1dc5ba" }}>Frontend Development</span>
+                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>/</span>
 
-                  <span style={{ fontSize: "15px", fontWeight: "bold", color: "#1dc5ba" }}>/</span>
+                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>Backend Development</span>
 
-                  <span style={{ fontSize: "15px", fontWeight: "bold", color: "#1dc5ba" }}>Frontend Developer</span>
+                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>/</span>
 
-                </div>
+                <span style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>Backend Developer</span>
 
-                <div className="frontend-tag" style={{ fontSize: "15px", fontWeight: "bold", color: "darkgray" }}>
-                  #1 MERN Stack Development Program
-                </div>
+              </div>
 
-                <p className="frontend-hero-para mt-3" style={{ fontSize: "15px", fontWeight: "bold", color: "black" }}>
+              <div className="backend-tag" style={{ color: "navy", fontSize: "15px", fontWeight: "bold" }}>
+                #1 Mern Stack Development Program
+              </div>
+
+              <div className="backend-content-card">
+                <p style={{ fontSize: "16px", fontWeight: "bold", color: "black" }}>
 
                   Master MongoDB, Express.js, React.js & Node.js <br />
                   and build real-world full stack applications.
@@ -224,40 +219,236 @@ export default function MernStackDeveloper() {
                 </p>
 
 
+
+              </div>
+
+
+              <p className="backend-hero-para mt-3">
+
+                Become a professional Mern Stack Developer by mastering
+                React.JS, Javascript, Node JS, Express JS, MongoDB and REST APIs with live projects
+                and placement support.
+
+              </p>
+
+              <div className="backend-rating-box">
+
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+
+                <span>
+                  4.9 Rating (15,000+ Reviews)
+                </span>
+
+              </div>
+
+              <div className="backend-btn-group">
+
+                <button className="backend-primary-btn" style={{ fontSize: "15px" }}>
+                  Download Curriculum
+                </button>
+
+                <button className="backend-outline-btn bg-success" style={{ fontSize: "15px" }}>
+                  Free Demo Class
+                </button>
+
+              </div>
+              <div className="backend-tab-section">
+
+                <div className="backend-tab-buttons">
+
+                  <button style={{ fontSize: "15px" }}
+                    className={
+                      activeTab === "about"
+                        ? "backend-tab-btn active"
+                        : "backend-tab-btn"
+                    }
+                    onClick={() => setActiveTab("about")}
+                  >
+                    About
+                  </button>
+
+                  <button style={{ fontSize: "15px" }}
+                    className={
+                      activeTab === "career"
+                        ? "backend-tab-btn active"
+                        : "backend-tab-btn"
+                    }
+                    onClick={() => setActiveTab("career")}
+                  >
+                    Career
+                  </button>
+
+                  <button style={{ fontSize: "15px" }}
+                    className={
+                      activeTab === "certificate"
+                        ? "backend-tab-btn active"
+                        : "backend-tab-btn"
+                    }
+                    onClick={() => setActiveTab("certificate")}
+                  >
+                    Certificate
+                  </button>
+
+                  <button style={{ fontSize: "15px" }}
+                    className={
+                      activeTab === "faqs"
+                        ? "backend-tab-btn active"
+                        : "backend-tab-btn"
+                    }
+                    onClick={() => setActiveTab("faqs")}
+                  >
+                    FAQs
+                  </button>
+
+                </div>
+
+                <div className="backend-tab-content">
+
+                  {activeTab === "about" && (
+
+                    <div>
+
+                      <h3 style={{ fontSize: "20px", fontWeight: "bold" }}>What You Will Learn?</h3>
+                      <br />
+
+                      <ul>
+
+                        <li>Frontend Development using React JS</li>
+
+                        <li>Backend Development using Node JS</li>
+
+                        <li>REST API Development with Express JS</li>
+
+                        <li>MongoDB Database Integration</li>
+
+                        <li>Authentication using JWT</li>
+
+                        <li>Deployment & Hosting</li>
+
+                      </ul>
+
+
+                    </div>
+
+                  )}
+
+                  {activeTab === "career" && (
+
+                    <div>
+
+                      <h3 style={{ fontSize: "25px" }}>Career Opportunities</h3>
+                      <br />
+
+                      <ul>
+
+                        <li>MERN Stack Developer</li>
+
+                        <li>Frontend Developer</li>
+
+                        <li>Backend Developer</li>
+
+                        <li>Full Stack Developer</li>
+
+                      </ul>
+
+                    </div>
+
+                  )}
+
+                  {activeTab === "certificate" && (
+
+                    <div>
+
+                      <h3 style={{ fontSize: "25px" }}>Industry Certificate</h3>
+                      <br />
+
+                      <p style={{ color: "darkgray" }}>
+
+                        Get an industry-recognized MERN Stack Developer
+                        certificate after course completion.
+
+                      </p>
+
+                    </div>
+
+                  )}
+
+                  {activeTab === "faqs" && (
+
+                    <div>
+
+                      <h3 style={{ fontSize: "25px" }}>Frequently Asked Questions</h3>
+                      <br />
+
+                      <p style={{ color: "darkgray" }}>
+                        100% placement support and interview preparation included.
+                      </p>
+
+
+                    </div>
+
+                  )}
+
+                </div>
+
+              </div>
+              <div className="backend-module-wrapper">
+
+                <h2 className="backend-section-title">
+                  Explore Course Modules
+                </h2>
+
+                {modules.map((item, index) => (
+
+                  <div className="backend-module-card" key={index}>
+
+                    <div
+                      className="backend-module-header"
+                      onClick={() =>
+                        setOpenIndex(openIndex === index ? null : index)
+                      }
+                    >
+
+                      <h5>{item.title}</h5>
+
+                      {openIndex === index ? (
+                        <FaChevronUp />
+                      ) : (
+                        <FaChevronDown />
+                      )}
+
+                    </div>
+
+                    {openIndex === index && (
+
+                      <div className="backend-module-body">
+
+                        <p>{item.content}</p>
+
+                      </div>
+
+                    )}
+
+                  </div>
+
+                ))}
+
               </div>
             </div>
-          </div>
 
-          <div className="mern-rating-box">
 
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
+            {/* Content Section */}
+            <div className="col-lg-6" style={{ marginTop: "50px" }}>
 
-            <span style={{ color: "#333", fontSize: "15px" }}>
-              4.9 Rating (18,500+ Reviews)
-            </span>
-
-          </div>
-
-          <div className="mern-btn-group">
-
-            <button className="mern-primary-btn" style={{ fontSize: "15px" }}>
-              Download Curriculum
-            </button>
-
-            <button className="mern-outline-btn" style={{ fontSize: "15px" }}>
-              Free Demo Class
-            </button>
-
-          </div>
-
-          <div className="row align-items-center">
-
-            {/* Left Side */}
-            <div className="col-lg-6 mb-4">
+              <p className="text-muted mt-5" style={{ fontSize: "15px" }}>
+               Learn MongoDB, Express.js, React.js, Node.js, Authentication,
+API Development, State Management, and Deployment to build
+modern full-stack web applications.
+              </p>
 
               <div className="row mt-4">
                 {concepts.map((item, index) => (
@@ -278,87 +469,6 @@ export default function MernStackDeveloper() {
                     </motion.div>
                   </div>
                 ))}
-              </div>
-
-
-              {/* MODULES */}
-
-              <div className="mern-module-wrapper">
-
-                <h2 className="mern-section-title">
-                  Explore Course Modules
-                </h2>
-
-                {modules.map((item, index) => (
-
-                  <div className="mern-module-card" key={index}>
-
-                    <div
-                      className="mern-module-header"
-                      onClick={() =>
-                        setOpenIndex(openIndex === index ? null : index)
-                      }
-                    >
-
-                      <h5>{item.title}</h5>
-
-                      {openIndex === index ? (
-                        <FaChevronUp />
-                      ) : (
-                        <FaChevronDown />
-                      )}
-
-                    </div>
-
-                    {openIndex === index && (
-
-                      <div className="mern-module-body">
-
-                        <p style={{ fontSize: "16px" }}>{item.content}</p>
-
-                      </div>
-
-                    )}
-
-                  </div>
-
-                ))}
-
-              </div>
-
-            </div>
-
-            {/* Right Side Image */}
-            <div className="col-lg-6 text-center" style={{ marginTop: "-45rem" }}>
-
-
-
-              <div className="mern-badge">
-                MERN Stack Development
-              </div>
-
-              <div className="mern-content-card">
-
-                <h2 style={{ fontSize: "20px" }}>
-                  What Is MERN Stack Developer?
-                </h2>
-
-                <p style={{ fontSize: "15px" }}>
-
-                  A MERN Stack Developer is a full stack developer who builds
-                  complete web applications using MongoDB, Express JS, React JS
-                  and Node JS.
-
-                </p>
-
-                <p style={{ fontSize: "15px" }}>
-
-                  MERN Stack helps developers create modern frontend interfaces,
-                  scalable backend APIs and powerful database-driven applications
-                  using JavaScript.
-
-                </p>
-
               </div>
               <div className="backend-form-card mt-5">
 
@@ -417,13 +527,14 @@ export default function MernStackDeveloper() {
                     </select>
                   </div>
 
-                  <button type="submit" className="backend-submit-btn">
+                  <button type="submit" className="backend-submit-btn mt-3">
                     Apply Now →
                   </button>
 
                 </form>
 
               </div>
+
               <div className="backend-related-card">
 
                 <h3>Related Courses</h3>
@@ -441,150 +552,24 @@ export default function MernStackDeveloper() {
                 ))}
 
               </div>
-              <div className="mern-tab-section" style={{marginTop:"20rem"}}>
 
-                <div className="mern-tab-buttons">
-
-                  <button style={{ fontSize: "15px" }}
-                    className={
-                      activeTab === "about"
-                        ? "mern-tab-btn active"
-                        : "mern-tab-btn"
-                    }
-                    onClick={() => setActiveTab("about")}
-                  >
-                    About
-                  </button>
-
-                  <button style={{ fontSize: "15px" }}
-                    className={
-                      activeTab === "career"
-                        ? "mern-tab-btn active"
-                        : "mern-tab-btn"
-                    }
-                    onClick={() => setActiveTab("career")}
-                  >
-                    Career
-                  </button>
-
-                  <button style={{ fontSize: "15px" }}
-                    className={
-                      activeTab === "certificate"
-                        ? "mern-tab-btn active"
-                        : "mern-tab-btn"
-                    }
-                    onClick={() => setActiveTab("certificate")}
-                  >
-                    Certificate
-                  </button>
-
-                  <button style={{ fontSize: "15px" }}
-                    className={
-                      activeTab === "faqs"
-                        ? "mern-tab-btn active"
-                        : "mern-tab-btn"
-                    }
-                    onClick={() => setActiveTab("faqs")}
-                  >
-                    FAQs
-                  </button>
-
-                </div>
-
-                <div className="mern-tab-content">
-
-                  {activeTab === "about" && (
-
-                    <div>
-
-                      <h3 style={{ fontSize: "17px", fontWeight: "bold" }}>What You Will Learn?</h3>
-
-                      <ul>
-
-                        <li>Frontend Development using React JS</li>
-
-                        <li>Backend Development using Node JS</li>
-
-                        <li>REST API Development with Express JS</li>
-
-                        <li>MongoDB Database Integration</li>
-
-                        <li>Authentication using JWT</li>
-
-                        <li>Deployment & Hosting</li>
-
-                      </ul>
-
-                    </div>
-
-                  )}
-
-                  {activeTab === "career" && (
-
-                    <div>
-
-                      <h3 style={{ fontSize: "17px", fontWeight: "bold" }}>Career Opportunities</h3>
-
-                      <ul>
-
-                        <li>MERN Stack Developer</li>
-
-                        <li>Frontend Developer</li>
-
-                        <li>Backend Developer</li>
-
-                        <li>Full Stack Developer</li>
-
-                      </ul>
-
-                    </div>
-
-                  )}
-
-                  {activeTab === "certificate" && (
-
-                    <div>
-
-                      <h3 style={{ fontSize: "17px", fontWeight: "bold" }}>Industry Certificate</h3>
-
-                      <p>
-
-                        Get an industry-recognized MERN Stack Developer
-                        certificate after course completion.
-
-                      </p>
-
-                    </div>
-
-                  )}
-
-                  {activeTab === "faqs" && (
-
-                    <div>
-
-                      <h3 style={{ fontSize: "17px", fontWeight: "bold" }}>Frequently Asked Questions</h3>
-
-                      <p>
-                        100% placement support and interview preparation included.
-                      </p>
-
-                    </div>
-
-                  )}
-
-                </div>
-
-              </div>
             </div>
+
           </div>
 
-          <Courses />
         </div>
-        <Testimonials />
       </section>
-
-
-
+      <ModernCourseSlider/>
+      <div
+        style={{
+          marginTop: location.pathname.includes("merndeveloper")
+            ? "-5rem"
+            : "0px",
+        }}
+      >
+        <Courses />
+      </div>
+      <Testimonials />
 
     </>
   );

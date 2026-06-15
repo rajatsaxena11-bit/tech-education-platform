@@ -73,6 +73,7 @@
   color: #111;
 }
 
+
 .hero-title span {
   background: linear-gradient(
     90deg,
@@ -82,7 +83,21 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (max-width: 768px) {
 
+  .frontend-course {
+    padding-top: 70px; /* 90px se kam */
+  }
+
+  .frontend-course .col-lg-6:first-child {
+    padding-top: 0 !important;
+  }
+
+  .hero-title {
+    margin-top: -80px;
+  }
+
+}
 /* ===== BUTTONS ===== */
 
 .frontend-btn-group {
@@ -143,6 +158,20 @@
   50%{
     transform: translateY(-15px);
   }
+}
+
+.frontend-course{
+  padding-top:140px;
+  padding-bottom:80px;
+}
+
+.frontend-course .row{
+  min-height:auto;
+  align-items:flex-start;
+}
+
+.frontend-course .col-lg-6:first-child{
+  padding-top:90px;
 }
 
 /* ===== CONCEPT CARDS ===== */
@@ -405,13 +434,19 @@
   .frontend-course {
     padding-top: 90px;
   }
+  
+}
+  
+
+  
+  
 
   /* Hero title */
   .hero-title {
     font-size: 1.5rem !important;
     line-height: 1.3;
     text-align: center;
-    /* margin-top: 30px; */
+    /* margin-top: 300px; */
   }
 
   /* Breadcrumb */
@@ -526,17 +561,27 @@
   font-size:18px;
 }
 
-.frontend-course .row{
+/* .frontend-course .row{
   min-height:100vh;
   align-items:center;
+} */
+
+
+.frontend-course .row{
+  min-height:auto;
+  align-items:flex-start;
 }
 
 .frontend-course .col-lg-6:first-child{
   padding-right:50px;
 }
 
-.frontend-course{
+/* .frontend-course{
   padding-top:100px;
+  padding-bottom:80px;
+} */
+ .frontend-course{
+  padding-top:140px;
   padding-bottom:80px;
 }
 

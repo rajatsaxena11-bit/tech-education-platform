@@ -1,581 +1,326 @@
-/* enquiryModal.css */
+/* =========================
+   OVERLAY
+========================= */
 
 .career-popup-overlay {
-
   position: fixed;
   inset: 0;
-
   background: rgba(0, 0, 0, 0.7);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  z-index: 99999;
-
-  padding: 15px;
-
   backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  z-index: 99999;
+  transition: all 0.3s ease;
 }
 
-/* MODAL */
+.popup-closing {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/* =========================
+   MODAL CONTAINER
+========================= */
 
 .career-popup-container {
-
-  width: 100%;
-
-  max-width: 1100px;
-
+  width: 85%;
+  max-width: 850px;
+  max-height: 85vh;
   background: #fff;
-
-  border-radius: 28px;
-
+  border-radius: 24px;
   overflow: hidden;
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
+  display: flex;
   position: relative;
-
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
   animation: careerPopupAnimation 0.4s ease;
 }
 
-.career-popup-left-panel,
-.career-popup-right-panel {
-  flex: 1;
-  overflow-y: auto;
-}
-
 @keyframes careerPopupAnimation {
-
   from {
-    transform: scale(0.9);
     opacity: 0;
+    transform: translateY(20px) scale(0.95);
   }
 
   to {
-    transform: scale(1);
     opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
-/* CLOSE BUTTON */
+/* =========================
+   CLOSE BUTTON
+========================= */
 
 .career-popup-close-btn {
-
   position: absolute;
-
-  top: 18px;
-  right: 18px;
-
-  width: 42px;
-  height: 42px;
-
+  top: 15px;
+  right: 15px;
+  width: 38px;
+  height: 38px;
   border: none;
-
   border-radius: 50%;
-
-  background: #f3f4f6;
-
-  font-size: 18px;
-
+  background: #f1f5f9;
   cursor: pointer;
-
-  z-index: 2;
-
+  font-size: 18px;
+  z-index: 100;
   transition: 0.3s;
 }
 
 .career-popup-close-btn:hover {
-
-  background: #e5e7eb;
-
+  background: #e2e8f0;
   transform: rotate(90deg);
 }
 
-/* LEFT PANEL */
+/* =========================
+   LEFT PANEL
+========================= */
 
 .career-popup-left-panel {
-
-  padding: 60px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(37, 99, 235, 0.95),
-      rgba(6, 182, 212, 0.95)
-    );
-
-  color: white;
-
-  position: relative;
+  width: 45%;
+  padding: 35px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+  overflow-y: auto;
 }
 
 .career-popup-tagline {
-
   display: inline-block;
-
-  padding: 8px 14px;
-
-  border-radius: 30px;
-
+  padding: 8px 15px;
   background: rgba(255, 255, 255, 0.15);
-
+  border-radius: 30px;
   font-size: 13px;
   font-weight: 600;
-
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .career-popup-heading {
-
-  font-size: 52px;
-
-  line-height: 1.1;
-
+  font-size: 34px;
+  line-height: 1.2;
   font-weight: 800;
+  margin-bottom: 15px;
 }
 
 .career-popup-description {
-
-  margin-top: 20px;
-
-  font-size: 17px;
-
+  font-size: 15px;
   line-height: 1.7;
-
   opacity: 0.9;
 }
 
-/* FEATURES */
+/* =========================
+   FEATURES
+========================= */
 
 .career-popup-feature-grid {
-
-  margin-top: 35px;
-
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .career-popup-feature-card {
-
-  padding: 16px 18px;
-
-  background: rgba(255, 255, 255, 0.12);
-
-  border-radius: 16px;
-
-  font-size: 15px;
-
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 14px;
+  font-size: 14px;
   backdrop-filter: blur(8px);
 }
 
-/* SUCCESS CARD */
+/* =========================
+   SUCCESS CARD
+========================= */
 
 .career-popup-placement-card {
-
-  margin-top: 40px;
-
-  background: white;
-
-  color: black;
-
-  padding: 16px;
-
-  border-radius: 18px;
-
+  margin-top: 25px;
+  background: #fff;
+  color: #111;
+  border-radius: 16px;
+  padding: 12px;
   display: flex;
   align-items: center;
-  gap: 14px;
-
-  width: fit-content;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  gap: 12px;
 }
 
 .career-popup-placement-card img {
-
-  width: 58px;
-  height: 58px;
-
-  border-radius: 50%;
-
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
   object-fit: cover;
 }
 
 .career-popup-placement-card h4 {
-
   margin: 0;
-
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .career-popup-placement-card span {
-
   color: #16a34a;
-
   font-weight: 700;
-
-  font-size: 14px;
+  font-size: 13px;
 }
 
-/* RIGHT PANEL */
+/* =========================
+   RIGHT PANEL
+========================= */
 
 .career-popup-right-panel {
-
-  padding: 50px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 55%;
+  padding: 35px;
+  overflow-y: auto;
 }
 
 .career-popup-form-wrapper {
-
   width: 100%;
 }
 
 .career-popup-form-header h2 {
-
-  font-size: 34px;
-
+  font-size: 30px;
   font-weight: 800;
-
+  margin-bottom: 8px;
   color: #111827;
 }
 
 .career-popup-form-header p {
-
-  margin-top: 10px;
-
-  color: #6b7280;
-
-  font-size: 15px;
+  font-size: 14px;
+  color: #64748b;
 }
 
-/* FORM */
+/* =========================
+   FORM
+========================= */
 
 .career-popup-form-wrapper form {
-
-  margin-top: 35px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+  margin-top: 25px;
 }
 
 .career-popup-input-group {
-
-  height: 58px;
-
-  border: 1px solid #e5e7eb;
-
-  border-radius: 16px;
-
-  padding: 0 18px;
-
+  height: 52px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0 15px;
   display: flex;
   align-items: center;
-  gap: 12px;
-
+  gap: 10px;
+  margin-bottom: 14px;
   transition: 0.3s;
+  background: #f8fafc;
 }
 
 .career-popup-input-group:focus-within {
-
   border-color: #2563eb;
-
-  box-shadow:
-    0 0 0 4px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .career-popup-input-group svg {
-
   color: #2563eb;
-
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .career-popup-input-group input,
 .career-popup-input-group select {
-
   width: 100%;
   height: 100%;
-
   border: none;
   outline: none;
-
   background: transparent;
-
-  font-size: 15px;
+  font-size: 14px;
 }
 
-/* BUTTON */
+/* =========================
+   SUBMIT BUTTON
+========================= */
 
 .career-popup-submit-btn {
-
-  height: 58px;
-
+  width: 100%;
+  height: 52px;
   border: none;
-
-  border-radius: 18px;
-
-  background:
-    linear-gradient(
-      to right,
-      #2563eb,
-      #06b6d4
-    );
-
+  border-radius: 12px;
+  background: linear-gradient(to right, #2563eb, #06b6d4);
   color: white;
-
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
-
   cursor: pointer;
-
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
-
+  align-items: center;
+  gap: 8px;
   transition: 0.3s;
 }
 
 .career-popup-submit-btn:hover {
-
   transform: translateY(-2px);
-
-  box-shadow:
-    0 12px 30px rgba(37,99,235,0.3);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
 }
 
-/* MOBILE */
+/* =========================
+   TABLET
+========================= */
 
-@media(max-width: 900px){
-
-  .career-popup-container{
-    grid-template-columns: 1fr;
-  }
-
-  .career-popup-left-panel{
-    padding: 40px 30px;
-  }
-
-  .career-popup-heading{
-    font-size: 38px;
-  }
-
-  .career-popup-right-panel{
-    padding: 35px 25px;
-  }
-}
-
-@media(max-width: 500px){
-
-  .career-popup-heading{
-    font-size: 30px;
-  }
-
-  .career-popup-form-header h2{
-    font-size: 28px;
-  }
-
-  .career-popup-placement-card{
-    width: 100%;
-  }
-}
-
-/* OVERLAY */
-.career-popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  padding: 10px;
-}
-
-/* MAIN CONTAINER */
-.career-popup-container{
-  display:flex;
-  max-height:100vh !important;
-  overflow-y:auto !important;
-}
-
-@media(max-width:768px){
-  .career-popup-container{
-    flex-direction:column !important;
-    height:auto !important;
+@media (max-width: 992px) {
+  .career-popup-container {
+    width: 95%;
+    max-width: 750px;
   }
 
   .career-popup-left-panel,
-  .career-popup-right-panel{
-    width:100% !important;
-    height:auto !important;
+  .career-popup-right-panel {
+    padding: 25px;
+  }
+
+  .career-popup-heading {
+    font-size: 28px;
   }
 }
 
-/* LEFT PANEL */
-.career-popup-left-panel {
-  width: 50%;
-  padding: 25px;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: #fff;
-}
-
-/* RIGHT PANEL */
-.career-popup-right-panel {
-  width: 50%;
-  padding: 25px;
-}
-
-/* INPUT */
-.career-popup-input-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: #f1f5f9;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
-
-.career-popup-input-group input,
-.career-popup-input-group select {
-  border: none;
-  outline: none;
-  width: 100%;
-  background: transparent;
-}
-
-/* BUTTON */
-.career-popup-submit-btn {
-  width: 100%;
-  padding: 12px;
-  background: #2563eb;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-/* SUCCESS CARD */
-.career-popup-placement-card {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.career-popup-placement-card img {
-  width: 60px;
-  height: 60px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-/* CLOSE BUTTON */
-.career-popup-close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  border: none;
-  background: transparent;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/* ========================= */
-/* 📱 MOBILE RESPONSIVE */
-/* ========================= */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 768px) {
-
   .career-popup-container {
     flex-direction: column;
-    max-width: 100%;
-    height: auto;
+    width: 95%;
+    max-height: 90vh;
   }
 
   .career-popup-left-panel,
   .career-popup-right-panel {
     width: 100%;
-    padding: 15px;
+    padding: 20px;
   }
 
   .career-popup-heading {
-    font-size: 18px !important;
+    font-size: 24px;
+  }
+
+  .career-popup-form-header h2 {
+    font-size: 24px;
+  }
+
+  .career-popup-placement-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .career-popup-heading {
+    font-size: 20px;
   }
 
   .career-popup-description {
     font-size: 13px;
   }
 
-  .career-popup-feature-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .career-popup-placement-card img {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-/* ========================= */
-/* 📱 TABLET RESPONSIVE */
-/* ========================= */
-
-@media (min-width: 769px) and (max-width: 1024px) {
-
-  .career-popup-container {
-    max-width: 90%;
-  }
-
-  .career-popup-left-panel,
-  .career-popup-right-panel {
-    padding: 20px;
-  }
-
-  .career-popup-heading {
+  .career-popup-form-header h2 {
     font-size: 22px;
   }
-}
 
-/* ========================= */
-/* 💻 LARGE SCREEN */
-/* ========================= */
+  .career-popup-input-group {
+    height: 48px;
+  }
 
-@media (min-width: 1200px) {
-  .career-popup-container {
-    max-width: 1000px;
+  .career-popup-submit-btn {
+    height: 48px;
   }
 }
-
-.career-popup-overlay {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  opacity: 1;
-  transform: scale(1);
-
-  transition: all 0.3s ease;
-}
-
-.popup-closing {
-  opacity: 0;
-  transform: scale(0.8);
-}
-

@@ -219,8 +219,8 @@ export default function Courses() {
 
             </div>
 
-            <Link className="view-btn bg-primary text-light explore-course-btn" style={{fontSize:"15px", letterSpacing:"1px"}}>
-              View All Courses →
+            <Link to="/viewallcourses" className="view-btn bg-primary text-light explore-course-btn" style={{fontSize:"16px", letterSpacing:"1px"}}>
+               All Courses →
               <div className="btn-shine-effect"></div>
             </Link>
 
