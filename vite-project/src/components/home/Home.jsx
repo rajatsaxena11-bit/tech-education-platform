@@ -281,30 +281,40 @@ export default function Home() {
                                 </div>
                             </div>
                             {/* Popular Tags */}
-                            <div className="d-flex flex-wrap gap-3 mb-5 " style={{ cursor: "pointer" }}>
+                            <div className="hero-tags-wrapper">
+                                <NavLink to="/frontenddeveloper" className="floating hero-link">
+                                    <span className="hero-tag">Frontend</span>
+                                </NavLink>
 
-                                <NavLink to = "/frontenddeveloper" className="floating"><span className="hero-tag">Frontend</span></NavLink>
-                                <NavLink to = "/backenddeveloper" className="floating"><span className="hero-tag">Backend</span></NavLink>
-                                <NavLink to = "/merndeveloper" className="floating"><span className="hero-tag">Mern Stack</span></NavLink>
-                                <NavLink to = "/softwaretestingdeveloper" className="floating"><span className="hero-tag">Software Testing</span></NavLink>
+                                <NavLink to="/backenddeveloper" className="floating hero-link">
+                                    <span className="hero-tag">Backend</span>
+                                </NavLink>
 
+                                <NavLink to="/merndeveloper" className="floating hero-link">
+                                    <span className="hero-tag">MERN Stack</span>
+                                </NavLink>
+
+                                <NavLink to="/softwaretestingdeveloper" className="floating hero-link">
+                                    <span className="hero-tag">Software Testing</span>
+                                </NavLink>
                             </div>
 
-                            <div className="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                            <div className="hero-btn-wrapper">
+  <Link to="/explorecourse">
+    <button className="btn btn-primary hero-btn shadow career-primary-btn explore-course-btn">
+      Explore Courses
+      <div className="btn-shine-effect"></div>
+    </button>
+  </Link>
 
-                                <Link to="/explorecourse">
-                                    <button style={{ fontSize: "15px" }} className="btn btn-primary hero-btn shadow career-primary-btn explore-course-btn">
-                                        Explore Courses
-                                        <div className="btn-shine-effect"></div>
-                                    </button>
-                                </Link>
-
-                                <button style={{ fontSize: "15px" }} className="premium-demo-btn btn btn-outline-success hero-btn career-primary-btn explore-course-btn" onClick={() => setShowDemoModal(true)}>
-                                    ✨ Free Demo
-                                    <div className="btn-shine-effect"></div>
-                                </button>
-
-                            </div>
+  <button
+    className="premium-demo-btn btn btn-outline-success hero-btn career-primary-btn explore-course-btn"
+    onClick={() => setShowDemoModal(true)}
+  >
+    ✨ Free Demo
+    <div className="btn-shine-effect"></div>
+  </button>
+</div>
                             {/* Stats */}
                             <div className="homehero-stats-section" style={{ cursor: "pointer" }}>
 

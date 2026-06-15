@@ -26,7 +26,7 @@ const placedStudents = [
     course: "MERN Stack Development",
     company: "TCS",
     package: "6.5 LPA",
-    image: "https://media.licdn.com/dms/image/v2/D4D22AQEEfE_X4M3Xrw/feedshare-shrink_800/B4DZyVwRUsJIAg-/0/1772038985425?e=2147483647&v=beta&t=TinZHRxw5Y4kS-BvUM7TeVFbLqD6MDmsnuPF0UhLEno",
+    image: "https://apollo.olx.in/v1/files/9ohwzs9xmkn02-IN/image",
   },
 
   {
@@ -35,7 +35,7 @@ const placedStudents = [
     course: "UI/UX Designing",
     company: "Infosys",
     package: "5.2 LPA",
-    image: "https://s3.amazonaws.com/thumbnails.venngage.com/template/feb6cbae-9f21-4c36-ab34-94732857a2b5.png",
+    image: "https://i.pinimg.com/736x/01/fd/92/01fd92de4dccd36074fbe7eb2ce4d523.jpg",
   },
 
   {
@@ -44,7 +44,7 @@ const placedStudents = [
     course: "Python Full Stack",
     company: "Wipro",
     package: "7 LPA",
-    image: "https://i.pinimg.com/474x/f3/4b/9a/f34b9a90c1c1958cebbccd8aa0357c77.jpg",
+    image: "https://media.licdn.com/dms/image/v2/D5622AQGEN2SM9fMVbQ/feedshare-shrink_800/feedshare-shrink_800/0/1712731482152?e=2147483647&v=beta&t=K307hSSEI_GTxFjsInINHSVVxNMt0bJNEovXz_Ui0JA",
   },
 
   {
@@ -53,7 +53,15 @@ const placedStudents = [
     course: "FrontEnd Developer",
     company: "Capgemini",
     package: "8 LPA",
-    image: "src/assets/images/hiringcompany/faa.jfif",
+    image: "https://media.licdn.com/dms/image/v2/D5622AQE1JtwEkb0BRg/feedshare-shrink_800/feedshare-shrink_800/0/1708693811305?e=2147483647&v=beta&t=B8GUsbKZzM01c5dc3uxoNYRxrtS2Mm3GS6Pn6Wt72Eg",
+  },
+   {
+    id: 5,
+    name: "Priya Verma",
+    course: "UI/UX Designing",
+    company: "Infosys",
+    package: "5.2 LPA",
+    image: "https://jobsbrij.com/Admin/asset/jobs/6871_WhatsApp_Image_2023-04-10_at_10_43_11_AM_(1).jpeg",
   },
 
 ];
@@ -81,9 +89,9 @@ export default function About() {
 
   return (
 
-    <section className="about-hero-section" style={{ marginTop: "-70px", cursor: "pointer" }}>
+    <section className="about-hero-section" style={{  cursor: "pointer", marginTop:"-5rem" }}>
 
-      {/* BACKGROUND BLUR */}
+    
 
       <div className="hero-blur blur-one"></div>
       <div className="hero-blur blur-two"></div>
@@ -92,11 +100,11 @@ export default function About() {
 
         <div className="row align-items-center">
 
-          {/* </div> */}
+          
           <div className="container">
             <div className="row align-items-center">
 
-              {/* LEFT SIDE */}
+             
               <div className="col-lg-6">
 
                 <div className="about-content">
@@ -218,9 +226,9 @@ export default function About() {
               </div>
 
               {/* RIGHT SIDE */}
-              <div className="col-lg-6">
+              <div className="col-lg-6" style={{marginTop:"-8rem"}}>
 
-                <div className="slider-wrapper" style={{marginTop:"-7rem"}}>
+                <div className="slider-wrapper">
 
                   <Swiper
                     modules={[Autoplay, Pagination]}
@@ -273,24 +281,6 @@ export default function About() {
                             />
                             <div className="btn-shine-effect2"></div>
 
-                            {/* <div className="placed-content">
-
-                              <h3 style={{fontSize:"20px"}}>{student.name} <sup className="text-success">🎉 Hired</sup></h3>
-
-                              <p style={{fontSize:"15px", fontWeight:"bold"}}>{student.course}</p>
-
-                              <div className="placed-company explore-course-btn2" style={{fontSize:"15px", fontWeight:"bold"}}>
-                                🚀 Placed At {student.company}
-                                <div className="btn-shine-effect2"></div>
-                              </div>
-
-                              <div className="placed-package explore-course-btn2" style={{fontSize:"15px", fontWeight:"bold"}}>
-                                💰 {student.package}
-                                <div className="btn-shine-effect2"></div>
-                              </div>
-
-                            </div> */}
-
                           </div>
 
                         </SwiperSlide>
@@ -298,16 +288,6 @@ export default function About() {
                       ))}
 
                     </Swiper>
-
-
-
-
-
-
-
-
-
-
                   </Swiper>
 
                 </div>
