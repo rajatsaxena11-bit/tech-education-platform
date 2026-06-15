@@ -1,25 +1,24 @@
-// StartupCompanyApply.jsx
-
 import React, { useEffect, useState } from "react";
-
 import {
   FaMapMarkerAlt,
   FaBriefcase,
-  FaRocket,
   FaMoneyBillWave,
   FaClock,
   FaUpload,
   FaCheckCircle,
   FaLaptopCode,
   FaUsers,
+  FaRocket,
   FaArrowRight,
+  FaBuilding,
+  FaGraduationCap,
 } from "react-icons/fa";
 
 import {
   SiReact,
+  SiJavascript,
   SiNodedotjs,
   SiMongodb,
-  SiJavascript,
 } from "react-icons/si";
 
 import { useParams } from "react-router-dom";
@@ -27,58 +26,52 @@ import { useParams } from "react-router-dom";
 import "../../assets/mycss/placements/startupcompanyapply.css";
 
 export default function StartupCompanyApply() {
-
   const { id } = useParams();
 
   const [startup, setStartup] = useState({});
-
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-
     fetch(`https://server-4-rtp3.onrender.com/startupcompany/${id}`)
       .then((res) => res.json())
-      .then((data) => {
-        setStartup(data);
-      });
-
+      .then((data) => setStartup(data))
+      .catch((err) => console.log(err));
   }, [id]);
 
   const handleSubmit = (e) => {
-
     e.preventDefault();
-
     setSubmitted(true);
-
   };
 
   return (
-
     <div className="ventureapply-page mt-5">
 
-      {/* HERO */}
+      {/* HERO SECTION */}
+      <section className="ventureapply-hero">
 
-      <div className="ventureapply-hero">
+        <div className="ventureapply-hero-left">
 
-        <div className="ventureapply-left">
+          <div className="ventureapply-company-header">
 
-          <span className="ventureapply-badge">
+            <div className="ventureapply-company-logo">
+              {startup.company?.charAt(0)}
+            </div>
 
-            🚀 {startup.type}
+            <div>
+              <span className="ventureapply-badge">
+                🚀 Startup Opportunity
+              </span>
 
-          </span>
+              <h1 className="ventureapply-role" style={{color:"#0d9cb9"}}>
+                {startup.role}
+              </h1>
 
-          <h1 style={{fontSize:"30px", color:"darkgray", letterSpacing:"1px"}}>
+              <h3 className="ventureapply-company" style={{color:"#0d9cb9"}}>
+                {startup.company}
+              </h3>
+            </div>
 
-            {startup.role}
-
-          </h1>
-
-          <h3>
-
-            {startup.company}
-
-          </h3>
+          </div>
 
           <div className="ventureapply-meta">
 
@@ -101,232 +94,253 @@ export default function StartupCompanyApply() {
 
         </div>
 
-        <div className="ventureapply-right">
+        <div className="ventureapply-salary-card">
 
-          <div className="ventureapply-salary-card">
+          <h2>₹ {startup.package}</h2>
 
-            <h2 style={{fontSize:"18px"}}>
+          <p>Annual Compensation</p>
 
-              ₹{startup.package}
-
-            </h2>
-
-            <p className="text-dark" style={{fontSize:"15px", fontWeight:"bold"}}>
-              Competitive Startup Salary
-            </p>
-
-          </div>
+          <button
+            className="ventureapply-apply-btn"
+            onClick={() =>
+              document
+                .getElementById("application-form")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Apply Now
+            <FaArrowRight />
+          </button>
 
         </div>
 
-      </div>
+      </section>
+
+      {/* JOB OVERVIEW */}
+
+      <section className="ventureapply-overview">
+
+        <div className="overview-card">
+          <FaBriefcase />
+          <h4>Experience</h4>
+          <p>{startup.experience}</p>
+        </div>
+
+        <div className="overview-card">
+          <FaMapMarkerAlt />
+          <h4>Location</h4>
+          <p>{startup.location}</p>
+        </div>
+
+        <div className="overview-card">
+          <FaMoneyBillWave />
+          <h4>Package</h4>
+          <p>₹ {startup.package}</p>
+        </div>
+
+        <div className="overview-card">
+          <FaBuilding />
+          <h4>Company Type</h4>
+          <p>{startup.type}</p>
+        </div>
+
+      </section>
 
       {/* ABOUT */}
 
-      <div className="ventureapply-about-card">
+      <section className="ventureapply-card">
 
-        <h2 style={{fontSize:"25px"}}>
+        <h2>About Company</h2>
 
-          About Startup
-
-        </h2>
-
-        <p className="text-dark" style={{fontSize:"15px"}}>
-
-          {startup.company} is a fast-growing startup building
-          innovative digital products for modern developers and businesses.
-          We are looking for passionate engineers who love building scalable
-          applications and solving real-world problems.
-
+        <p>
+          {startup.company} is a fast-growing startup focused on building
+          innovative products that solve real-world problems. We are looking
+          for passionate engineers who enjoy creating scalable applications,
+          learning new technologies, and working in a high-growth environment.
         </p>
 
-      </div>
+      </section>
+
+      {/* RESPONSIBILITIES */}
+
+      <section className="ventureapply-card">
+
+        <h2>Key Responsibilities</h2>
+
+        <ul className="ventureapply-list">
+          <li>Build scalable and responsive web applications.</li>
+          <li>Develop reusable React components.</li>
+          <li>Integrate APIs and backend services.</li>
+          <li>Write clean, maintainable code.</li>
+          <li>Collaborate with designers and product teams.</li>
+          <li>Participate in code reviews and testing.</li>
+        </ul>
+
+      </section>
+
+      {/* REQUIREMENTS */}
+
+      <section className="ventureapply-card">
+
+        <h2>Requirements</h2>
+
+        <ul className="ventureapply-list">
+          <li>Strong JavaScript fundamentals.</li>
+          <li>Experience with React.js.</li>
+          <li>Basic Node.js understanding.</li>
+          <li>Knowledge of REST APIs.</li>
+          <li>Problem-solving mindset.</li>
+          <li>Excellent communication skills.</li>
+        </ul>
+
+      </section>
 
       {/* SKILLS */}
 
-      <div className="ventureapply-skills-section">
+      <section className="ventureapply-card">
 
-        <h2 style={{fontSize:"25px"}}>
-
-          Required Skills
-
-        </h2 >
+        <h2>Required Skills</h2>
 
         <div className="ventureapply-skills-grid">
 
-          <span>
+          <div className="skill-chip">
             <SiReact />
             React.js
-          </span>
+          </div>
 
-          <span>
+          <div className="skill-chip">
             <SiJavascript />
             JavaScript
-          </span>
+          </div>
 
-          <span>
+          <div className="skill-chip">
             <SiNodedotjs />
             Node.js
-          </span>
+          </div>
 
-          <span>
+          <div className="skill-chip">
             <SiMongodb />
             MongoDB
-          </span>
+          </div>
 
         </div>
 
-      </div>
+      </section>
 
-      {/* PERKS */}
+      {/* BENEFITS */}
 
-      <div className="ventureapply-perks-section">
+      <section className="ventureapply-card">
 
-        <h2 style={{fontSize:"25px"}}>
+        <h2>Benefits & Perks</h2>
 
-          Startup Perks & Benefits
+        <div className="ventureapply-benefits">
 
-        </h2>
-
-        <div className="ventureapply-perks-grid">
-
-          <div className="ventureapply-perk-card">
-
+          <div className="benefit-card">
             <FaLaptopCode />
-
-            <h4 style={{fontSize:"20px", fontWeight:"bold"}}>
-              Remote Work
-            </h4>
-
+            <h4>Remote Friendly</h4>
           </div>
 
-          <div className="ventureapply-perk-card">
-
+          <div className="benefit-card">
             <FaRocket />
-
-            <h4 style={{fontSize:"20px", fontWeight:"bold"}}>
-              Fast Career Growth
-            </h4>
-
+            <h4>Career Growth</h4>
           </div>
 
-          <div className="ventureapply-perk-card">
-
+          <div className="benefit-card">
             <FaUsers />
-
-            <h4 style={{fontSize:"20px", fontWeight:"bold"}}>
-              Small Creative Team
-            </h4>
-
+            <h4>Startup Culture</h4>
           </div>
 
-          <div className="ventureapply-perk-card">
-
+          <div className="benefit-card">
             <FaMoneyBillWave />
-
-            <h4 style={{fontSize:"20px", fontWeight:"bold"}}>
-              Performance Bonus
-            </h4>
-
+            <h4>Performance Bonus</h4>
           </div>
 
         </div>
 
-      </div>
+      </section>
 
       {/* HIRING PROCESS */}
 
-      <div className="ventureapply-process-section">
+      <section className="ventureapply-card">
 
-        <h2 style={{fontSize:"25px"}}>
+        <h2>Hiring Process</h2>
 
-          Hiring Process
+        <div className="ventureapply-process">
 
-        </h2>
-
-        <div className="ventureapply-process-grid">
-
-          <div className="ventureapply-process-card">
-            1. Resume Screening
+          <div className="process-step">
+            <span>1</span>
+            Resume Screening
           </div>
 
-          <div className="ventureapply-process-card">
-            2. Technical Round
+          <div className="process-step">
+            <span>2</span>
+            Technical Interview
           </div>
 
-          <div className="ventureapply-process-card">
-            3. Founder Discussion
+          <div className="process-step">
+            <span>3</span>
+            Founder Discussion
           </div>
 
-          <div className="ventureapply-process-card">
-            4. Offer Letter
+          <div className="process-step">
+            <span>4</span>
+            Offer Letter
           </div>
 
         </div>
 
-      </div>
+      </section>
 
-      {/* FORM */}
+      {/* APPLICATION FORM */}
 
-      <div className="ventureapply-form-wrapper">
+      <section
+        id="application-form"
+        className="ventureapply-form-section"
+      >
 
-        <h2 style={{fontSize:"25px"}}>
-
-          Apply For This Startup Role
-
-        </h2>
+        <h2>Apply For This Position</h2>
 
         <form onSubmit={handleSubmit}>
 
-          <div className="ventureapply-input-grid">
+          <div className="ventureapply-form-grid">
 
-            <input
-              type="text"
-              placeholder="Full Name"
-              required
-            />
+            <div className="field">
+              <label>Full Name</label>
+              <input type="text" required />
+            </div>
 
-            <input
-              type="email"
-              placeholder="Email Address"
-              required
-            />
+            <div className="field">
+              <label>Email Address</label>
+              <input type="email" required />
+            </div>
 
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              required
-            />
+            <div className="field">
+              <label>Phone Number</label>
+              <input type="tel" required />
+            </div>
 
-            <input
-              type="text"
-              placeholder="College / University"
-              required
-            />
+            <div className="field">
+              <label>College / University</label>
+              <input type="text" required />
+            </div>
 
-            <input
-              type="url"
-              placeholder="Github Profile"
-            />
+            <div className="field">
+              <label>Github Profile</label>
+              <input type="url" />
+            </div>
 
-            <input
-              type="url"
-              placeholder="Portfolio Website"
-            />
+            <div className="field">
+              <label>Portfolio Website</label>
+              <input type="url" />
+            </div>
 
           </div>
-
-          {/* RESUME */}
 
           <div className="ventureapply-upload-box">
 
             <FaUpload />
 
-            <p>
-
-              Upload Resume
-
-            </p>
+            <h4>Upload Resume</h4>
 
             <input
               type="file"
@@ -335,67 +349,55 @@ export default function StartupCompanyApply() {
 
           </div>
 
-          {/* TEXTAREA */}
+          <div className="field">
+            <label>Why do you want to join us?</label>
 
-          <textarea
-            placeholder="Why do you want to join this startup?"
-          ></textarea>
-
-          {/* BUTTON */}
+            <textarea
+              rows="5"
+              placeholder="Tell us about yourself..."
+            ></textarea>
+          </div>
 
           <button
             type="submit"
             className="ventureapply-submit-btn"
           >
-
             Submit Application
-
             <FaArrowRight />
-
           </button>
 
         </form>
 
-      </div>
+      </section>
 
-      {/* SUCCESS POPUP */}
+      {/* SUCCESS MODAL */}
 
       {submitted && (
-
         <div className="ventureapply-popup-overlay">
 
           <div className="ventureapply-popup-card">
 
-            <FaCheckCircle />
+            <FaCheckCircle className="success-icon" />
 
             <h2>
-
-              Application Submitted!
-
+              Application Submitted 🎉
             </h2>
 
             <p>
-
-              Your startup application has been submitted successfully.
-              The hiring team will contact you shortly.
-
+              Thank you for applying. Our recruitment team
+              will review your profile and contact you soon.
             </p>
 
             <button
               onClick={() => setSubmitted(false)}
             >
-
               Close
-
             </button>
 
           </div>
 
         </div>
-
       )}
-
     </div>
-
   );
 }

@@ -86,6 +86,10 @@ import ExploreCourses from './components/ExploreCourse/ExploreCourse';
 import SidebarComponent from './components/SidebarComponent';
 import ContactUsPage from './pages/ContactUsPage';
 import ViewAllCourses from './components/home/ViewAllCourses';
+import CareerOpportunities from './components/Notification/ViewAllNotification';
+import JobApply from './components/Notification/JobApply';
+
+
 
 
 
@@ -136,11 +140,17 @@ function App() {
 
           <Route path="/hiringcompany" element={<EliteHiringNowCompanies />} />
 
-
           <Route path="/explorecourse" element={<ExploreCourses />} />
 
-
           <Route path="/contactus" element={<ContactUsPage />} />
+
+
+          <Route path="/viewallnotification" element={<CareerOpportunities />} />
+          <Route path="/jobapply/:id" element={<JobApply />} />
+
+
+
+          
 
 
         

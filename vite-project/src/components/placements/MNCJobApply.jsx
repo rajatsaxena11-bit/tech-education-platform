@@ -12,6 +12,9 @@ import {
     FaCheckCircle,
     FaArrowLeft,
     FaLaptopCode,
+
+
+    FaRocket,
 } from "react-icons/fa";
 
 import { Link, useParams } from "react-router-dom";
@@ -117,7 +120,7 @@ export default function MNCJobApply() {
 
             <div className="corporateapply-hero">
 
-               
+
 
                 <div className="corporateapply-company-area">
 
@@ -129,25 +132,48 @@ export default function MNCJobApply() {
 
                     <div>
 
-                        <h1 style={{fontSize:"25px", color:"darkgray", letterSpacing:"1px"}}>
+                        <h1 style={{ fontSize: "25px", color: "darkgray", letterSpacing: "1px" }}>
 
                             {jobData.role}
 
                         </h1>
 
-                        <h4 style={{fontSize:"22px", fontWeight:"bold"}}>
+                        <h4 style={{ fontSize: "22px", fontWeight: "bold" }}>
 
                             {jobData.icon} India
 
+
                         </h4>
 
+                        <div className="salary-stats">
+
+                            <div>
+                                <span className="fw-bold">Job Type</span>
+                                <strong className="text-light">Full Time</strong>
+                            </div>
+
+                            <div>
+                                <span className="fw-bold">Work Mode</span>
+                                <strong className="text-light">Remote</strong>
+                            </div>
+                           
+
+                        </div>
                     </div>
 
                 </div>
 
-                <div className="corporateapply-badge">
+                <div>
+                    <div className="corporateapply-badge">
 
-                    Actively Hiring
+                        Actively Hiring
+
+                    </div>
+                    <div className="corporateapply-badge mt-3">
+
+                       <i className="fa fa-briefcase"></i> {jobData.experience}
+
+                    </div>
                 </div>
 
             </div>
@@ -194,7 +220,7 @@ export default function MNCJobApply() {
 
             <div className="corporateapply-description-box">
 
-                <h2 style={{fontSize:"25px"}}>
+                <h2 style={{ fontSize: "25px" }}>
 
                     Job Description
 
@@ -217,7 +243,7 @@ export default function MNCJobApply() {
 
             <div className="corporateapply-skills-section">
 
-                <h2 style={{fontSize:"25px"}}>
+                <h2 style={{ fontSize: "25px" }}>
 
                     Required Skills
 
@@ -254,6 +280,65 @@ export default function MNCJobApply() {
                     </span>
 
                 </div>
+                <section className="ventureapply-card">
+
+                    <h2 style={{ fontSize: "25px" }}>Benefits & Perks</h2>
+
+                    <div className="ventureapply-benefits">
+
+                        <div className="benefit-card">
+                            <FaLaptopCode />
+                            <h4>Remote Friendly</h4>
+                        </div>
+
+                        <div className="benefit-card">
+                            <FaRocket />
+                            <h4>Career Growth</h4>
+                        </div>
+
+                        <div className="benefit-card">
+                            <FaUsers />
+                            <h4>MNC Culture</h4>
+                        </div>
+
+                        <div className="benefit-card">
+                            <FaMoneyBillWave />
+                            <h4>Performance Bonus</h4>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section className="ventureapply-card">
+
+                    <h2 style={{ fontSize: "25px" }}>Hiring Process</h2>
+
+                    <div className="ventureapply-process">
+
+                        <div className="process-step">
+                            <span>1</span>
+                            Resume Screening
+                        </div>
+
+                        <div className="process-step">
+                            <span>2</span>
+                            Technical Interview
+                        </div>
+
+                        <div className="process-step">
+                            <span>3</span>
+                            Founder Discussion
+                        </div>
+
+                        <div className="process-step">
+                            <span>4</span>
+                            Offer Letter
+                        </div>
+
+                    </div>
+
+                </section>
 
             </div>
 
@@ -261,7 +346,7 @@ export default function MNCJobApply() {
 
             <div className="corporateapply-form-box">
 
-                <h2 style={{fontSize:"25px"}}>
+                <h2 style={{ fontSize: "25px" }}>
 
                     Apply For This Job
 

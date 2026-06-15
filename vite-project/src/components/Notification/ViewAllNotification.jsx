@@ -14,6 +14,17 @@ import "../../assets/mycss/notification/viewallnotification.css";
 
 export default function CareerOpportunities() {
     const [data, setData] = useState([])
+    const [loading, setLoading] = useState(true);
+    
+      useEffect(() => {
+        const timer = setTimeout(() => {
+          setLoading(false);
+        }, 400); // 2 second loading
+    
+        return () => clearTimeout(timer);
+      }, []);
+    
+    
 
     useEffect(() => {
         fetch("http://localhost:4000/carreropportunity")
@@ -29,6 +40,15 @@ export default function CareerOpportunities() {
         job.role.toLowerCase().includes(searchTerm.toLowerCase()) ||
         job.company.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+      if (loading) {
+        return (
+          <div className="frontend-loader">
+            <div className="spinner"></div>
+            <h3>Loading...</h3>
+          </div>
+        );
+      }
 
     return (
 
@@ -96,7 +116,7 @@ export default function CareerOpportunities() {
                                     <FaBriefcase />
                                 </div>
 
-                                <span className="careerhub-badge explore-course-btn2">
+                                <span className="careerhub-badge explore-course-btn2" style={{background:"#032128"}}>
 
                                     {data.type}
                                     <div className="btn-shine-effect2"></div>

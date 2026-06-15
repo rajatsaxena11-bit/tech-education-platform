@@ -1,283 +1,452 @@
-/* jobapply.css */
+/* =========================
+   JOB APPLY PAGE
+========================= */
 
-.jobapply-page{
-    width: 100%;
-    min-height: 100vh;
-    padding: 80px 5%;
-    background: #f5f7fb;
+.jobapply-page {
+  max-width: 1200px;
+  margin: 100px auto 50px;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #1f2937;
 }
 
-/* HERO */
-
-.jobapply-hero-section{
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    background: white;
-    padding: 35px;
-    border-radius: 28px;
-    margin-bottom: 35px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+.jobapply-loader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 700;
 }
 
-.jobapply-company-badge{
-   padding: 8px;
-    border-radius: 24px;
-    background: #0d6efd;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
+/* =========================
+   HERO SECTION
+========================= */
+
+.jobapply-hero {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: #fff;
+  border-radius: 24px;
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.jobapply-hero-section h1{
-    font-size: 22px;
-    font-weight: 500;
-    color: #111;
-    margin-bottom: 8px;
+.jobapply-company-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.jobapply-hero-section h4{
-    color: #666;
-    font-size: 17px;
-    font-weight: bold;
+.jobapply-company-logo {
+  width: 85px;
+  height: 85px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
 }
 
-/* DETAILS */
-
-.jobapply-detail-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-    gap: 20px;
-    margin-bottom: 35px;
+.jobapply-company-box h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
-.jobapply-detail-card{
-    background: white;
-    padding: 24px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    font-weight: 600;
-    color: #222;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+.jobapply-company-box h4 {
+  margin: 8px 0;
+  opacity: 0.9;
+  font-weight: 500;
 }
 
-/* SKILLS */
-
-.jobapply-skills-section{
-    background: white;
-    padding: 35px;
-    border-radius: 28px;
-    margin-bottom: 35px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+.jobapply-posted {
+  font-size: 14px;
+  opacity: 0.8;
 }
 
-.jobapply-skills-section h3{
-    margin-bottom: 25px;
-    font-size: 20px;
-    font-weight: bold;
+.jobapply-top-btn {
+  border: none;
+  background: #fff;
+  color: #1e3a8a;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.jobapply-skills-stack{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+.jobapply-top-btn:hover {
+  transform: translateY(-3px);
 }
 
-.jobapply-skills-stack span{
-    background: #edf3ff;
-    color: #0d6efd;
-    padding: 12px 22px;
-    border-radius: 40px;
-    font-weight: 600;
-    font-size: 15px;
+/* =========================
+   DETAILS GRID
+========================= */
+
+.jobapply-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
-/* DESCRIPTION */
-
-.jobapply-description-box{
-    background: white;
-    padding: 35px;
-    border-radius: 28px;
-    margin-bottom: 35px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+.jobapply-detail-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+  transition: 0.3s;
 }
 
-.jobapply-description-box h3{
-    font-size: 28px;
-    margin-bottom: 18px;
+.jobapply-detail-card:hover {
+  transform: translateY(-5px);
 }
 
-.jobapply-description-box p{
-    line-height: 1.9;
-    color: #555;
-    font-size: 17px;
+.jobapply-detail-card svg {
+  font-size: 24px;
+  color: #2563eb;
+  margin-bottom: 10px;
 }
 
-/* FORM */
-
-.jobapply-form-panel{
-    background: white;
-    padding: 40px;
-    border-radius: 28px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+.jobapply-detail-card span {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
 }
 
-.jobapply-form-panel h2{
-    font-size: 34px;
-    margin-bottom: 30px;
+/* =========================
+   HIGHLIGHTS
+========================= */
+
+.jobapply-highlights {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
-.jobapply-input-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 20px;
+.jobapply-highlights div {
+  background: #fff;
+  border-radius: 18px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
 }
 
-.jobapply-input-grid input{
-    width: 100%;
-    padding: 16px;
-    border-radius: 16px;
-    border: 1px solid #ddd;
-    outline: none;
-    font-size: 15px;
+.jobapply-highlights svg {
+  color: #2563eb;
+  font-size: 24px;
 }
 
-.jobapply-upload-zone{
-    margin-top: 25px;
-    border: 2px dashed #0d6efd;
-    border-radius: 20px;
-    padding: 40px;
+.jobapply-highlights h5 {
+  margin: 12px 0 6px;
+  font-size: 16px;
+}
+
+.jobapply-highlights p {
+  margin: 0;
+  color: #6b7280;
+}
+
+/* =========================
+   CONTENT SECTIONS
+========================= */
+
+.jobapply-section {
+  background: #fff;
+  border-radius: 22px;
+  padding: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.jobapply-section h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #111827;
+}
+
+.jobapply-section p {
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.jobapply-skills-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.jobapply-skills-stack span {
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================
+   RESPONSIBILITIES
+========================= */
+
+.jobapply-list {
+  padding-left: 20px;
+}
+
+.jobapply-list li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+/* =========================
+   BENEFITS
+========================= */
+
+.jobapply-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.jobapply-benefits span {
+  background: #f3f4f6;
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+/* =========================
+   FORM PANEL
+========================= */
+
+.jobapply-form-panel {
+  background: #fff;
+  border-radius: 25px;
+  padding: 35px;
+  margin-top: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.jobapply-form-panel h2 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.jobapply-input-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+.jobapply-input-grid input,
+.jobapply-form-panel textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.jobapply-input-grid input:focus,
+.jobapply-form-panel textarea:focus {
+  border-color: #2563eb;
+}
+
+.jobapply-form-panel textarea {
+  margin-top: 20px;
+  resize: vertical;
+}
+
+/* =========================
+   UPLOAD
+========================= */
+
+.jobapply-upload-zone {
+  margin-top: 25px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 20px;
+  text-align: center;
+  padding: 35px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.jobapply-upload-zone:hover {
+  border-color: #2563eb;
+  background: #f8fbff;
+}
+
+.jobapply-upload-zone svg {
+  font-size: 32px;
+  color: #2563eb;
+}
+
+.jobapply-upload-zone h4 {
+  margin: 10px 0;
+}
+
+.jobapply-upload-zone p {
+  color: #6b7280;
+  margin: 0;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.jobapply-submit-action {
+  width: 100%;
+  margin-top: 25px;
+  border: none;
+  background: linear-gradient(135deg,#2563eb,#1e40af);
+  color: #fff;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.jobapply-submit-action:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================
+   SUCCESS MODAL
+========================= */
+
+.jobapply-success-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.jobapply-success-card {
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 24px;
+  padding: 35px;
+  text-align: center;
+  animation: popupScale 0.3s ease;
+}
+
+.success-icon {
+  color: #10b981;
+  font-size: 70px;
+}
+
+.jobapply-success-card h2 {
+  margin-top: 15px;
+}
+
+.jobapply-success-card p {
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.success-btns {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.success-btns button {
+  flex: 1;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.success-btns button:first-child {
+  background: #2563eb;
+  color: white;
+}
+
+.success-btns button:last-child {
+  background: #e5e7eb;
+}
+
+@keyframes popupScale {
+  from {
+    opacity: 0;
+    transform: scale(.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+  .jobapply-detail-grid,
+  .jobapply-highlights {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .jobapply-input-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .jobapply-page {
+    margin-top: 80px;
+    padding: 15px;
+  }
+
+  .jobapply-hero {
+    flex-direction: column;
     text-align: center;
-    color: #0d6efd;
-}
+    gap: 20px;
+  }
 
-.jobapply-upload-zone svg{
-    font-size: 40px;
-    margin-bottom: 15px;
-}
+  .jobapply-company-box {
+    flex-direction: column;
+  }
 
-.jobapply-upload-zone input{
-    margin-top: 15px;
-}
+  .jobapply-company-box h1 {
+    font-size: 1.5rem;
+  }
 
-.jobapply-form-panel textarea{
-    width: 100%;
-    margin-top: 25px;
-    min-height: 160px;
-    border-radius: 20px;
-    border: 1px solid #ddd;
+  .jobapply-detail-grid,
+  .jobapply-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .success-btns {
+    flex-direction: column;
+  }
+
+  .jobapply-form-panel,
+  .jobapply-section {
     padding: 20px;
-    resize: none;
-    outline: none;
-    font-size: 15px;
-}
-
-.jobapply-submit-action{
-    margin-top: 30px;
-    border: none;
-    background: #0d6efd;
-    color: white;
-    padding: 18px 35px;
-    border-radius: 18px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.jobapply-submit-action:hover{
-    transform: translateY(-4px);
-}
-
-/* SUCCESS POPUP */
-
-.jobapply-success-popup{
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-}
-
-.jobapply-success-card{
-    width: 90%;
-    max-width: 450px;
-    background: white;
-    padding: 40px;
-    border-radius: 28px;
-    text-align: center;
-    animation: popupScale 0.4s ease;
-}
-
-@keyframes popupScale{
-
-    from{
-        transform: scale(0.7);
-        opacity: 0;
-    }
-
-    to{
-        transform: scale(1);
-        opacity: 1;
-    }
-
-}
-
-.jobapply-success-card svg{
-    font-size: 70px;
-    color: #28a745;
-    margin-bottom: 20px;
-}
-
-.jobapply-success-card h2{
-    margin-bottom: 15px;
-}
-
-.jobapply-success-card p{
-    color: #666;
-    line-height: 1.7;
-}
-
-.jobapply-success-card button{
-    margin-top: 25px;
-    border: none;
-    background: #0d6efd;
-    color: white;
-    padding: 14px 30px;
-    border-radius: 14px;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-    .jobapply-page{
-        padding: 50px 4%;
-    }
-
-    .jobapply-hero-section{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .jobapply-hero-section h1{
-        font-size: 32px;
-    }
-
-    .jobapply-form-panel{
-        padding: 25px;
-    }
-
-    .jobapply-form-panel h2{
-        font-size: 28px;
-    }
-
+  }
 }

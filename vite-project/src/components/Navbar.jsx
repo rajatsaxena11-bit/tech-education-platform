@@ -361,8 +361,9 @@ export default function Header() {
                                     <li><NavLink to="/interviewpreparation" onClick={() => setMobileNav(false)}>Interview Preparation</NavLink></li>
                                     <li><NavLink to="/studentsuccessstories" onClick={() => setMobileNav(false)}>Success Stories</NavLink></li>
                                     <li><NavLink to="/mockinterview" onClick={() => setMobileNav(false)}>Mock Interview</NavLink></li>
-                                    <li><NavLink to="/startupopportunity" onClick={() => setMobileNav(false)}>StartUp Companies</NavLink></li>
-                                    <li><NavLink to="/mncopportunity" onClick={() => setMobileNav(false)}>MNC Companies</NavLink></li>
+                                    <li><NavLink to="/startupopportunity" onClick={handleMenuClick}>StartUp Companies</NavLink></li>
+                                    <li><NavLink to="/mncopportunity" onClick={handleMenuClick}>MNC Companies</NavLink></li>
+                                    <li><NavLink to="/viewallnotification" onClick={handleMenuClick}>Explore Career Opportunities</NavLink></li>
 
                                 </ul>
                             </li>
