@@ -43,18 +43,38 @@ export default function TopMNCHiring() {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true);
 
+    // useEffect(() => {
+    //     fetch("https://server-5-n0c3.onrender.com/MNCCommpany")
+    //         .then((res) => res.json())
+    //         .then((data) => {
+    //             setData(data)
+    //             setLoading(false);
+    //         })
+    //         .catch((err) => {
+    //             console.log(err);
+    //             setLoading(false);
+    //         });
+    // }, [])
+
     useEffect(() => {
-        fetch("https://server-5-n0c3.onrender.com/MNCCommpany")
-            .then((res) => res.json())
-            .then((data) => {
-                setData(data)
+        const fetchJobs = async () => {
+            try {
+                const response = await fetch(
+                    "https://server-5-n0c3.onrender.com/MNCCommpany"
+                );
+
+                const result = await response.json();
+
+                setData(result);
+            } catch (error) {
+                console.error(error);
+            } finally {
                 setLoading(false);
-            })
-            .catch((err) => {
-                console.log(err);
-                setLoading(false);
-            });
-    }, [])
+            }
+        };
+
+        fetchJobs();
+    }, []);
 
     if (loading) {
         return (

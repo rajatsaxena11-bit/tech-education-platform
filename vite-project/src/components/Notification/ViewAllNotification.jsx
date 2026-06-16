@@ -15,24 +15,44 @@ import "../../assets/mycss/notification/viewallnotification.css";
 export default function CareerOpportunities() {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true);
-    
-      useEffect(() => {
-        const timer = setTimeout(() => {
-          setLoading(false);
-        }, 400); 
-    
-        return () => clearTimeout(timer);
-      }, []);
-    
-    
 
     useEffect(() => {
-        fetch("https://server-5-n0c3.onrender.com/carreropportunity")
-            .then((res) => res.json())
-            .then((data) => {
-                setData(data)
-            })
-    }, [])
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 400);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+
+
+    // useEffect(() => {
+    //     fetch("https://server-5-n0c3.onrender.com/carreropportunity")
+    //         .then((res) => res.json())
+    //         .then((data) => {
+    //             setData(data)
+    //         })
+    // }, [])
+
+    useEffect(() => {
+        const fetchJobs = async () => {
+            try {
+                const response = await fetch(
+                    "https://server-5-n0c3.onrender.com/carreropportunity"
+                );
+
+                const result = await response.json();
+
+                setData(result);
+            } catch (error) {
+                console.error(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchJobs();
+    }, []);
 
     const [searchTerm, setSearchTerm] = useState("");
 
@@ -41,14 +61,14 @@ export default function CareerOpportunities() {
         job.company.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-      if (loading) {
+    if (loading) {
         return (
-          <div className="frontend-loader">
-            <div className="spinner"></div>
-            <h3>Loading...</h3>
-          </div>
+            <div className="frontend-loader">
+                <div className="spinner"></div>
+                <h3>Loading...</h3>
+            </div>
         );
-      }
+    }
 
     return (
 
@@ -116,7 +136,7 @@ export default function CareerOpportunities() {
                                     <FaBriefcase />
                                 </div>
 
-                                <span className="careerhub-badge explore-course-btn2" style={{background:"#032128"}}>
+                                <span className="careerhub-badge explore-course-btn2" style={{ background: "#032128" }}>
 
                                     {data.type}
                                     <div className="btn-shine-effect2"></div>
@@ -127,10 +147,10 @@ export default function CareerOpportunities() {
 
                             <h3>
 
-                                {data.role} 
+                                {data.role}
 
                             </h3>
-                         
+
 
                             <h5>
 
@@ -154,7 +174,7 @@ export default function CareerOpportunities() {
                                     {data.location}
 
                                 </span>
-                                 <span className="careerhub-badge explore-course-btn2 text-light">
+                                <span className="careerhub-badge explore-course-btn2 text-light">
 
                                     {data.package}
                                     <div className="btn-shine-effect2"></div>
